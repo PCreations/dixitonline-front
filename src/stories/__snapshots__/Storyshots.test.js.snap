@@ -1,0 +1,2278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Avatar Avatar With Gray Border 1`] = `
+<div
+  className="css-70qvj9"
+>
+  <div
+    className="css-1ee5mdm"
+  >
+    <div
+      aria-label="Anthow"
+      className="css-1uc1olj"
+    >
+      A
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Avatar Avatar With Username 1`] = `
+<div
+  className="css-70qvj9"
+>
+  <div
+    className="css-1f4svg7"
+  >
+    <div
+      aria-label="Anthow"
+      className="css-1uc1olj"
+    >
+      A
+    </div>
+  </div>
+  <span
+    style={
+      Object {
+        "paddingLeft": "10px",
+      }
+    }
+  >
+    Anthow
+  </span>
+</div>
+`;
+
+exports[`Storyshots Avatar Default Avatar 1`] = `
+<div
+  className="css-70qvj9"
+>
+  <div
+    className="css-1f4svg7"
+  >
+    <div
+      aria-label="Anthow"
+      className="css-1uc1olj"
+    >
+      A
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Avatar Not Ready Player Avatar 1`] = `
+<div
+  className="css-70qvj9"
+>
+  <div
+    className="css-1f4svg7"
+  >
+    <div
+      aria-label="Anthow"
+      className="css-1uc1olj"
+    >
+      A
+    </div>
+    <i
+      aria-hidden="true"
+      className="hourglass start icon"
+      onClick={[Function]}
+      style={
+        Object {
+          "bottom": "8px",
+          "color": "black",
+          "position": "absolute",
+          "right": "-8px",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Avatar Ready Player Avatar 1`] = `
+<div
+  className="css-70qvj9"
+>
+  <div
+    className="css-1f4svg7"
+  >
+    <div
+      aria-label="Anthow"
+      className="css-1uc1olj"
+    >
+      A
+    </div>
+    <i
+      aria-hidden="true"
+      className="check circle outline icon"
+      onClick={[Function]}
+      style={
+        Object {
+          "bottom": "8px",
+          "color": "black",
+          "position": "absolute",
+          "right": "-8px",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Primary Button 1`] = `
+<button
+  className="ui primary button"
+  onClick={[Function]}
+>
+  Primary button
+</button>
+`;
+
+exports[`Storyshots Button Secondary Button 1`] = `
+<button
+  className="ui button"
+  onClick={[Function]}
+>
+  Secondary button
+</button>
+`;
+
+exports[`Storyshots Card Bordered 1`] = `
+<div
+  className="css-1l4w6pd"
+  onClick={[Function]}
+>
+  <img
+    className="css-9whsf3"
+    style={
+      Object {
+        "border": "5px solid red",
+        "cursor": "pointer",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Card Card 1`] = `
+<div
+  className="css-1l4w6pd"
+  onClick={[Function]}
+>
+  <img
+    className="css-9whsf3"
+    style={
+      Object {
+        "border": "",
+        "cursor": "pointer",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Card With Votes 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "400px",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="css-1l4w6pd"
+    onClick={[Function]}
+  >
+    <img
+      className="css-9whsf3"
+      style={
+        Object {
+          "border": "",
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "bottom": "5%",
+        "position": "absolute",
+        "right": "5%",
+      }
+    }
+  >
+    <div
+      className="css-shnk6d"
+    >
+      <div
+        style={
+          Object {
+            "marginRight": "5px",
+          }
+        }
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-opwzgt"
+          >
+            <div
+              aria-label="Jaz"
+              className="css-1uc1olj"
+            >
+              J
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "marginRight": "5px",
+          }
+        }
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1rqfuau"
+          >
+            <div
+              aria-label="Pierre"
+              className="css-1uc1olj"
+            >
+              P
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots CardGrid Default Grid 1`] = `
+<div
+  className="css-1j4sjxz"
+>
+  <div
+    className="css-1l4w6pd"
+    onClick={[Function]}
+  >
+    <img
+      className="css-9whsf3"
+      style={
+        Object {
+          "border": "",
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+  <div
+    className="css-1l4w6pd"
+    onClick={[Function]}
+  >
+    <img
+      className="css-9whsf3"
+      style={
+        Object {
+          "border": "",
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+  <div
+    className="css-1l4w6pd"
+    onClick={[Function]}
+  >
+    <img
+      className="css-9whsf3"
+      style={
+        Object {
+          "border": "",
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+  <div
+    className="css-1l4w6pd"
+    onClick={[Function]}
+  >
+    <img
+      className="css-9whsf3"
+      style={
+        Object {
+          "border": "",
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+  <div
+    className="css-1l4w6pd"
+    onClick={[Function]}
+  >
+    <img
+      className="css-9whsf3"
+      style={
+        Object {
+          "border": "",
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+  <div
+    className="css-1l4w6pd"
+    onClick={[Function]}
+  >
+    <img
+      className="css-9whsf3"
+      style={
+        Object {
+          "border": "",
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots CardModal Default Modal 1`] = `
+<button
+  className="ui button"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Show Modal
+</button>
+`;
+
+exports[`Storyshots CardModal No Votes Card Modal Content 1`] = `
+<div
+  className="ui basic center aligned segment"
+  style={
+    Object {
+      "backgroundColor": "white",
+      "color": "black",
+      "maxWidth": "100%",
+      "width": "400px",
+    }
+  }
+>
+  <p>
+    Personne n'a voté pour cette carte.
+  </p>
+</div>
+`;
+
+exports[`Storyshots CardModal Player Choice Card Modal Content 1`] = `
+<div
+  className="ui basic center aligned segment"
+  style={
+    Object {
+      "backgroundColor": "white",
+      "color": "black",
+      "maxWidth": "100%",
+      "width": "400px",
+    }
+  }
+>
+  <button
+    className="ui primary button"
+    onClick={[Function]}
+  >
+    CHOISIR CETTE CARTE
+  </button>
+</div>
+`;
+
+exports[`Storyshots CardModal Player Vote Card Modal Content 1`] = `
+<div
+  className="ui basic center aligned segment"
+  style={
+    Object {
+      "backgroundColor": "white",
+      "color": "black",
+      "maxWidth": "100%",
+      "width": "400px",
+    }
+  }
+>
+  <button
+    className="ui primary button"
+    onClick={[Function]}
+  >
+    VOTER POUR CETTE CARTE
+  </button>
+</div>
+`;
+
+exports[`Storyshots CardModal Storyteller Card Modal Content 1`] = `
+<div
+  className="ui basic center aligned segment"
+  style={
+    Object {
+      "backgroundColor": "white",
+      "color": "black",
+      "maxWidth": "100%",
+      "width": "400px",
+    }
+  }
+>
+  <p>
+    Définir l'indice pour cette carte
+  </p>
+  <div
+    className="ui input"
+    style={
+      Object {
+        "marginRight": "10px",
+      }
+    }
+  >
+    <input
+      onChange={[Function]}
+      placeholder="indice"
+      type="text"
+    />
+  </div>
+  <button
+    className="ui primary button"
+    onClick={[Function]}
+    style={
+      Object {
+        "marginTop": "10px",
+      }
+    }
+  >
+    VALIDER
+  </button>
+</div>
+`;
+
+exports[`Storyshots CardModal Vote Results Card Modal Content 1`] = `
+<div
+  className="ui basic center aligned segment"
+  style={
+    Object {
+      "backgroundColor": "white",
+      "color": "black",
+      "maxWidth": "100%",
+      "width": "400px",
+    }
+  }
+>
+  <p>
+    Joueur(s) ayant voté pour cette carte :
+  </p>
+  <div
+    className="css-1l4w6pd"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-kikxgz"
+        >
+          <div
+            aria-label="Noyo"
+            className="css-1uc1olj"
+          >
+            N
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-opwzgt"
+        >
+          <div
+            aria-label="Jaz"
+            className="css-1uc1olj"
+          >
+            J
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Chose a Username Empty State 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Choisissez un pseudo
+    </legend>
+    <div
+      className="ui basic center aligned segment"
+    >
+      <div
+        className="ui input"
+        style={
+          Object {
+            "marginRight": "10px",
+          }
+        }
+      >
+        <input
+          onChange={[Function]}
+          placeholder="pseudo"
+          type="text"
+        />
+      </div>
+      <button
+        className="ui primary button"
+        onClick={[Function]}
+      >
+        GO
+      </button>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Chose a Username Erroneous State 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Choisissez un pseudo
+    </legend>
+    <div
+      className="ui basic center aligned segment"
+    >
+      <div
+        className="ui negative message"
+      >
+        <p>
+          Le pseudo ne peut pas être vide
+        </p>
+      </div>
+      <div
+        className="ui error input"
+        style={
+          Object {
+            "marginRight": "10px",
+          }
+        }
+      >
+        <input
+          onChange={[Function]}
+          placeholder="pseudo"
+          type="text"
+        />
+      </div>
+      <button
+        className="ui primary button"
+        onClick={[Function]}
+      >
+        GO
+      </button>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots GameSelection Default State 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Choix de partie
+    </legend>
+    <div
+      className="ui basic center aligned segment"
+    >
+      <button
+        className="ui primary button"
+        onClick={[Function]}
+      >
+        Créer une nouvelle partie
+      </button>
+      <p
+        style={
+          Object {
+            "marginTop": "10px",
+          }
+        }
+      >
+        ou
+      </p>
+      <form
+        className="ui form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="inline field"
+        >
+          <label>
+            Rejoindre une partie :
+          </label>
+          <div
+            className="ui mini input"
+          >
+            <input
+              onChange={[Function]}
+              placeholder="code"
+              type="text"
+            />
+          </div>
+        </div>
+      </form>
+      <button
+        className="ui button"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "10px",
+          }
+        }
+      >
+        rejoindre
+      </button>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots GameWaitingForPlayers As Host When Enough Players 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Partie GXSZRF
+    </legend>
+    <div
+      className="ui basic center aligned segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <p>
+        Vous pouvez maintenant lancer la partie
+      </p>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1f4svg7"
+        >
+          <div
+            aria-label="Anthow"
+            className="css-1uc1olj"
+          >
+            A
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Anthow
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1sh4ify"
+        >
+          <div
+            aria-label="Mike"
+            className="css-1uc1olj"
+          >
+            M
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Mike
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-opwzgt"
+        >
+          <div
+            aria-label="Jaz"
+            className="css-1uc1olj"
+          >
+            J
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Jaz
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1rqfuau"
+        >
+          <div
+            aria-label="Pierre"
+            className="css-1uc1olj"
+          >
+            P
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Pierre
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic center aligned segment"
+    >
+      <button
+        className="ui primary button"
+        onClick={[Function]}
+      >
+        Lancer la partie !
+      </button>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots GameWaitingForPlayers As Player When Enough Players 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Partie GXSZRF
+    </legend>
+    <div
+      className="ui basic center aligned segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <p>
+        En attente du lancement de la partie
+      </p>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1f4svg7"
+        >
+          <div
+            aria-label="Anthow"
+            className="css-1uc1olj"
+          >
+            A
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Anthow
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1sh4ify"
+        >
+          <div
+            aria-label="Mike"
+            className="css-1uc1olj"
+          >
+            M
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Mike
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-opwzgt"
+        >
+          <div
+            aria-label="Jaz"
+            className="css-1uc1olj"
+          >
+            J
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Jaz
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1rqfuau"
+        >
+          <div
+            aria-label="Pierre"
+            className="css-1uc1olj"
+          >
+            P
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Pierre
+        </span>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots GameWaitingForPlayers With Some Players 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Partie GXSZRF
+    </legend>
+    <div
+      className="ui basic center aligned segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <p>
+        En attente de joueurs...
+      </p>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1f4svg7"
+        >
+          <div
+            aria-label="Anthow"
+            className="css-1uc1olj"
+          >
+            A
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Anthow
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1sh4ify"
+        >
+          <div
+            aria-label="Mike"
+            className="css-1uc1olj"
+          >
+            M
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Mike
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-opwzgt"
+        >
+          <div
+            aria-label="Jaz"
+            className="css-1uc1olj"
+          >
+            J
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "paddingLeft": "10px",
+            }
+          }
+        >
+          Jaz
+        </span>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Input In Error 1`] = `
+<div
+  className="ui error input"
+>
+  <input
+    onChange={[Function]}
+    placeholder="pseudo"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Input With Placeholder 1`] = `
+<div
+  className="ui input"
+>
+  <input
+    onChange={[Function]}
+    placeholder="pseudo"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Logo Logo 1`] = `
+<img
+  className="ui centered image"
+  src="dixit.png"
+  style={
+    Object {
+      "padding": "20px",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots PlayersPanel Players Avatar And Score 1`] = `
+<div
+  className="ui basic segment"
+  style={
+    Object {
+      "borderBottom": "1px solid #718096",
+      "marginTop": "10px",
+    }
+  }
+>
+  <div
+    className="css-gg4vpm"
+  >
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="edit icon"
+        onClick={[Function]}
+        style={
+          Object {
+            "left": "34%",
+            "position": "absolute",
+            "top": "-21px",
+          }
+        }
+      />
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1ee5mdm"
+        >
+          <div
+            aria-label="Anthow"
+            className="css-1uc1olj"
+          >
+            A
+          </div>
+          <i
+            aria-hidden="true"
+            className="check circle outline icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "bottom": "8px",
+                "color": "black",
+                "position": "absolute",
+                "right": "-8px",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        style={
+          Object {
+            "left": "17px",
+            "position": "relative",
+            "top": "5px",
+          }
+        }
+      >
+        3
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1sh4ify"
+        >
+          <div
+            aria-label="Mike"
+            className="css-1uc1olj"
+          >
+            M
+          </div>
+          <i
+            aria-hidden="true"
+            className="hourglass start icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "bottom": "8px",
+                "color": "black",
+                "position": "absolute",
+                "right": "-8px",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        style={
+          Object {
+            "left": "17px",
+            "position": "relative",
+            "top": "5px",
+          }
+        }
+      >
+        1
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-opwzgt"
+        >
+          <div
+            aria-label="Jaz"
+            className="css-1uc1olj"
+          >
+            J
+          </div>
+          <i
+            aria-hidden="true"
+            className="check circle outline icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "bottom": "8px",
+                "color": "black",
+                "position": "absolute",
+                "right": "-8px",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        style={
+          Object {
+            "left": "17px",
+            "position": "relative",
+            "top": "5px",
+          }
+        }
+      >
+        2
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1rqfuau"
+        >
+          <div
+            aria-label="Pierre"
+            className="css-1uc1olj"
+          >
+            P
+          </div>
+          <i
+            aria-hidden="true"
+            className="check circle outline icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "bottom": "8px",
+                "color": "black",
+                "position": "absolute",
+                "right": "-8px",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        style={
+          Object {
+            "left": "17px",
+            "position": "relative",
+            "top": "5px",
+          }
+        }
+      >
+        0
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-kikxgz"
+        >
+          <div
+            aria-label="Noyo"
+            className="css-1uc1olj"
+          >
+            N
+          </div>
+          <i
+            aria-hidden="true"
+            className="hourglass start icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "bottom": "8px",
+                "color": "black",
+                "position": "absolute",
+                "right": "-8px",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        style={
+          Object {
+            "left": "17px",
+            "position": "relative",
+            "top": "5px",
+          }
+        }
+      >
+        5
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1vt4lux"
+        >
+          <div
+            aria-label="Yoyo"
+            className="css-1uc1olj"
+          >
+            Y
+          </div>
+          <i
+            aria-hidden="true"
+            className="hourglass start icon"
+            onClick={[Function]}
+            style={
+              Object {
+                "bottom": "8px",
+                "color": "black",
+                "position": "absolute",
+                "right": "-8px",
+              }
+            }
+          />
+        </div>
+      </div>
+      <span
+        style={
+          Object {
+            "left": "17px",
+            "position": "relative",
+            "top": "5px",
+          }
+        }
+      >
+        4
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots StorytellerClue Default State 1`] = `
+<div
+  className="ui basic center aligned segment"
+>
+  <p>
+    Anthow
+     a donné l'indice :
+  </p>
+  <div
+    className="ui grey inverted raised segment"
+  >
+    <h4
+      className="ui header"
+    >
+      <i
+        aria-hidden="true"
+        className="quote left small icon"
+        onClick={[Function]}
+      />
+      <div
+        className="content"
+      >
+        danger sous-marin
+      </div>
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TitledBox Full Width 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      A box with content
+    </legend>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum convallis est, id commodo urna dictum eget. Integer aliquam erat et dui vulputate finibus. Vestibulum eros enim, volutpat sed egestas sed, eleifend non lectus.
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots TitledBox With Content 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      A box with content
+    </legend>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum convallis est, id commodo urna dictum eget. Integer aliquam erat et dui vulputate finibus. Vestibulum eros enim, volutpat sed egestas sed, eleifend non lectus.
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "padding": "10px 0px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Votez pour une carte
+    </legend>
+    <div
+      className="css-1j4sjxz"
+    >
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "padding": "10px 0px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Choisissez une carte
+    </legend>
+    <div
+      className="css-1j4sjxz"
+    >
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "padding": "10px 0px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Retrouvez la carte de Anthow
+    </legend>
+    <div
+      className="css-1j4sjxz"
+    >
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "padding": "10px 0px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Choisissez une carte
+    </legend>
+    <div
+      className="css-1j4sjxz"
+    >
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots TitledCardGrid Vote Result 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "padding": "10px 0px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Résultat des votes
+    </legend>
+    <div
+      className="css-1j4sjxz"
+    >
+      <div
+        style={
+          Object {
+            "maxWidth": "400px",
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
+            }
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "bottom": "5%",
+              "position": "absolute",
+              "right": "5%",
+            }
+          }
+        >
+          <div
+            className="css-shnk6d"
+          >
+            <div
+              style={
+                Object {
+                  "marginRight": "5px",
+                }
+              }
+            >
+              <div
+                className="css-70qvj9"
+              >
+                <div
+                  className="css-opwzgt"
+                >
+                  <div
+                    aria-label="Jaz"
+                    className="css-1uc1olj"
+                  >
+                    J
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "maxWidth": "400px",
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "5px solid red",
+                "cursor": "pointer",
+              }
+            }
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "bottom": "5%",
+              "position": "absolute",
+              "right": "5%",
+            }
+          }
+        >
+          <div
+            className="css-shnk6d"
+          >
+            <div
+              style={
+                Object {
+                  "marginRight": "5px",
+                }
+              }
+            >
+              <div
+                className="css-70qvj9"
+              >
+                <div
+                  className="css-1rqfuau"
+                >
+                  <div
+                    aria-label="Pierre"
+                    className="css-1uc1olj"
+                  >
+                    P
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginRight": "5px",
+                }
+              }
+            >
+              <div
+                className="css-70qvj9"
+              >
+                <div
+                  className="css-kikxgz"
+                >
+                  <div
+                    aria-label="Noyo"
+                    className="css-1uc1olj"
+                  >
+                    N
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginRight": "5px",
+                }
+              }
+            >
+              <div
+                className="css-70qvj9"
+              >
+                <div
+                  className="css-1sh4ify"
+                >
+                  <div
+                    aria-label="Mike"
+                    className="css-1uc1olj"
+                  >
+                    M
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginRight": "5px",
+                }
+              }
+            >
+              <div
+                className="css-70qvj9"
+              >
+                <div
+                  className="css-opwzgt"
+                >
+                  <div
+                    aria-label="Jaz"
+                    className="css-1uc1olj"
+                  >
+                    J
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1l4w6pd"
+        onClick={[Function]}
+      >
+        <img
+          className="css-9whsf3"
+          style={
+            Object {
+              "border": "",
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
