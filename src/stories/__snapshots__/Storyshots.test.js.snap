@@ -120,6 +120,15 @@ exports[`Storyshots Avatar Ready Player Avatar 1`] = `
 </div>
 `;
 
+exports[`Storyshots Button Loading Button 1`] = `
+<button
+  className="ui loading primary button"
+  onClick={[Function]}
+>
+  Primary button
+</button>
+`;
+
 exports[`Storyshots Button Primary Button 1`] = `
 <button
   className="ui primary button"
@@ -574,58 +583,6 @@ exports[`Storyshots Chose a Username Empty State 1`] = `
 </div>
 `;
 
-exports[`Storyshots Chose a Username Erroneous State 1`] = `
-<div
-  className="css-1l4w6pd"
->
-  <fieldset
-    style={
-      Object {
-        "maxWidth": "600px",
-        "width": "100%",
-      }
-    }
-  >
-    <legend
-      className="ui medium center aligned header"
-    >
-      Choisissez un pseudo
-    </legend>
-    <div
-      className="ui basic center aligned segment"
-    >
-      <div
-        className="ui negative message"
-      >
-        <p>
-          Le pseudo ne peut pas être vide
-        </p>
-      </div>
-      <div
-        className="ui error input"
-        style={
-          Object {
-            "marginRight": "10px",
-          }
-        }
-      >
-        <input
-          onChange={[Function]}
-          placeholder="pseudo"
-          type="text"
-        />
-      </div>
-      <button
-        className="ui primary button"
-        onClick={[Function]}
-      >
-        GO
-      </button>
-    </div>
-  </fieldset>
-</div>
-`;
-
 exports[`Storyshots GameSelection Default State 1`] = `
 <div
   className="css-1l4w6pd"
@@ -643,6 +600,15 @@ exports[`Storyshots GameSelection Default State 1`] = `
     >
       Choix de partie
     </legend>
+    <div
+      className="ui basic center aligned segment"
+    >
+      <p>
+        Bienvenue 
+        Anthow
+         !
+      </p>
+    </div>
     <div
       className="ui basic center aligned segment"
     >
@@ -1186,7 +1152,7 @@ exports[`Storyshots Input With Placeholder 1`] = `
 exports[`Storyshots Logo Logo 1`] = `
 <img
   className="ui centered image"
-  src="dixit.png"
+  src="/dixit.png"
   style={
     Object {
       "padding": "20px",
@@ -1505,8 +1471,35 @@ exports[`Storyshots StorytellerClue Default State 1`] = `
   className="ui basic center aligned segment"
 >
   <p>
-    Anthow
-     a donné l'indice :
+    Anthow a donné l'indice :
+  </p>
+  <div
+    className="ui grey inverted raised segment"
+  >
+    <h4
+      className="ui header"
+    >
+      <i
+        aria-hidden="true"
+        className="quote left small icon"
+        onClick={[Function]}
+      />
+      <div
+        className="content"
+      >
+        danger sous-marin
+      </div>
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Storyshots StorytellerClue Seen As Storyteller 1`] = `
+<div
+  className="ui basic center aligned segment"
+>
+  <p>
+    Vous avez donné l'indice : 
   </p>
   <div
     className="ui grey inverted raised segment"
@@ -1591,7 +1584,7 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
     <legend
       className="ui medium center aligned header"
     >
-      Votez pour une carte
+      Votre main
     </legend>
     <div
       className="css-1j4sjxz"
@@ -2029,6 +2022,16 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
     >
       Résultat des votes
     </legend>
+    <div
+      className="ui basic center aligned segment"
+    >
+      <button
+        className="ui primary button"
+        onClick={[Function]}
+      >
+        Passer au prochain tour
+      </button>
+    </div>
     <div
       className="css-1j4sjxz"
     >

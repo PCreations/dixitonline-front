@@ -7,6 +7,7 @@
     "@chakra-ui/core": "^0.7.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@sentry/browser": "^5.15.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -24,11 +25,11 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_GRAPHQL_API=http://localhost:5001/dixit-af060/us-central1/api/graphql react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && firebase deploy",
+    "deploy": "REACT_APP_GRAPHQL_API=https://us-central1-dixit-af060.cloudfunctions.net/api/graphql yarn build && firebase deploy",
     "serve": "yarn build && firebase serve --only hosting",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"

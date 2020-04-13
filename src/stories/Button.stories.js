@@ -11,3 +11,9 @@ export const primaryButton = () => (
 );
 
 export const secondaryButton = () => <Button onClick={action('secondary-button-click')}>Secondary button</Button>;
+
+export const loadingButton = () => (
+  <Button loading primary>
+    Primary button
+  </Button>
+);

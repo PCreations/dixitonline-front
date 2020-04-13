@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import { Segment } from 'semantic-ui-react';
+import { Button } from './Button';
 import { TitledBox } from './TitledBox';
 import { CardGrid } from './CardGrid';
 import {
@@ -10,7 +12,7 @@ import {
   VoteResultsCardModalContent,
 } from './CardModal';
 
-const TitledCardGrid = ({ cards, title, children }) => {
+const TitledCardGrid = ({ cards, title, children, renderBeforeCards }) => {
   const [modalState, setModalState] = useState({ card: { id: '', src: '' }, open: false });
 
   const handleCardClick = useCallback(
@@ -35,6 +37,7 @@ const TitledCardGrid = ({ cards, title, children }) => {
 
   return (
     <TitledBox title={title} noSidePadding fullWidth>
+      {renderBeforeCards && renderBeforeCards()}
       <CardGrid cards={cards} onCardClicked={handleCardClick} />
       <CardModal open={modalState.open} src={modalState.card.src} onClose={closeModal}>
         {children && children({ closeModal, cardId: modalState.card.id })}
@@ -44,7 +47,7 @@ const TitledCardGrid = ({ cards, title, children }) => {
 };
 
 export const NoModalContentTitledCardGrid = ({ cards }) => {
-  return <TitledCardGrid title="Votez pour une carte" cards={cards} />;
+  return <TitledCardGrid title="Votre main" cards={cards} />;
 };
 
 export const StorytellerTitledCardGrid = ({ cards, onClueSubmitted }) => {
@@ -98,11 +101,28 @@ export const PlayerVoteCardTitledCardGrid = ({ cards, storyteller, onCardVoted }
   );
 };
 
-export const PlayersVoteResultTitleCardGrid = ({ cards }) => {
+export const PlayersVoteResultTitleCardGrid = ({ cards, onReadyForNextTurn }) => {
   const findCard = (cardId) => cards.find((c) => c.id === cardId);
 
+  const [loading, setLoading] = useState(false);
+
+  const handleOnReadyForNextTurn = useCallback(() => {
+    setLoading(true);
+    onReadyForNextTurn();
+  }, [setLoading, onReadyForNextTurn]);
+
   return (
-    <TitledCardGrid title="Résultat des votes" cards={cards}>
+    <TitledCardGrid
+      title="Résultat des votes"
+      cards={cards}
+      renderBeforeCards={() => (
+        <Segment basic textAlign="center">
+          <Button primary onClick={handleOnReadyForNextTurn} loading={loading}>
+            Passer au prochain tour
+          </Button>
+        </Segment>
+      )}
+    >
       {({ cardId }) => cardId && <VoteResultsCardModalContent votes={findCard(cardId).votes} />}
     </TitledCardGrid>
   );

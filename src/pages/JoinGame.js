@@ -10,14 +10,6 @@ const JOIN_GAME = gql`
       ... on GameJoinGameResultSuccess {
         game {
           id
-          host {
-            id
-            name
-          }
-          players {
-            id
-            name
-          }
         }
       }
       ... on GameJoinGameResultError {
@@ -36,13 +28,22 @@ export const JoinGame = () => {
     if (data?.gameJoinGame.__typename === 'GameJoinGameResultSuccess') {
       history.push(`/game/${gameId}`);
     }
-  }, [joinGame, data, history, gameId]);
+  }, []);
 
   if (loading) return 'Loading...';
 
+  console.log(data);
   if (data?.gameJoinGame.__typename === 'GameJoinGameResultError') {
+    if (data.gameJoinGame.type === 'GAME_ALREADY_JOINED') {
+      history.push(`/game/${gameId}`);
+    }
     return data.gameJoinGame.type;
   }
 
-  return 'Accès au jeu...';
+  return (
+    <div>
+      <p>Accès au jeu...</p>
+      <a href={`/game/${gameId}`}>Cliquez ici si vous n'êtes pas redirigé</a>
+    </div>
+  );
 };

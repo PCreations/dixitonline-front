@@ -4,7 +4,12 @@ import { TitledBox } from './TitledBox';
 import { Input } from './Input';
 import { Button } from './Button';
 
-export const GameSelection = ({ onCreateNewGameClicked, onJoinGameSubmitted }) => {
+export const GameSelection = ({
+  authenticatedUser,
+  onCreateNewGameClicked,
+  onJoinGameSubmitted,
+  createNewGameLoading,
+}) => {
   const [code, setCode] = useState('');
   const [hasError, setHasError] = useState(false);
 
@@ -27,7 +32,10 @@ export const GameSelection = ({ onCreateNewGameClicked, onJoinGameSubmitted }) =
   return (
     <TitledBox title="Choix de partie">
       <Segment basic textAlign="center">
-        <Button primary onClick={onCreateNewGameClicked}>
+        <p>Bienvenue {authenticatedUser} !</p>
+      </Segment>
+      <Segment basic textAlign="center">
+        <Button primary onClick={onCreateNewGameClicked} loading={createNewGameLoading}>
           Créer une nouvelle partie
         </Button>
         <p style={{ marginTop: '10px' }}>ou</p>

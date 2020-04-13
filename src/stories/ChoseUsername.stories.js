@@ -7,11 +7,3 @@ export default { title: 'Chose a Username' };
 export const emptyState = () => (
   <ChoseUsername onUsernameChange={action('username-change')} onUsernameSubmitted={action('username-submitted')} />
 );
-
-export const erroneousState = () => (
-  <ChoseUsername
-    onUsernameChange={action('username-change')}
-    onUsernameSubmitted={action('username-submitted')}
-    error
-  />
-);

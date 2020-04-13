@@ -9,7 +9,7 @@ const MIN_PLAYERS_TO_START_GAME = 4;
 
 const canStartGame = (players) => players.length >= MIN_PLAYERS_TO_START_GAME;
 
-export const GameWaitingForPlayers = ({ gameId, players, isHost, onStartGameClicked }) => (
+export const GameWaitingForPlayers = ({ gameId, players, isHost, onStartGameClicked, startGameIsLoading }) => (
   <TitledBox title={`Partie ${gameId}`}>
     <Segment textAlign="center" basic style={{ padding: '0' }}>
       <p>
@@ -27,7 +27,7 @@ export const GameWaitingForPlayers = ({ gameId, players, isHost, onStartGameClic
     ))}
     {canStartGame(players) && isHost && (
       <Segment textAlign="center" basic>
-        <Button primary onClick={onStartGameClicked}>
+        <Button primary onClick={onStartGameClicked} loading={startGameIsLoading}>
           Lancer la partie !
         </Button>
       </Segment>
