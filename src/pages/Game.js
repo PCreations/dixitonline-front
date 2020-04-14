@@ -317,6 +317,7 @@ export const Game = () => {
       );
     }
     case 'ENDED':
+      stopGamePolling();
       return <GameEnded players={data.game.players} />;
     default:
       return (
