@@ -9,7 +9,7 @@ export const Card = ({ id, src, onClick, votes = [], bordered }) =>
         centered
         src={src}
         maxWidth="100%"
-        style={{ cursor: 'pointer', border: `${bordered ? '5px solid red' : ''}` }}
+        style={{ cursor: 'pointer', border: `${bordered ? '5px solid green' : ''}` }}
       />
     </Flex>
   ) : (
@@ -19,7 +19,7 @@ export const Card = ({ id, src, onClick, votes = [], bordered }) =>
           centered
           src={src}
           maxWidth="100%"
-          style={{ cursor: 'pointer', border: `${bordered ? '5px solid red' : ''}` }}
+          style={{ cursor: 'pointer', border: `${bordered ? '5px solid green' : ''}` }}
         />
       </Flex>
       <div style={{ position: 'absolute', bottom: '5%', right: '5%' }}>

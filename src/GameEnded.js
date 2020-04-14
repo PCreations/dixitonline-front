@@ -51,7 +51,7 @@ export const GameEnded = ({ players }) => {
 GameEnded.propTypes = {
   players: PropTypes.arrayOf(
     PropTypes.shape({
-      score: PropTypes.string.isRequired,
+      score: PropTypes.number.isRequired,
       username: PropTypes.string.isRequired,
     })
   ),

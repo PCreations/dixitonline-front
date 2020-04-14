@@ -39,7 +39,8 @@ export const voteResult = () => (
     cards={cards.map((c, index) => ({
       ...c,
       ownedByStoryteller: index === 1,
-      votes: index === 0 ? ['Jaz'] : index === 1 ? ['Pierre', 'Noyo', 'Mike', 'Jaz'] : [],
+      username: ['Pierre', 'Antho', 'Jaz', 'Noyo', 'Mike', 'Yoyo'][index],
+      votes: index === 0 ? ['Jaz'] : index === 1 ? ['Pierre', 'Noyo', 'Mike', 'Yoyo'] : [],
     }))}
   />
 );

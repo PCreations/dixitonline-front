@@ -156,7 +156,7 @@ exports[`Storyshots Card Bordered 1`] = `
     className="css-9whsf3"
     style={
       Object {
-        "border": "5px solid red",
+        "border": "5px solid green",
         "cursor": "pointer",
       }
     }
@@ -270,88 +270,112 @@ exports[`Storyshots CardGrid Default Grid 1`] = `
   className="css-1j4sjxz"
 >
   <div
-    className="css-1l4w6pd"
-    onClick={[Function]}
+    className="css-dvxtzn"
   >
-    <img
-      className="css-9whsf3"
-      style={
-        Object {
-          "border": "",
-          "cursor": "pointer",
+    <div
+      className="css-1l4w6pd"
+      onClick={[Function]}
+    >
+      <img
+        className="css-9whsf3"
+        style={
+          Object {
+            "border": "",
+            "cursor": "pointer",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
   <div
-    className="css-1l4w6pd"
-    onClick={[Function]}
+    className="css-dvxtzn"
   >
-    <img
-      className="css-9whsf3"
-      style={
-        Object {
-          "border": "",
-          "cursor": "pointer",
+    <div
+      className="css-1l4w6pd"
+      onClick={[Function]}
+    >
+      <img
+        className="css-9whsf3"
+        style={
+          Object {
+            "border": "",
+            "cursor": "pointer",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
   <div
-    className="css-1l4w6pd"
-    onClick={[Function]}
+    className="css-dvxtzn"
   >
-    <img
-      className="css-9whsf3"
-      style={
-        Object {
-          "border": "",
-          "cursor": "pointer",
+    <div
+      className="css-1l4w6pd"
+      onClick={[Function]}
+    >
+      <img
+        className="css-9whsf3"
+        style={
+          Object {
+            "border": "",
+            "cursor": "pointer",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
   <div
-    className="css-1l4w6pd"
-    onClick={[Function]}
+    className="css-dvxtzn"
   >
-    <img
-      className="css-9whsf3"
-      style={
-        Object {
-          "border": "",
-          "cursor": "pointer",
+    <div
+      className="css-1l4w6pd"
+      onClick={[Function]}
+    >
+      <img
+        className="css-9whsf3"
+        style={
+          Object {
+            "border": "",
+            "cursor": "pointer",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
   <div
-    className="css-1l4w6pd"
-    onClick={[Function]}
+    className="css-dvxtzn"
   >
-    <img
-      className="css-9whsf3"
-      style={
-        Object {
-          "border": "",
-          "cursor": "pointer",
+    <div
+      className="css-1l4w6pd"
+      onClick={[Function]}
+    >
+      <img
+        className="css-9whsf3"
+        style={
+          Object {
+            "border": "",
+            "cursor": "pointer",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
   <div
-    className="css-1l4w6pd"
-    onClick={[Function]}
+    className="css-dvxtzn"
   >
-    <img
-      className="css-9whsf3"
-      style={
-        Object {
-          "border": "",
-          "cursor": "pointer",
+    <div
+      className="css-1l4w6pd"
+      onClick={[Function]}
+    >
+      <img
+        className="css-9whsf3"
+        style={
+          Object {
+            "border": "",
+            "cursor": "pointer",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
 </div>
 `;
@@ -578,6 +602,345 @@ exports[`Storyshots Chose a Username Empty State 1`] = `
       >
         GO
       </button>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots GameEnded Score 1`] = `
+<div
+  className="css-1l4w6pd"
+>
+  <fieldset
+    style={
+      Object {
+        "maxWidth": "600px",
+        "width": "100%",
+      }
+    }
+  >
+    <legend
+      className="ui medium center aligned header"
+    >
+      Résultats de la partie
+    </legend>
+    <div
+      className="ui basic center aligned segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <p>
+        And the winner is...
+      </p>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-gmuwbf"
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-opwzgt"
+          >
+            <div
+              aria-label="Jaz"
+              className="css-1uc1olj"
+            >
+              J
+            </div>
+          </div>
+          <span
+            style={
+              Object {
+                "paddingLeft": "10px",
+              }
+            }
+          >
+            Jaz
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "20px",
+              "marginTop": "20px",
+            }
+          }
+        >
+          <i
+            aria-hidden="true"
+            className="yellow trophy huge icon"
+            onClick={[Function]}
+          />
+          <strong
+            style={
+              Object {
+                "size": "2rem",
+              }
+            }
+          >
+            1er - 
+            14
+             points
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-geek62"
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1rqfuau"
+          >
+            <div
+              aria-label="Pierre"
+              className="css-1uc1olj"
+            >
+              P
+            </div>
+          </div>
+          <span
+            style={
+              Object {
+                "paddingLeft": "10px",
+              }
+            }
+          >
+            Pierre
+          </span>
+        </div>
+        <span>
+          <strong>
+            <i
+              aria-hidden="true"
+              className="grey certificate big icon"
+              onClick={[Function]}
+            />
+            2
+            ème - 
+            12
+             points
+          </strong>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-geek62"
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1f4svg7"
+          >
+            <div
+              aria-label="Anthow"
+              className="css-1uc1olj"
+            >
+              A
+            </div>
+          </div>
+          <span
+            style={
+              Object {
+                "paddingLeft": "10px",
+              }
+            }
+          >
+            Anthow
+          </span>
+        </div>
+        <span>
+          <strong>
+            <i
+              aria-hidden="true"
+              className="brown certificate large icon"
+              onClick={[Function]}
+            />
+            3
+            ème - 
+            10
+             points
+          </strong>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-geek62"
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-kikxgz"
+          >
+            <div
+              aria-label="Noyo"
+              className="css-1uc1olj"
+            >
+              N
+            </div>
+          </div>
+          <span
+            style={
+              Object {
+                "paddingLeft": "10px",
+              }
+            }
+          >
+            Noyo
+          </span>
+        </div>
+        <span>
+          <strong>
+            <i
+              aria-hidden="true"
+              className="certificate icon"
+              onClick={[Function]}
+            />
+            4
+            ème - 
+            8
+             points
+          </strong>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-geek62"
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1vt4lux"
+          >
+            <div
+              aria-label="Yoyo"
+              className="css-1uc1olj"
+            >
+              Y
+            </div>
+          </div>
+          <span
+            style={
+              Object {
+                "paddingLeft": "10px",
+              }
+            }
+          >
+            Yoyo
+          </span>
+        </div>
+        <span>
+          <strong>
+            <i
+              aria-hidden="true"
+              className="certificate icon"
+              onClick={[Function]}
+            />
+            5
+            ème - 
+            7
+             points
+          </strong>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ui basic segment"
+      style={
+        Object {
+          "padding": "0",
+        }
+      }
+    >
+      <div
+        className="css-geek62"
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1sh4ify"
+          >
+            <div
+              aria-label="Mike"
+              className="css-1uc1olj"
+            >
+              M
+            </div>
+          </div>
+          <span
+            style={
+              Object {
+                "paddingLeft": "10px",
+              }
+            }
+          >
+            Mike
+          </span>
+        </div>
+        <span>
+          <strong>
+            <i
+              aria-hidden="true"
+              className="certificate icon"
+              onClick={[Function]}
+            />
+            6
+            ème - 
+            5
+             points
+          </strong>
+        </span>
+      </div>
     </div>
   </fieldset>
 </div>
@@ -1150,15 +1513,20 @@ exports[`Storyshots Input With Placeholder 1`] = `
 `;
 
 exports[`Storyshots Logo Logo 1`] = `
-<img
-  className="ui centered image"
-  src="/dixit.png"
-  style={
-    Object {
-      "padding": "20px",
+<a
+  href="/"
+  onClick={[Function]}
+>
+  <img
+    className="ui centered image"
+    src="/dixit.png"
+    style={
+      Object {
+        "padding": "20px",
+      }
     }
-  }
-/>
+  />
+</a>
 `;
 
 exports[`Storyshots PlayersPanel Players Avatar And Score 1`] = `
@@ -1590,88 +1958,112 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
       className="css-1j4sjxz"
     >
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
     </div>
   </fieldset>
@@ -1699,88 +2091,112 @@ exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
       className="css-1j4sjxz"
     >
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
     </div>
   </fieldset>
@@ -1808,88 +2224,112 @@ exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
       className="css-1j4sjxz"
     >
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
     </div>
   </fieldset>
@@ -1917,88 +2357,112 @@ exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
       className="css-1j4sjxz"
     >
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
     </div>
   </fieldset>
@@ -2036,13 +2500,212 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
       className="css-1j4sjxz"
     >
       <div
-        style={
-          Object {
-            "maxWidth": "400px",
-            "position": "relative",
-          }
-        }
+        className="css-dvxtzn"
       >
+        <span>
+          Carte de 
+          Pierre
+        </span>
+        <div
+          style={
+            Object {
+              "maxWidth": "400px",
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="css-1l4w6pd"
+            onClick={[Function]}
+          >
+            <img
+              className="css-9whsf3"
+              style={
+                Object {
+                  "border": "",
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "bottom": "5%",
+                "position": "absolute",
+                "right": "5%",
+              }
+            }
+          >
+            <div
+              className="css-shnk6d"
+            >
+              <div
+                style={
+                  Object {
+                    "marginRight": "5px",
+                  }
+                }
+              >
+                <div
+                  className="css-70qvj9"
+                >
+                  <div
+                    className="css-opwzgt"
+                  >
+                    <div
+                      aria-label="Jaz"
+                      className="css-1uc1olj"
+                    >
+                      J
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-dvxtzn"
+      >
+        <span>
+          Carte de 
+          Antho
+        </span>
+        <div
+          style={
+            Object {
+              "maxWidth": "400px",
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="css-1l4w6pd"
+            onClick={[Function]}
+          >
+            <img
+              className="css-9whsf3"
+              style={
+                Object {
+                  "border": "5px solid green",
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "bottom": "5%",
+                "position": "absolute",
+                "right": "5%",
+              }
+            }
+          >
+            <div
+              className="css-shnk6d"
+            >
+              <div
+                style={
+                  Object {
+                    "marginRight": "5px",
+                  }
+                }
+              >
+                <div
+                  className="css-70qvj9"
+                >
+                  <div
+                    className="css-1rqfuau"
+                  >
+                    <div
+                      aria-label="Pierre"
+                      className="css-1uc1olj"
+                    >
+                      P
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginRight": "5px",
+                  }
+                }
+              >
+                <div
+                  className="css-70qvj9"
+                >
+                  <div
+                    className="css-kikxgz"
+                  >
+                    <div
+                      aria-label="Noyo"
+                      className="css-1uc1olj"
+                    >
+                      N
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginRight": "5px",
+                  }
+                }
+              >
+                <div
+                  className="css-70qvj9"
+                >
+                  <div
+                    className="css-1sh4ify"
+                  >
+                    <div
+                      aria-label="Mike"
+                      className="css-1uc1olj"
+                    >
+                      M
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginRight": "5px",
+                  }
+                }
+              >
+                <div
+                  className="css-70qvj9"
+                >
+                  <div
+                    className="css-1vt4lux"
+                  >
+                    <div
+                      aria-label="Yoyo"
+                      className="css-1uc1olj"
+                    >
+                      Y
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-dvxtzn"
+      >
+        <span>
+          Carte de 
+          Jaz
+        </span>
         <div
           className="css-1l4w6pd"
           onClick={[Function]}
@@ -2057,51 +2720,14 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
             }
           />
         </div>
-        <div
-          style={
-            Object {
-              "bottom": "5%",
-              "position": "absolute",
-              "right": "5%",
-            }
-          }
-        >
-          <div
-            className="css-shnk6d"
-          >
-            <div
-              style={
-                Object {
-                  "marginRight": "5px",
-                }
-              }
-            >
-              <div
-                className="css-70qvj9"
-              >
-                <div
-                  className="css-opwzgt"
-                >
-                  <div
-                    aria-label="Jaz"
-                    className="css-1uc1olj"
-                  >
-                    J
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div
-        style={
-          Object {
-            "maxWidth": "400px",
-            "position": "relative",
-          }
-        }
+        className="css-dvxtzn"
       >
+        <span>
+          Carte de 
+          Noyo
+        </span>
         <div
           className="css-1l4w6pd"
           onClick={[Function]}
@@ -2110,170 +2736,56 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
             className="css-9whsf3"
             style={
               Object {
-                "border": "5px solid red",
+                "border": "",
                 "cursor": "pointer",
               }
             }
           />
         </div>
+      </div>
+      <div
+        className="css-dvxtzn"
+      >
+        <span>
+          Carte de 
+          Mike
+        </span>
         <div
-          style={
-            Object {
-              "bottom": "5%",
-              "position": "absolute",
-              "right": "5%",
-            }
-          }
+          className="css-1l4w6pd"
+          onClick={[Function]}
         >
-          <div
-            className="css-shnk6d"
-          >
-            <div
-              style={
-                Object {
-                  "marginRight": "5px",
-                }
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
               }
-            >
-              <div
-                className="css-70qvj9"
-              >
-                <div
-                  className="css-1rqfuau"
-                >
-                  <div
-                    aria-label="Pierre"
-                    className="css-1uc1olj"
-                  >
-                    P
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              style={
-                Object {
-                  "marginRight": "5px",
-                }
-              }
-            >
-              <div
-                className="css-70qvj9"
-              >
-                <div
-                  className="css-kikxgz"
-                >
-                  <div
-                    aria-label="Noyo"
-                    className="css-1uc1olj"
-                  >
-                    N
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              style={
-                Object {
-                  "marginRight": "5px",
-                }
-              }
-            >
-              <div
-                className="css-70qvj9"
-              >
-                <div
-                  className="css-1sh4ify"
-                >
-                  <div
-                    aria-label="Mike"
-                    className="css-1uc1olj"
-                  >
-                    M
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              style={
-                Object {
-                  "marginRight": "5px",
-                }
-              }
-            >
-              <div
-                className="css-70qvj9"
-              >
-                <div
-                  className="css-opwzgt"
-                >
-                  <div
-                    aria-label="Jaz"
-                    className="css-1uc1olj"
-                  >
-                    J
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            }
+          />
         </div>
       </div>
       <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
+        className="css-dvxtzn"
       >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
+        <span>
+          Carte de 
+          Yoyo
+        </span>
+        <div
+          className="css-1l4w6pd"
+          onClick={[Function]}
+        >
+          <img
+            className="css-9whsf3"
+            style={
+              Object {
+                "border": "",
+                "cursor": "pointer",
+              }
             }
-          }
-        />
-      </div>
-      <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
-      >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
-            }
-          }
-        />
-      </div>
-      <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
-      >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
-            }
-          }
-        />
-      </div>
-      <div
-        className="css-1l4w6pd"
-        onClick={[Function]}
-      >
-        <img
-          className="css-9whsf3"
-          style={
-            Object {
-              "border": "",
-              "cursor": "pointer",
-            }
-          }
-        />
+          />
+        </div>
       </div>
     </div>
   </fieldset>
