@@ -1385,7 +1385,7 @@ exports[`Storyshots GameWaitingForPlayers With Some Players 1`] = `
       }
     >
       <p>
-        En attente de joueurs...
+        En attente de joueurs... (4 joueurs minimum, 6 maximum)
       </p>
     </div>
     <div

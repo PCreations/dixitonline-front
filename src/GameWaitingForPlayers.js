@@ -17,7 +17,7 @@ export const GameWaitingForPlayers = ({ gameId, players, isHost, onStartGameClic
           ? isHost
             ? 'Vous pouvez maintenant lancer la partie'
             : 'En attente du lancement de la partie'
-          : 'En attente de joueurs...'}
+          : 'En attente de joueurs... (4 joueurs minimum, 6 maximum)'}
       </p>
     </Segment>
     {players.map(({ id, username }) => (
