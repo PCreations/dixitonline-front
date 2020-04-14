@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
+import { firebaseApp } from '../firebase-app';
 import { AuthStateContext } from '../AuthContext';
 import { Logo } from '../Logo';
 import { GameSelection } from '../GameSelection';
@@ -31,11 +32,24 @@ export const Lobby = () => {
 
   const joinGame = useCallback(
     ({ code }) => {
+      firebaseApp.analytics().logEvent('join_game', {
+        gameId: code,
+        userId: currentUser.id,
+        userUsername: currentUser.username,
+      });
       const route = `/join/${code}`;
       history.push(route);
     },
-    [history]
+    [currentUser, history]
   );
+
+  const handleCreateNewGame = useCallback(() => {
+    firebaseApp.analytics().logEvent('game_created', {
+      userId: currentUser.id,
+      userUsername: currentUser.username,
+    });
+    createGame();
+  }, [currentUser, createGame]);
 
   useEffect(() => {
     if (data && data.gameCreateGame) {
@@ -49,7 +63,7 @@ export const Lobby = () => {
       <Logo />
       <GameSelection
         authenticatedUser={currentUser.username}
-        onCreateNewGameClicked={createGame}
+        onCreateNewGameClicked={handleCreateNewGame}
         onJoinGameSubmitted={joinGame}
         createNewGameLoading={loading}
       />

@@ -10,10 +10,9 @@ export const Login = () => {
   const history = useHistory();
   const location = useLocation();
   const setAuthState = useContext(AuthSetStateContext);
-  console.log('FIREBASE APP', firebaseApp);
 
   useEffect(() => {
-    firebaseApp.auth().onAuthStateChanged((user) => {
+    return firebaseApp.auth().onAuthStateChanged((user) => {
       if (user) {
         const { from } = location.state || { from: { pathname: '/' } };
         history.replace(from);

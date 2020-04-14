@@ -20,12 +20,35 @@ export const AuthProvider = ({ children }) => {
             isAuthenticated: true,
             currentUser: {
               id: user.uid,
-              username: user.displayName || state.currentUser.usrname,
+              username: state.username || user.displayName,
             },
           }));
         }
       }),
     [setAuthState]
+  );
+
+  useEffect(
+    () =>
+      firebaseApp.auth().onAuthStateChanged((user) => {
+        if (user) {
+          const alreadyLoggedIn = localStorage.getItem('currentUser') !== null;
+          const currentUser = {
+            id: user.uid,
+            username: user.displayName || authState.currentUser.username,
+          };
+          console.log('Already logged in ? ', alreadyLoggedIn);
+          if (!alreadyLoggedIn) {
+            console.log('sending login event');
+            firebaseApp.analytics().logEvent('login', {
+              userId: currentUser.id,
+              userUsername: currentUser.username,
+            });
+          }
+          localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        }
+      }),
+    [authState]
   );
 
   useEffect(() => {
