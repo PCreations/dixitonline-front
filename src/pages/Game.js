@@ -224,6 +224,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
                   src: card.url,
                   ownedByStoryteller: playerId === storyteller.id,
                   votes: votes.map((p) => p.name),
+                  username: players.find((p) => p.id === playerId).username,
                 }))}
                 clue={data.getTurnPhase.clue}
                 storytellerUsername={storyteller.username}
