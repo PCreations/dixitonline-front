@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import gql from 'graphql-tag';
 import { useParams, useHistory } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
+import { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/core';
 
 const JOIN_GAME = gql`
   mutation JoinGame($joinGameInput: GameJoinGameInput!) {
@@ -22,7 +23,7 @@ const JOIN_GAME = gql`
 export const JoinGame = () => {
   const { gameId } = useParams();
   const history = useHistory();
-  const [joinGame, { data, loading }] = useMutation(JOIN_GAME, { variables: { joinGameInput: { gameId } } });
+  const [joinGame, { error, data, loading }] = useMutation(JOIN_GAME, { variables: { joinGameInput: { gameId } } });
 
   useEffect(() => {
     joinGame();
@@ -43,6 +44,15 @@ export const JoinGame = () => {
   }, [data, history, gameId]);
 
   if (loading) return 'Loading...';
+
+  if (error)
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        <AlertTitle mr={2}>Erreur ! </AlertTitle>
+        <AlertDescription>Aucun jeu n'existe pour ce code</AlertDescription>
+      </Alert>
+    );
 
   return (
     <div>

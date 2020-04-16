@@ -269,7 +269,11 @@ export const Game = () => {
       <Alert status="error">
         <AlertIcon />
         <AlertTitle mr={2}>Une erreur est survenue :(</AlertTitle>
-        <AlertDescription>Essayez de rafraîchir la page</AlertDescription>
+        <AlertDescription>
+          {error.message.includes('not found')
+            ? "Aucune partie n'existe pour ce code !"
+            : 'Essayez de rafraîchir la page'}
+        </AlertDescription>
       </Alert>
     );
   }
