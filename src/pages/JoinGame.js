@@ -23,22 +23,26 @@ export const JoinGame = () => {
   const { gameId } = useParams();
   const history = useHistory();
   const [joinGame, { data, loading }] = useMutation(JOIN_GAME, { variables: { joinGameInput: { gameId } } });
+
   useEffect(() => {
     joinGame();
+  }, [joinGame]);
+
+  useEffect(() => {
     if (data?.gameJoinGame.__typename === 'GameJoinGameResultSuccess') {
       history.push(`/game/${gameId}`);
     }
-  }, []);
+  }, [data, gameId, history]);
+
+  useEffect(() => {
+    if (data?.gameJoinGame.__typename === 'GameJoinGameResultError') {
+      if (data.gameJoinGame.type === 'GAME_ALREADY_JOINED') {
+        history.push(`/game/${gameId}`);
+      }
+    }
+  }, [data, history, gameId]);
 
   if (loading) return 'Loading...';
-
-  console.log(data);
-  if (data?.gameJoinGame.__typename === 'GameJoinGameResultError') {
-    if (data.gameJoinGame.type === 'GAME_ALREADY_JOINED') {
-      history.push(`/game/${gameId}`);
-    }
-    return data.gameJoinGame.type;
-  }
 
   return (
     <div>
