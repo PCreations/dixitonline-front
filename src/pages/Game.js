@@ -182,9 +182,13 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
           paddingBottom: 0,
         }}
       >
-        <span>
-          Tours restants : <strong>{remainingTurns}</strong>
-        </span>
+        {remainingTurns === 0 ? (
+          <span>Dernier tour !</span>
+        ) : (
+          <span>
+            Tours restants : <strong>{remainingTurns + 1}</strong>
+          </span>
+        )}
       </Segment>
       {(() => {
         switch (data.getTurnPhase.name) {
