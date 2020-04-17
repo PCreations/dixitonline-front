@@ -163,7 +163,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
     id: player.id,
     username: player.name,
     isStoryteller: player.id === data.getTurnPhase.storytellerId,
-    score: totalPlayerScoreById[player.id],
+    score: totalPlayerScoreById[player.id] + player.score,
     isReady: player.readyForNextPhase,
   }));
   const storyteller = players.find((p) => p.isStoryteller);
@@ -209,11 +209,8 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
             return (
               <VotingPhase
                 turnId={turnId}
-                cards={
-                  isStoryteller || currentPlayer.isReady
-                    ? data.getTurnPhase.hand
-                    : data.getTurnPhase.board.map(({ card }) => ({ id: card.id, src: card.url }))
-                }
+                board={data.getTurnPhase.board.map(({ card }) => ({ id: card.id, src: card.url }))}
+                cards={data.getTurnPhase.hand}
                 clue={data.getTurnPhase.clue}
                 storytellerUsername={storyteller.username}
                 isStoryteller={isStoryteller}
@@ -221,6 +218,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
               />
             );
           case 'SCORING':
+            console.log(data.getTurnPhase.players);
             return (
               <ScoringPhase
                 cards={data.getTurnPhase.board.map(({ card, playerId, votes }) => ({
@@ -229,6 +227,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
                   ownedByStoryteller: playerId === storyteller.id,
                   votes: votes.map((p) => p.name),
                   username: players.find((p) => p.id === playerId).username,
+                  score: data.getTurnPhase.players.find((p) => p.id === playerId).score,
                 }))}
                 clue={data.getTurnPhase.clue}
                 storytellerUsername={storyteller.username}

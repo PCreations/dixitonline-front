@@ -23,7 +23,7 @@ const TURN_VOTE = gql`
   ${PhaseFragment}
 `;
 
-export const VotingPhase = ({ turnId, cards, clue, storytellerUsername, isStoryteller, hasPlayed }) => {
+export const VotingPhase = ({ turnId, board, cards, clue, storytellerUsername, isStoryteller, hasPlayed }) => {
   const [vote, { error, data }] = useMutation(TURN_VOTE);
 
   const handleVote = useCallback(
@@ -55,9 +55,17 @@ export const VotingPhase = ({ turnId, cards, clue, storytellerUsername, isStoryt
         />
       )}
       {isStoryteller || hasPlayed ? (
-        <NoModalContentTitledCardGrid cards={cards} />
+        <>
+          <NoModalContentTitledCardGrid cards={board} title="Cartes soumises au vote" />
+          <hr />
+          <NoModalContentTitledCardGrid cards={cards} />
+        </>
       ) : (
-        <PlayerVoteCardTitledCardGrid cards={cards} storyteller={storytellerUsername} onCardVoted={handleVote} />
+        <>
+          <PlayerVoteCardTitledCardGrid cards={board} storyteller={storytellerUsername} onCardVoted={handleVote} />
+          <hr />
+          <NoModalContentTitledCardGrid cards={cards} />
+        </>
       )}
     </>
   );

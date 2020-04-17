@@ -46,8 +46,8 @@ const TitledCardGrid = ({ cards, title, children, renderBeforeCards }) => {
   );
 };
 
-export const NoModalContentTitledCardGrid = ({ cards }) => {
-  return <TitledCardGrid title="Votre main" cards={cards} />;
+export const NoModalContentTitledCardGrid = ({ cards, title = 'Votre main' }) => {
+  return <TitledCardGrid title={title} cards={cards} />;
 };
 
 export const StorytellerTitledCardGrid = ({ cards, onClueSubmitted }) => {
@@ -135,6 +135,7 @@ PlayersVoteResultTitleCardGrid.propTypes = {
       src: PropTypes.string.isRequired,
       ownedByStoryteller: PropTypes.bool.isRequired,
       votes: PropTypes.arrayOf(PropTypes.string),
+      score: PropTypes.number.isRequired,
     })
   ),
 };
