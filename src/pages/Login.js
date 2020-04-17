@@ -4,7 +4,9 @@ import { useHistory, useLocation } from 'react-router-dom';
 import { firebaseApp } from '../firebase-app';
 import { ChoseUsername } from '../ChoseUsername';
 import { Logo } from '../Logo';
+import { Footer } from '../Footer';
 import { AuthSetStateContext } from '../AuthContext';
+import { Segment, Icon } from 'semantic-ui-react';
 
 export const Login = () => {
   const history = useHistory();
@@ -43,6 +45,7 @@ export const Login = () => {
     <Flex flexDirection="column" alignItems="center" justifyItems="center">
       <Logo />
       <ChoseUsername onUsernameSubmitted={signIn} />
+      <Footer />
     </Flex>
   );
 };

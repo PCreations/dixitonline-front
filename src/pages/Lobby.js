@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/react-hooks';
 import { firebaseApp } from '../firebase-app';
 import { AuthStateContext } from '../AuthContext';
 import { Logo } from '../Logo';
+import { Footer } from '../Footer';
 import { GameSelection } from '../GameSelection';
 
 const CREATE_GAME = gql`
@@ -67,6 +68,7 @@ export const Lobby = () => {
         onJoinGameSubmitted={joinGame}
         createNewGameLoading={loading}
       />
+      <Footer />
     </>
   );
 };

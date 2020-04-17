@@ -4,6 +4,6 @@ import { Image } from 'semantic-ui-react';
 
 export const Logo = () => (
   <Link to="/">
-    <Image src="/dixit.png" centered style={{ padding: '20px' }} />
+    <Image src="/dixit.png" centered style={{ padding: '20px' }} alt="Dixit Online" />
   </Link>
 );
