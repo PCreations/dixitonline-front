@@ -31,6 +31,7 @@ export const JoinGame = () => {
 
   useEffect(() => {
     if (data?.gameJoinGame.__typename === 'GameJoinGameResultSuccess') {
+      console.log('Join game success, redirecting to game');
       history.push(`/game/${gameId}`);
     }
   }, [data, gameId, history]);
@@ -38,6 +39,7 @@ export const JoinGame = () => {
   useEffect(() => {
     if (data?.gameJoinGame.__typename === 'GameJoinGameResultError') {
       if (data.gameJoinGame.type === 'GAME_ALREADY_JOINED') {
+        console.log('Game already joined, redirecting to game');
         history.push(`/game/${gameId}`);
       }
     }
@@ -51,6 +53,15 @@ export const JoinGame = () => {
         <AlertIcon />
         <AlertTitle mr={2}>Erreur ! </AlertTitle>
         <AlertDescription>Aucun jeu n'existe pour ce code</AlertDescription>
+      </Alert>
+    );
+
+  if (data?.gameJoinGame?.type === 'MAXIMUM_NUMBER_OF_PLAYERS_REACHED')
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        <AlertTitle mr={2}>Erreur ! </AlertTitle>
+        <AlertDescription>Ce jeu est déjà complet</AlertDescription>
       </Alert>
     );
 

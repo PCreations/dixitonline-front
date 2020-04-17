@@ -263,9 +263,24 @@ export const Game = () => {
   useEffect(() => {
     startGamePolling(2000);
     return stopGamePolling;
-  }, []);
+  }, [startGamePolling, stopGamePolling]);
+
+  useEffect(() => {
+    if (error) stopGamePolling();
+  }, [error, stopGamePolling]);
 
   const { currentUser } = useContext(AuthStateContext);
+
+  useEffect(() => {
+    if (data) {
+      const isNotInGame = data && playerNotInGame(currentUser.id, data.game.players);
+      console.log('isNotInGame ?', isNotInGame, currentUser.id, data.game.players);
+      if (data.game.status === 'WAITING_FOR_PLAYERS' && isNotInGame) {
+        console.log('redirecting to join');
+        history.push(`/join/${data.game.id}`);
+      }
+    }
+  }, [data, currentUser, history]);
 
   if (error) {
     stopGamePolling();
@@ -286,18 +301,14 @@ export const Game = () => {
     return <Loading />;
   }
 
-  if (playerNotInGame(currentUser.id, data.game.players)) {
-    if (data.game.status !== 'WAITING_FOR_PLAYERS') {
-      stopGamePolling();
-      return (
-        <Alert status="error">
-          <AlertIcon />
-          <AlertTitle mr={2}>Oups !</AlertTitle>
-          <AlertDescription>Vous n'êtes pas dans cette partie</AlertDescription>
-        </Alert>
-      );
-    }
-    history.push(`/join/${data.game.id}`);
+  if (data && playerNotInGame(currentUser.id, data.game.players) && data.game.status !== 'WAITING_FOR_PLAYERS') {
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        <AlertTitle mr={2}>Oups !</AlertTitle>
+        <AlertDescription>Vous n'êtes pas dans cette partie</AlertDescription>
+      </Alert>
+    );
   }
 
   switch (data.game.status) {
