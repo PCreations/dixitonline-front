@@ -101,7 +101,7 @@ export const PlayerVoteCardTitledCardGrid = ({ cards, storyteller, onCardVoted }
   );
 };
 
-export const PlayersVoteResultTitleCardGrid = ({ cards, onReadyForNextTurn }) => {
+export const PlayersVoteResultTitleCardGrid = ({ cards, onReadyForNextTurn, isLastTurn }) => {
   const findCard = (cardId) => cards.find((c) => c.id === cardId);
 
   const [loading, setLoading] = useState(false);
@@ -118,7 +118,7 @@ export const PlayersVoteResultTitleCardGrid = ({ cards, onReadyForNextTurn }) =>
       renderBeforeCards={() => (
         <Segment basic textAlign="center">
           <Button primary onClick={handleOnReadyForNextTurn} loading={loading}>
-            Passer au prochain tour
+            {isLastTurn ? 'Voir le classement final !' : 'Passer au prochain tour'}
           </Button>
         </Segment>
       )}

@@ -232,6 +232,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
                 clue={data.getTurnPhase.clue}
                 storytellerUsername={storyteller.username}
                 isStoryteller={isStoryteller}
+                isLastTurn={remainingTurns === 0}
                 onReadyForNextTurn={handleReadyForNextTurn}
               />
             );
