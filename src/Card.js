@@ -7,6 +7,7 @@ export const Card = ({ id, src, onClick, votes = [], bordered }) =>
     <Flex key={id} justifyContent="center" onClick={() => onClick({ id })}>
       <Image
         centered
+        rounded={10}
         src={src}
         maxWidth="100%"
         style={{ cursor: 'pointer', border: `${bordered ? '5px solid green' : ''}` }}
@@ -17,6 +18,7 @@ export const Card = ({ id, src, onClick, votes = [], bordered }) =>
       <Flex key={id} justifyContent="center" onClick={() => onClick({ id })}>
         <Image
           centered
+          rounded={10}
           src={src}
           maxWidth="100%"
           style={{ cursor: 'pointer', border: `${bordered ? '5px solid green' : ''}` }}

@@ -153,7 +153,7 @@ exports[`Storyshots Card Bordered 1`] = `
   onClick={[Function]}
 >
   <img
-    className="css-9whsf3"
+    className="css-eb87cz"
     style={
       Object {
         "border": "5px solid green",
@@ -170,7 +170,7 @@ exports[`Storyshots Card Card 1`] = `
   onClick={[Function]}
 >
   <img
-    className="css-9whsf3"
+    className="css-eb87cz"
     style={
       Object {
         "border": "",
@@ -195,7 +195,7 @@ exports[`Storyshots Card With Votes 1`] = `
     onClick={[Function]}
   >
     <img
-      className="css-9whsf3"
+      className="css-eb87cz"
       style={
         Object {
           "border": "",
@@ -277,7 +277,7 @@ exports[`Storyshots CardGrid Default Grid 1`] = `
       onClick={[Function]}
     >
       <img
-        className="css-9whsf3"
+        className="css-eb87cz"
         style={
           Object {
             "border": "",
@@ -295,7 +295,7 @@ exports[`Storyshots CardGrid Default Grid 1`] = `
       onClick={[Function]}
     >
       <img
-        className="css-9whsf3"
+        className="css-eb87cz"
         style={
           Object {
             "border": "",
@@ -313,7 +313,7 @@ exports[`Storyshots CardGrid Default Grid 1`] = `
       onClick={[Function]}
     >
       <img
-        className="css-9whsf3"
+        className="css-eb87cz"
         style={
           Object {
             "border": "",
@@ -331,7 +331,7 @@ exports[`Storyshots CardGrid Default Grid 1`] = `
       onClick={[Function]}
     >
       <img
-        className="css-9whsf3"
+        className="css-eb87cz"
         style={
           Object {
             "border": "",
@@ -349,7 +349,7 @@ exports[`Storyshots CardGrid Default Grid 1`] = `
       onClick={[Function]}
     >
       <img
-        className="css-9whsf3"
+        className="css-eb87cz"
         style={
           Object {
             "border": "",
@@ -367,7 +367,7 @@ exports[`Storyshots CardGrid Default Grid 1`] = `
       onClick={[Function]}
     >
       <img
-        className="css-9whsf3"
+        className="css-eb87cz"
         style={
           Object {
             "border": "",
@@ -2038,7 +2038,7 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2056,7 +2056,7 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2074,7 +2074,7 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2092,7 +2092,7 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2110,7 +2110,7 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2128,7 +2128,7 @@ exports[`Storyshots TitledCardGrid No Modal Content 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2171,7 +2171,7 @@ exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2189,7 +2189,7 @@ exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2207,7 +2207,7 @@ exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2225,7 +2225,7 @@ exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2243,7 +2243,7 @@ exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2261,7 +2261,7 @@ exports[`Storyshots TitledCardGrid Player Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2304,7 +2304,7 @@ exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2322,7 +2322,7 @@ exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2340,7 +2340,7 @@ exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2358,7 +2358,7 @@ exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2376,7 +2376,7 @@ exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2394,7 +2394,7 @@ exports[`Storyshots TitledCardGrid Player Vote Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2437,7 +2437,7 @@ exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2455,7 +2455,7 @@ exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2473,7 +2473,7 @@ exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2491,7 +2491,7 @@ exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2509,7 +2509,7 @@ exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2527,7 +2527,7 @@ exports[`Storyshots TitledCardGrid Storyteller Chose Card 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2593,7 +2593,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
             onClick={[Function]}
           >
             <img
-              className="css-9whsf3"
+              className="css-eb87cz"
               style={
                 Object {
                   "border": "",
@@ -2661,7 +2661,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
             onClick={[Function]}
           >
             <img
-              className="css-9whsf3"
+              className="css-eb87cz"
               style={
                 Object {
                   "border": "5px solid green",
@@ -2787,7 +2787,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2810,7 +2810,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2833,7 +2833,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
@@ -2856,7 +2856,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
           onClick={[Function]}
         >
           <img
-            className="css-9whsf3"
+            className="css-eb87cz"
             style={
               Object {
                 "border": "",
