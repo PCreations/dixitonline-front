@@ -1022,6 +1022,21 @@ exports[`Storyshots GameSelection Default State 1`] = `
       >
         rejoindre
       </button>
+      <div
+        className="ui basic center aligned segment"
+      >
+        <a
+          alt="dixit online discord server"
+          href="https://discord.gg/WQRMufE"
+        >
+          <i
+            aria-hidden="true"
+            className="discord icon"
+            onClick={[Function]}
+          />
+          Trouvez des parties en attente de joueurs grâce à Discord !
+        </a>
+      </div>
     </div>
   </fieldset>
 </div>

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Segment, Message, Form } from 'semantic-ui-react';
+import { Segment, Message, Form, Icon } from 'semantic-ui-react';
 import { TitledBox } from './TitledBox';
 import { Input } from './Input';
 import { Button } from './Button';
@@ -53,6 +53,12 @@ export const GameSelection = ({
         <Button style={{ marginTop: '10px' }} onClick={handleJoinGameSubmitted}>
           rejoindre
         </Button>
+        <Segment basic textAlign="center">
+          <a href="https://discord.gg/WQRMufE" alt="dixit online discord server">
+            <Icon name="discord" />
+            Trouvez des parties en attente de joueurs grâce à Discord !
+          </a>
+        </Segment>
       </Segment>
     </TitledBox>
   );
