@@ -1518,6 +1518,7 @@ exports[`Storyshots Logo Logo 1`] = `
   onClick={[Function]}
 >
   <img
+    alt="Dixit Online"
     className="ui centered image"
     src="/dixit.png"
     style={
@@ -1542,293 +1543,377 @@ exports[`Storyshots PlayersPanel Players Avatar And Score 1`] = `
   <div
     className="css-gg4vpm"
   >
-    <div
-      style={
-        Object {
-          "position": "relative",
-        }
-      }
-    >
-      <i
-        aria-hidden="true"
-        className="edit icon"
-        onClick={[Function]}
+    <div>
+      <div
         style={
           Object {
-            "left": "34%",
-            "position": "absolute",
-            "top": "-21px",
+            "paddingBottom": "3px",
+            "textAlign": "center",
           }
         }
-      />
-      <div
-        className="css-70qvj9"
       >
+        <span>
+          Anthow
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <i
+          aria-hidden="true"
+          className="edit icon"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": "34%",
+              "position": "absolute",
+              "top": "-41px",
+            }
+          }
+        />
         <div
-          className="css-1ee5mdm"
+          className="css-70qvj9"
         >
           <div
-            aria-label="Anthow"
-            className="css-1uc1olj"
+            className="css-1ee5mdm"
           >
-            A
-          </div>
-          <i
-            aria-hidden="true"
-            className="check circle outline icon"
-            onClick={[Function]}
-            style={
-              Object {
-                "bottom": "8px",
-                "color": "black",
-                "position": "absolute",
-                "right": "-8px",
+            <div
+              aria-label="Anthow"
+              className="css-1uc1olj"
+            >
+              A
+            </div>
+            <i
+              aria-hidden="true"
+              className="check circle outline icon"
+              onClick={[Function]}
+              style={
+                Object {
+                  "bottom": "8px",
+                  "color": "black",
+                  "position": "absolute",
+                  "right": "-8px",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
-      </div>
-      <span
-        style={
-          Object {
-            "left": "17px",
-            "position": "relative",
-            "top": "5px",
+        <span
+          style={
+            Object {
+              "left": "17px",
+              "position": "relative",
+              "top": "5px",
+            }
           }
-        }
-      >
-        3
-      </span>
+        >
+          3
+        </span>
+      </div>
     </div>
-    <div
-      style={
-        Object {
-          "position": "relative",
-        }
-      }
-    >
+    <div>
       <div
-        className="css-70qvj9"
-      >
-        <div
-          className="css-1sh4ify"
-        >
-          <div
-            aria-label="Mike"
-            className="css-1uc1olj"
-          >
-            M
-          </div>
-          <i
-            aria-hidden="true"
-            className="hourglass start icon"
-            onClick={[Function]}
-            style={
-              Object {
-                "bottom": "8px",
-                "color": "black",
-                "position": "absolute",
-                "right": "-8px",
-              }
-            }
-          />
-        </div>
-      </div>
-      <span
         style={
           Object {
-            "left": "17px",
-            "position": "relative",
-            "top": "5px",
+            "paddingBottom": "3px",
+            "textAlign": "center",
           }
         }
       >
-        1
-      </span>
+        <span>
+          Mike
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1sh4ify"
+          >
+            <div
+              aria-label="Mike"
+              className="css-1uc1olj"
+            >
+              M
+            </div>
+            <i
+              aria-hidden="true"
+              className="hourglass start icon"
+              onClick={[Function]}
+              style={
+                Object {
+                  "bottom": "8px",
+                  "color": "black",
+                  "position": "absolute",
+                  "right": "-8px",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "left": "17px",
+              "position": "relative",
+              "top": "5px",
+            }
+          }
+        >
+          1
+        </span>
+      </div>
     </div>
-    <div
-      style={
-        Object {
-          "position": "relative",
-        }
-      }
-    >
+    <div>
       <div
-        className="css-70qvj9"
-      >
-        <div
-          className="css-opwzgt"
-        >
-          <div
-            aria-label="Jaz"
-            className="css-1uc1olj"
-          >
-            J
-          </div>
-          <i
-            aria-hidden="true"
-            className="check circle outline icon"
-            onClick={[Function]}
-            style={
-              Object {
-                "bottom": "8px",
-                "color": "black",
-                "position": "absolute",
-                "right": "-8px",
-              }
-            }
-          />
-        </div>
-      </div>
-      <span
         style={
           Object {
-            "left": "17px",
-            "position": "relative",
-            "top": "5px",
+            "paddingBottom": "3px",
+            "textAlign": "center",
           }
         }
       >
-        2
-      </span>
+        <span>
+          Jaz
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-opwzgt"
+          >
+            <div
+              aria-label="Jaz"
+              className="css-1uc1olj"
+            >
+              J
+            </div>
+            <i
+              aria-hidden="true"
+              className="check circle outline icon"
+              onClick={[Function]}
+              style={
+                Object {
+                  "bottom": "8px",
+                  "color": "black",
+                  "position": "absolute",
+                  "right": "-8px",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "left": "17px",
+              "position": "relative",
+              "top": "5px",
+            }
+          }
+        >
+          2
+        </span>
+      </div>
     </div>
-    <div
-      style={
-        Object {
-          "position": "relative",
-        }
-      }
-    >
+    <div>
       <div
-        className="css-70qvj9"
-      >
-        <div
-          className="css-1rqfuau"
-        >
-          <div
-            aria-label="Pierre"
-            className="css-1uc1olj"
-          >
-            P
-          </div>
-          <i
-            aria-hidden="true"
-            className="check circle outline icon"
-            onClick={[Function]}
-            style={
-              Object {
-                "bottom": "8px",
-                "color": "black",
-                "position": "absolute",
-                "right": "-8px",
-              }
-            }
-          />
-        </div>
-      </div>
-      <span
         style={
           Object {
-            "left": "17px",
-            "position": "relative",
-            "top": "5px",
+            "paddingBottom": "3px",
+            "textAlign": "center",
           }
         }
       >
-        0
-      </span>
+        <span>
+          Pierre
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1rqfuau"
+          >
+            <div
+              aria-label="Pierre"
+              className="css-1uc1olj"
+            >
+              P
+            </div>
+            <i
+              aria-hidden="true"
+              className="check circle outline icon"
+              onClick={[Function]}
+              style={
+                Object {
+                  "bottom": "8px",
+                  "color": "black",
+                  "position": "absolute",
+                  "right": "-8px",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "left": "17px",
+              "position": "relative",
+              "top": "5px",
+            }
+          }
+        >
+          0
+        </span>
+      </div>
     </div>
-    <div
-      style={
-        Object {
-          "position": "relative",
-        }
-      }
-    >
+    <div>
       <div
-        className="css-70qvj9"
-      >
-        <div
-          className="css-kikxgz"
-        >
-          <div
-            aria-label="Noyo"
-            className="css-1uc1olj"
-          >
-            N
-          </div>
-          <i
-            aria-hidden="true"
-            className="hourglass start icon"
-            onClick={[Function]}
-            style={
-              Object {
-                "bottom": "8px",
-                "color": "black",
-                "position": "absolute",
-                "right": "-8px",
-              }
-            }
-          />
-        </div>
-      </div>
-      <span
         style={
           Object {
-            "left": "17px",
-            "position": "relative",
-            "top": "5px",
+            "paddingBottom": "3px",
+            "textAlign": "center",
           }
         }
       >
-        5
-      </span>
+        <span>
+          Noyo
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-kikxgz"
+          >
+            <div
+              aria-label="Noyo"
+              className="css-1uc1olj"
+            >
+              N
+            </div>
+            <i
+              aria-hidden="true"
+              className="hourglass start icon"
+              onClick={[Function]}
+              style={
+                Object {
+                  "bottom": "8px",
+                  "color": "black",
+                  "position": "absolute",
+                  "right": "-8px",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "left": "17px",
+              "position": "relative",
+              "top": "5px",
+            }
+          }
+        >
+          5
+        </span>
+      </div>
     </div>
-    <div
-      style={
-        Object {
-          "position": "relative",
-        }
-      }
-    >
+    <div>
       <div
-        className="css-70qvj9"
-      >
-        <div
-          className="css-1vt4lux"
-        >
-          <div
-            aria-label="Yoyo"
-            className="css-1uc1olj"
-          >
-            Y
-          </div>
-          <i
-            aria-hidden="true"
-            className="hourglass start icon"
-            onClick={[Function]}
-            style={
-              Object {
-                "bottom": "8px",
-                "color": "black",
-                "position": "absolute",
-                "right": "-8px",
-              }
-            }
-          />
-        </div>
-      </div>
-      <span
         style={
           Object {
-            "left": "17px",
-            "position": "relative",
-            "top": "5px",
+            "paddingBottom": "3px",
+            "textAlign": "center",
           }
         }
       >
-        4
-      </span>
+        <span>
+          Yoyo
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="css-70qvj9"
+        >
+          <div
+            className="css-1vt4lux"
+          >
+            <div
+              aria-label="Yoyo"
+              className="css-1uc1olj"
+            >
+              Y
+            </div>
+            <i
+              aria-hidden="true"
+              className="hourglass start icon"
+              onClick={[Function]}
+              style={
+                Object {
+                  "bottom": "8px",
+                  "color": "black",
+                  "position": "absolute",
+                  "right": "-8px",
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          style={
+            Object {
+              "left": "17px",
+              "position": "relative",
+              "top": "5px",
+            }
+          }
+        >
+          4
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -1842,22 +1927,16 @@ exports[`Storyshots StorytellerClue Default State 1`] = `
     Anthow a donné l'indice :
   </p>
   <div
-    className="ui grey inverted raised segment"
+    className="ui teal large inverted raised segment"
   >
-    <h4
-      className="ui header"
-    >
+    <p>
       <i
         aria-hidden="true"
-        className="quote left small icon"
+        className="quote left large icon"
         onClick={[Function]}
       />
-      <div
-        className="content"
-      >
-        danger sous-marin
-      </div>
-    </h4>
+      danger sous-marin
+    </p>
   </div>
 </div>
 `;
@@ -1870,22 +1949,16 @@ exports[`Storyshots StorytellerClue Seen As Storyteller 1`] = `
     Vous avez donné l'indice : 
   </p>
   <div
-    className="ui grey inverted raised segment"
+    className="ui teal large inverted raised segment"
   >
-    <h4
-      className="ui header"
-    >
+    <p>
       <i
         aria-hidden="true"
-        className="quote left small icon"
+        className="quote left large icon"
         onClick={[Function]}
       />
-      <div
-        className="content"
-      >
-        danger sous-marin
-      </div>
-    </h4>
+      danger sous-marin
+    </p>
   </div>
 </div>
 `;
@@ -2505,6 +2578,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         <span>
           Carte de 
           Pierre
+           (+ 2 points !)
         </span>
         <div
           style={
@@ -2572,6 +2646,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         <span>
           Carte de 
           Antho
+          
         </span>
         <div
           style={
@@ -2705,6 +2780,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         <span>
           Carte de 
           Jaz
+           (+ 2 points !)
         </span>
         <div
           className="css-1l4w6pd"
@@ -2727,6 +2803,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         <span>
           Carte de 
           Noyo
+           (+ 2 points !)
         </span>
         <div
           className="css-1l4w6pd"
@@ -2749,6 +2826,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         <span>
           Carte de 
           Mike
+           (+ 2 points !)
         </span>
         <div
           className="css-1l4w6pd"
@@ -2771,6 +2849,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         <span>
           Carte de 
           Yoyo
+           (+ 2 points !)
         </span>
         <div
           className="css-1l4w6pd"

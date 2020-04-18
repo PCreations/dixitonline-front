@@ -41,6 +41,7 @@ export const voteResult = () => (
       ownedByStoryteller: index === 1,
       username: ['Pierre', 'Antho', 'Jaz', 'Noyo', 'Mike', 'Yoyo'][index],
       votes: index === 0 ? ['Jaz'] : index === 1 ? ['Pierre', 'Noyo', 'Mike', 'Yoyo'] : [],
+      score: index === 1 ? 0 : 2,
     }))}
   />
 );
