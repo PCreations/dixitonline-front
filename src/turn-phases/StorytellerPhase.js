@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext } from 'react';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
 import { Segment } from 'semantic-ui-react';
 import { StorytellerTitledCardGrid, NoModalContentTitledCardGrid } from '../TitledCardGrid';
 import { PhaseFragment } from './phase-fragment';
 import { Error } from '../Error';
+import { I18nTranslateContext } from '../I18nContext';
 
 const TURN_DEFINE_CLUE = gql`
   mutation TurnDefineClue($defineClueInput: TurnDefineClueInput!) {
@@ -23,6 +24,7 @@ const TURN_DEFINE_CLUE = gql`
 `;
 
 export const StorytellerPhase = ({ turnId, isStoryteller, cards }) => {
+  const t = useContext(I18nTranslateContext);
   const [defineClue, { error, data }] = useMutation(TURN_DEFINE_CLUE);
 
   const handleClueDefined = useCallback(
@@ -37,10 +39,10 @@ export const StorytellerPhase = ({ turnId, isStoryteller, cards }) => {
   return (
     <>
       <Segment basic textAlign="center">
-        {isStoryteller ? 'Vous êtes le conteur !' : 'En attente du conteur...'}
+        {isStoryteller ? t('turn.you-are-the-storyteller') : t('turn.waiting-for-storyteller')}
       </Segment>
-      {error && <Error title="Oups ! Une erreur inattendue est survenue :(" message={error} />}
-      {defineClueError && <Error title="Oups" message={defineClueError} />}
+      {error && <Error title={`${t('error.oops')} ${t('an-error-has-occured')}`} message={error} />}
+      {defineClueError && <Error title={t('error.oops')} message={defineClueError} />}
       {isStoryteller ? (
         <StorytellerTitledCardGrid cards={cards} onClueSubmitted={handleClueDefined} />
       ) : (

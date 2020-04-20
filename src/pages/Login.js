@@ -6,7 +6,6 @@ import { ChoseUsername } from '../ChoseUsername';
 import { Logo } from '../Logo';
 import { Footer } from '../Footer';
 import { AuthSetStateContext } from '../AuthContext';
-import { Segment, Icon } from 'semantic-ui-react';
 
 export const Login = () => {
   const history = useHistory();

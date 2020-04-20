@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Icon } from 'semantic-ui-react';
 import { TitledBox } from './TitledBox';
 import { Avatar } from './Avatar';
 import { Flex } from '@chakra-ui/core';
+import { I18nTranslateContext } from './I18nContext';
 
 const getIconForNonWinner = (rank) => {
   switch (rank) {
@@ -17,6 +18,7 @@ const getIconForNonWinner = (rank) => {
 };
 
 export const GameEnded = ({ players }) => {
+  const t = useContext(I18nTranslateContext);
   players.sort(({ score: scoreA }, { score: scoreB }) => scoreB - scoreA);
   return (
     <TitledBox title={`Résultats de la partie`}>
@@ -30,14 +32,16 @@ export const GameEnded = ({ players }) => {
             {index === 0 && (
               <div style={{ marginBottom: '20px', marginTop: '20px' }}>
                 <Icon color="yellow" name="trophy" size="huge" />
-                <strong style={{ size: '2rem' }}>1er - {score} points</strong>
+                <strong style={{ size: '2rem' }}>
+                  {t('game-ended.ranking.first')} - {score} points
+                </strong>
               </div>
             )}
             {index !== 0 && (
               <span>
                 <strong>
                   {getIconForNonWinner(index)}
-                  {index + 1}ème - {score} points
+                  {t('game-ended.ranking.other', index + 1)} - {score} points
                 </strong>
               </span>
             )}

@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import gql from 'graphql-tag';
 import { useParams, useHistory } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/core';
+import { I18nTranslateContext, I18nLanguageContext } from '../I18nContext';
 
 const JOIN_GAME = gql`
   mutation JoinGame($joinGameInput: GameJoinGameInput!) {
@@ -21,6 +22,8 @@ const JOIN_GAME = gql`
 `;
 
 export const JoinGame = () => {
+  const t = useContext(I18nTranslateContext);
+  const { language } = useContext(I18nLanguageContext);
   const { gameId } = useParams();
   const history = useHistory();
   const [joinGame, { error, data, loading }] = useMutation(JOIN_GAME, { variables: { joinGameInput: { gameId } } });
@@ -32,18 +35,18 @@ export const JoinGame = () => {
   useEffect(() => {
     if (data?.gameJoinGame.__typename === 'GameJoinGameResultSuccess') {
       console.log('Join game success, redirecting to game');
-      history.push(`/game/${gameId}`);
+      history.push(`/${language}/game/${gameId}`);
     }
-  }, [data, gameId, history]);
+  }, [language, data, gameId, history]);
 
   useEffect(() => {
     if (data?.gameJoinGame.__typename === 'GameJoinGameResultError') {
       if (data.gameJoinGame.type === 'GAME_ALREADY_JOINED') {
         console.log('Game already joined, redirecting to game');
-        history.push(`/game/${gameId}`);
+        history.push(`/${language}/game/${gameId}`);
       }
     }
-  }, [data, history, gameId]);
+  }, [language, data, history, gameId]);
 
   if (loading) return 'Loading...';
 
@@ -51,8 +54,8 @@ export const JoinGame = () => {
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle mr={2}>Erreur ! </AlertTitle>
-        <AlertDescription>Aucun jeu n'existe pour ce code</AlertDescription>
+        <AlertTitle mr={2}>{t('error.oops')}</AlertTitle>
+        <AlertDescription>{t('game.does-not-exist')}</AlertDescription>
       </Alert>
     );
 
@@ -60,15 +63,15 @@ export const JoinGame = () => {
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle mr={2}>Erreur ! </AlertTitle>
-        <AlertDescription>Ce jeu est déjà complet</AlertDescription>
+        <AlertTitle mr={2}>{t('error.oops')}</AlertTitle>
+        <AlertDescription>{t('game.error-game-full')}</AlertDescription>
       </Alert>
     );
 
   return (
     <div>
-      <p>Accès au jeu...</p>
-      <a href={`/game/${gameId}`}>Cliquez ici si vous n'êtes pas redirigé</a>
+      <p>{t('game.accessing-game')}</p>
+      <a href={`/${language}/game/${gameId}`}>{t('game.click-if-not-redirected')}</a>
     </div>
   );
 };

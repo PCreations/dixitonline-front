@@ -15,6 +15,7 @@ import { ScoringPhase } from '../turn-phases/ScoringPhase';
 import { VotingPhase } from '../turn-phases/VotingPhase';
 import { PhaseFragment } from '../turn-phases/phase-fragment';
 import { Error } from '../Error';
+import { I18nTranslateContext } from '../I18nContext';
 
 const Loading = () => (
   <Placeholder>
@@ -88,6 +89,7 @@ const GameNotStarted = ({ game }) => {
     }
   );
   const { currentUser } = useContext(AuthStateContext);
+  const t = useContext(I18nTranslateContext);
 
   const startGameErrorMessage = startGameError || startGameData?.gameStartGame.type;
 
@@ -97,7 +99,7 @@ const GameNotStarted = ({ game }) => {
       {startGameErrorMessage && (
         <Alert status="error">
           <AlertIcon />
-          <AlertTitle mr={2}>Impossible de lancer la partie :( </AlertTitle>
+          <AlertTitle mr={2}>{t('game.cant-start-game')}</AlertTitle>
           <AlertDescription>{startGameErrorMessage}</AlertDescription>
         </Alert>
       )}
@@ -123,6 +125,7 @@ const GameEnded = ({ players }) => {
 
 const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTurns }) => {
   console.log('current turn id', turnId);
+  const t = useContext(I18nTranslateContext);
   const {
     loading,
     error,
@@ -153,8 +156,8 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle mr={2}>Une erreur est survenue :(</AlertTitle>
-        <AlertDescription>Essayez de rafraîchir la page</AlertDescription>
+        <AlertTitle mr={2}>{t('an-error-has-occured')}</AlertTitle>
+        <AlertDescription>{t('refresh-page')}</AlertDescription>
       </Alert>
     );
   }
@@ -183,10 +186,13 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
         }}
       >
         {remainingTurns === 0 ? (
-          <span>Dernier tour !</span>
+          <span>{t('game.last-turn')}</span>
         ) : (
           <span>
-            Tours restants : <strong>{remainingTurns + 1}</strong>
+            <strong>
+              {t('game.remaining-turns')}
+              {remainingTurns + 1}
+            </strong>
           </span>
         )}
       </Segment>
@@ -237,7 +243,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
               />
             );
           default:
-            return <Error title="Oups..." message="Il va falloir punir le développeur..."></Error>;
+            return <Error title={t('error.oops')} message={t('error.punish-me')}></Error>;
         }
       })()}
     </Flex>
@@ -247,6 +253,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
 const playerNotInGame = (playerId, players) => !players.some(({ id }) => id === playerId);
 
 export const Game = () => {
+  const t = useContext(I18nTranslateContext);
   const history = useHistory();
   const { gameId } = useParams();
   const {
@@ -287,11 +294,9 @@ export const Game = () => {
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle mr={2}>Une erreur est survenue :(</AlertTitle>
+        <AlertTitle mr={2}>{t('an-error-has-occured')}</AlertTitle>
         <AlertDescription>
-          {error.message.includes('not found')
-            ? "Aucune partie n'existe pour ce code !"
-            : 'Essayez de rafraîchir la page'}
+          {error.message.includes('not found') ? t('game.does-not-exist') : t('refresh-page')}
         </AlertDescription>
       </Alert>
     );
@@ -305,8 +310,8 @@ export const Game = () => {
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle mr={2}>Oups !</AlertTitle>
-        <AlertDescription>Vous n'êtes pas dans cette partie</AlertDescription>
+        <AlertTitle mr={2}>{t('error.oops')}</AlertTitle>
+        <AlertDescription>{t('game.error-not-in-game')}</AlertDescription>
       </Alert>
     );
   }
@@ -343,8 +348,8 @@ export const Game = () => {
       return (
         <Alert status="error">
           <AlertIcon />
-          <AlertTitle mr={2}>Une erreur est survenue :(</AlertTitle>
-          <AlertDescription>Essayez de rafraîchir la page</AlertDescription>
+          <AlertTitle mr={2}>{t('an-error-has-occured')}</AlertTitle>
+          <AlertDescription>{t('refresh-page')}</AlertDescription>
         </Alert>
       );
   }

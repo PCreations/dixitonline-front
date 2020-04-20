@@ -1,10 +1,12 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import { Segment, Message } from 'semantic-ui-react';
 import { TitledBox } from './TitledBox';
 import { Input } from './Input';
 import { Button } from './Button';
+import { I18nTranslateContext } from './I18nContext';
 
 export const ChoseUsername = ({ onUsernameSubmitted }) => {
+  const t = useContext(I18nTranslateContext);
   const [hasError, setHasError] = useState(false);
   const [username, setUsername] = useState('');
 
@@ -25,14 +27,18 @@ export const ChoseUsername = ({ onUsernameSubmitted }) => {
   );
 
   return (
-    <TitledBox title="Choisissez un pseudo">
+    <TitledBox title={t('username.chose-username')}>
       <Segment basic textAlign="center">
         {hasError && (
           <Message negative>
-            <p>Le pseudo ne peut pas être vide</p>
+            <p>{t('username.error-cant-be-empty')}</p>
           </Message>
         )}
-        <Input placeholder="pseudo" style={{ marginRight: '10px' }} onChange={handleUsernameChange} />
+        <Input
+          placeholder={t('username.placeholder')}
+          style={{ marginRight: '10px' }}
+          onChange={handleUsernameChange}
+        />
         <Button primary onClick={handleUsernameSubmitted}>
           GO
         </Button>

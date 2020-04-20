@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import { Modal, Segment } from 'semantic-ui-react';
 import { Flex } from '@chakra-ui/core';
 import { Card } from './Card';
 import { Input } from './Input';
 import { Button } from './Button';
 import { Avatar } from './Avatar';
+import { I18nTranslateContext } from './I18nContext';
 
 const CardModalSegment = ({ children }) => (
   <Segment
@@ -26,6 +27,7 @@ export const CardModal = ({ src, trigger, children, open, onClose }) => (
 );
 
 export const StorytellerCardModalContent = ({ onClueSubmitted }) => {
+  const t = useContext(I18nTranslateContext);
   const [clue, setClue] = useState('');
   const [hasError, setHasError] = useState(false);
 
@@ -47,35 +49,47 @@ export const StorytellerCardModalContent = ({ onClueSubmitted }) => {
 
   return (
     <CardModalSegment>
-      <p>Définir l'indice pour cette carte</p>
-      <Input placeholder="indice" style={{ marginRight: '10px' }} onChange={handleClueChange} error={hasError} />
+      <p>{t('card-modal.clue')}</p>
+      <Input
+        placeholder={t('card-modal.clue-placeholder')}
+        style={{ marginRight: '10px' }}
+        onChange={handleClueChange}
+        error={hasError}
+      />
       <Button primary onClick={handleClueSubmitted} style={{ marginTop: '10px' }}>
-        VALIDER
+        {t('card-modal.validate')}
       </Button>
     </CardModalSegment>
   );
 };
 
-export const PlayerChoiceCardModalContent = ({ onCardChosen }) => (
-  <CardModalSegment>
-    <Button primary onClick={onCardChosen}>
-      CHOISIR CETTE CARTE
-    </Button>
-  </CardModalSegment>
-);
-
-export const PlayerVoteCardModalContent = ({ onCardVoted }) => (
-  <CardModalSegment>
-    <Button primary onClick={onCardVoted}>
-      VOTER POUR CETTE CARTE
-    </Button>
-  </CardModalSegment>
-);
-
-export const VoteResultsCardModalContent = ({ votes = [] } = {}) =>
-  votes.length > 0 ? (
+export const PlayerChoiceCardModalContent = ({ onCardChosen }) => {
+  const t = useContext(I18nTranslateContext);
+  return (
     <CardModalSegment>
-      <p>Joueur(s) ayant voté pour cette carte :</p>
+      <Button primary onClick={onCardChosen}>
+        {t('card-modal.chose-card')}
+      </Button>
+    </CardModalSegment>
+  );
+};
+
+export const PlayerVoteCardModalContent = ({ onCardVoted }) => {
+  const t = useContext(I18nTranslateContext);
+  return (
+    <CardModalSegment>
+      <Button primary onClick={onCardVoted}>
+        {t('card-modal.vote-card')}
+      </Button>
+    </CardModalSegment>
+  );
+};
+
+export const VoteResultsCardModalContent = ({ votes = [] } = {}) => {
+  const t = useContext(I18nTranslateContext);
+  return votes.length > 0 ? (
+    <CardModalSegment>
+      <p>{t('card-modal.vote-result')}</p>
       <Flex justifyContent="center">
         {votes.map((username, index) => (
           <div style={{ marginRight: '5px' }} key={`${index}${username}`}>
@@ -86,6 +100,7 @@ export const VoteResultsCardModalContent = ({ votes = [] } = {}) =>
     </CardModalSegment>
   ) : (
     <CardModalSegment>
-      <p>Personne n'a voté pour cette carte.</p>
+      <p>{t('card-modal.no-votes')}</p>
     </CardModalSegment>
   );
+};

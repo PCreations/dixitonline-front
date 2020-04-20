@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useCallback } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
+import { Segment, Flag } from 'semantic-ui-react';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
 import { firebaseApp } from '../firebase-app';
@@ -7,6 +8,7 @@ import { AuthStateContext } from '../AuthContext';
 import { Logo } from '../Logo';
 import { Footer } from '../Footer';
 import { GameSelection } from '../GameSelection';
+import { I18nLanguageContext } from '../I18nContext';
 
 const CREATE_GAME = gql`
   mutation {
@@ -28,6 +30,7 @@ const CREATE_GAME = gql`
 
 export const Lobby = () => {
   const { currentUser } = useContext(AuthStateContext);
+  const { language } = useContext(I18nLanguageContext);
   const [createGame, { data, loading }] = useMutation(CREATE_GAME);
   const history = useHistory();
 
@@ -38,10 +41,11 @@ export const Lobby = () => {
         userId: currentUser.id,
         userUsername: currentUser.username,
       });
-      const route = `/join/${code}`;
+      const route = `/${language}/join/${code}`;
+      debugger;
       history.push(route);
     },
-    [currentUser, history]
+    [language, currentUser, history]
   );
 
   const handleCreateNewGame = useCallback(() => {
@@ -54,14 +58,25 @@ export const Lobby = () => {
 
   useEffect(() => {
     if (data && data.gameCreateGame) {
-      const route = `/game/${data.gameCreateGame.game.id}`;
+      const route = `/${language}/game/${data.gameCreateGame.game.id}`;
       history.push(route);
     }
-  }, [data, history]);
+  }, [language, data, history]);
 
   return (
     <>
       <Logo />
+      <Segment basic textAlign="center">
+        {language === 'fr' ? (
+          <Link to="/en/">
+            <Flag name="gb" />
+          </Link>
+        ) : (
+          <Link to="/fr/">
+            <Flag name="fr" />
+          </Link>
+        )}
+      </Segment>
       <GameSelection
         authenticatedUser={currentUser.username}
         onCreateNewGameClicked={handleCreateNewGame}

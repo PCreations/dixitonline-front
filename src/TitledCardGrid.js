@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Segment } from 'semantic-ui-react';
 import { Button } from './Button';
@@ -11,6 +11,7 @@ import {
   PlayerVoteCardModalContent,
   VoteResultsCardModalContent,
 } from './CardModal';
+import { I18nTranslateContext } from './I18nContext';
 
 const TitledCardGrid = ({ cards, title, children, renderBeforeCards }) => {
   const [modalState, setModalState] = useState({ card: { id: '', src: '' }, open: false });
@@ -46,11 +47,14 @@ const TitledCardGrid = ({ cards, title, children, renderBeforeCards }) => {
   );
 };
 
-export const NoModalContentTitledCardGrid = ({ cards, title = 'Votre main' }) => {
-  return <TitledCardGrid title={title} cards={cards} />;
+export const NoModalContentTitledCardGrid = ({ cards, title }) => {
+  const t = useContext(I18nTranslateContext);
+  const overridenTitle = title || t('titled-card-grid.your-hand');
+  return <TitledCardGrid title={overridenTitle} cards={cards} />;
 };
 
 export const StorytellerTitledCardGrid = ({ cards, onClueSubmitted }) => {
+  const t = useContext(I18nTranslateContext);
   const handleClueSubmitted = useCallback(
     ({ closeModal, cardId }) => ({ clue }) => {
       closeModal();
@@ -59,7 +63,7 @@ export const StorytellerTitledCardGrid = ({ cards, onClueSubmitted }) => {
     [onClueSubmitted]
   );
   return (
-    <TitledCardGrid title="Choisissez une carte" cards={cards}>
+    <TitledCardGrid title={t('titled-card-grid.chose-card')} cards={cards}>
       {({ closeModal, cardId }) => (
         <StorytellerCardModalContent onClueSubmitted={handleClueSubmitted({ closeModal, cardId })} />
       )}
@@ -68,6 +72,7 @@ export const StorytellerTitledCardGrid = ({ cards, onClueSubmitted }) => {
 };
 
 export const PlayerChoseCardTitledCardGrid = ({ cards, onCardChosen }) => {
+  const t = useContext(I18nTranslateContext);
   const handleCardChosen = useCallback(
     ({ closeModal, cardId }) => () => {
       onCardChosen({ id: cardId });
@@ -77,7 +82,7 @@ export const PlayerChoseCardTitledCardGrid = ({ cards, onCardChosen }) => {
   );
 
   return (
-    <TitledCardGrid title="Choisissez une carte" cards={cards}>
+    <TitledCardGrid title={t('titled-card-grid.chose-card')} cards={cards}>
       {({ closeModal, cardId }) => (
         <PlayerChoiceCardModalContent onCardChosen={handleCardChosen({ closeModal, cardId })} />
       )}
@@ -86,6 +91,7 @@ export const PlayerChoseCardTitledCardGrid = ({ cards, onCardChosen }) => {
 };
 
 export const PlayerVoteCardTitledCardGrid = ({ cards, storyteller, onCardVoted }) => {
+  const t = useContext(I18nTranslateContext);
   const handleCardVoted = useCallback(
     ({ closeModal, cardId }) => () => {
       onCardVoted({ id: cardId });
@@ -95,13 +101,14 @@ export const PlayerVoteCardTitledCardGrid = ({ cards, storyteller, onCardVoted }
   );
 
   return (
-    <TitledCardGrid title={`Retrouvez la carte de ${storyteller}`} cards={cards}>
+    <TitledCardGrid title={t('titled-card-grid.find-card', storyteller)} cards={cards}>
       {({ closeModal, cardId }) => <PlayerVoteCardModalContent onCardVoted={handleCardVoted({ closeModal, cardId })} />}
     </TitledCardGrid>
   );
 };
 
 export const PlayersVoteResultTitleCardGrid = ({ cards, onReadyForNextTurn, isLastTurn }) => {
+  const t = useContext(I18nTranslateContext);
   const findCard = (cardId) => cards.find((c) => c.id === cardId);
 
   const [loading, setLoading] = useState(false);
@@ -113,12 +120,12 @@ export const PlayersVoteResultTitleCardGrid = ({ cards, onReadyForNextTurn, isLa
 
   return (
     <TitledCardGrid
-      title="Résultat des votes"
+      title={t('titled-card-grid.vote-results')}
       cards={cards}
       renderBeforeCards={() => (
         <Segment basic textAlign="center">
           <Button primary onClick={handleOnReadyForNextTurn} loading={loading}>
-            {isLastTurn ? 'Voir le classement final !' : 'Passer au prochain tour'}
+            {isLastTurn ? t('titled-card-grid.see-leaderboard') : t('titled-card-grid.go-to-next-turn')}
           </Button>
         </Segment>
       )}

@@ -1,8 +1,9 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import { Segment, Message, Form, Icon } from 'semantic-ui-react';
 import { TitledBox } from './TitledBox';
 import { Input } from './Input';
 import { Button } from './Button';
+import { I18nTranslateContext } from './I18nContext';
 
 export const GameSelection = ({
   authenticatedUser,
@@ -10,6 +11,7 @@ export const GameSelection = ({
   onJoinGameSubmitted,
   createNewGameLoading,
 }) => {
+  const t = useContext(I18nTranslateContext);
   const [code, setCode] = useState('');
   const [hasError, setHasError] = useState(false);
 
@@ -30,33 +32,35 @@ export const GameSelection = ({
   }, [onJoinGameSubmitted, code]);
 
   return (
-    <TitledBox title="Choix de partie">
+    <TitledBox title={t('game-choice.title')}>
       <Segment basic textAlign="center">
-        <p>Bienvenue {authenticatedUser} !</p>
+        <p>
+          {t('welcome.home')} {authenticatedUser} !
+        </p>
       </Segment>
       <Segment basic textAlign="center">
         <Button primary onClick={onCreateNewGameClicked} loading={createNewGameLoading}>
-          Créer une nouvelle partie
+          {t('game-choice.create-new-game')}
         </Button>
-        <p style={{ marginTop: '10px' }}>ou</p>
+        <p style={{ marginTop: '10px' }}>{t('game-choice.or')}</p>
         <Form>
           <Form.Field inline>
-            <label>Rejoindre une partie :</label>
+            <label>{t('game-choice.join-game')}</label>
             <Input placeholder="code" size="mini" error={hasError} onChange={handleCodeChange} />
           </Form.Field>
         </Form>
         {hasError && (
           <Message negative>
-            <p>Le code ne peut pas être vide</p>
+            <p>{t('game-choice.code-error-empty')}</p>
           </Message>
         )}
         <Button style={{ marginTop: '10px' }} onClick={handleJoinGameSubmitted}>
-          rejoindre
+          {t('game-choice.join')}
         </Button>
         <Segment basic textAlign="center">
           <a href="https://discord.gg/WQRMufE" alt="dixit online discord server">
             <Icon name="discord" />
-            Trouvez des parties en attente de joueurs grâce à Discord !
+            {t('game-choice.discord')}
           </a>
         </Segment>
       </Segment>
