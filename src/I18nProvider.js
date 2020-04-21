@@ -33,8 +33,8 @@ const catalog = new Map([
   [
     'game-choice.join-game',
     new Map([
-      ['fr', 'Rejoindre une partie'],
-      ['en', 'Join a game'],
+      ['fr', 'Rejoindre une partie :'],
+      ['en', 'Join a game :'],
     ]),
   ],
   [

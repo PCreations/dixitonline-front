@@ -690,7 +690,8 @@ exports[`Storyshots GameEnded Score 1`] = `
               }
             }
           >
-            1er - 
+            1er
+             - 
             14
              points
           </strong>
@@ -738,8 +739,8 @@ exports[`Storyshots GameEnded Score 1`] = `
               className="grey certificate big icon"
               onClick={[Function]}
             />
-            2
-            ème - 
+            2ème
+             - 
             12
              points
           </strong>
@@ -787,8 +788,8 @@ exports[`Storyshots GameEnded Score 1`] = `
               className="brown certificate large icon"
               onClick={[Function]}
             />
-            3
-            ème - 
+            3ème
+             - 
             10
              points
           </strong>
@@ -836,8 +837,8 @@ exports[`Storyshots GameEnded Score 1`] = `
               className="certificate icon"
               onClick={[Function]}
             />
-            4
-            ème - 
+            4ème
+             - 
             8
              points
           </strong>
@@ -885,8 +886,8 @@ exports[`Storyshots GameEnded Score 1`] = `
               className="certificate icon"
               onClick={[Function]}
             />
-            5
-            ème - 
+            5ème
+             - 
             7
              points
           </strong>
@@ -934,8 +935,8 @@ exports[`Storyshots GameEnded Score 1`] = `
               className="certificate icon"
               onClick={[Function]}
             />
-            6
-            ème - 
+            6ème
+             - 
             5
              points
           </strong>
@@ -967,7 +968,8 @@ exports[`Storyshots GameSelection Default State 1`] = `
       className="ui basic center aligned segment"
     >
       <p>
-        Bienvenue 
+        Bienvenue
+         
         Anthow
          !
       </p>
@@ -1939,7 +1941,7 @@ exports[`Storyshots StorytellerClue Default State 1`] = `
   className="ui basic center aligned segment"
 >
   <p>
-    Anthow a donné l'indice :
+    Anthow a donné l'indice : 
   </p>
   <div
     className="ui teal large inverted raised segment"
@@ -2591,8 +2593,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         className="css-dvxtzn"
       >
         <span>
-          Carte de 
-          Pierre
+          Carte de Pierre
            (+ 2 points !)
         </span>
         <div
@@ -2659,8 +2660,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         className="css-dvxtzn"
       >
         <span>
-          Carte de 
-          Antho
+          Carte de Antho
           
         </span>
         <div
@@ -2793,8 +2793,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         className="css-dvxtzn"
       >
         <span>
-          Carte de 
-          Jaz
+          Carte de Jaz
            (+ 2 points !)
         </span>
         <div
@@ -2816,8 +2815,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         className="css-dvxtzn"
       >
         <span>
-          Carte de 
-          Noyo
+          Carte de Noyo
            (+ 2 points !)
         </span>
         <div
@@ -2839,8 +2837,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         className="css-dvxtzn"
       >
         <span>
-          Carte de 
-          Mike
+          Carte de Mike
            (+ 2 points !)
         </span>
         <div
@@ -2862,8 +2859,7 @@ exports[`Storyshots TitledCardGrid Vote Result 1`] = `
         className="css-dvxtzn"
       >
         <span>
-          Carte de 
-          Yoyo
+          Carte de Yoyo
            (+ 2 points !)
         </span>
         <div
