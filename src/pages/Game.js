@@ -15,7 +15,7 @@ import { ScoringPhase } from '../turn-phases/ScoringPhase';
 import { VotingPhase } from '../turn-phases/VotingPhase';
 import { PhaseFragment } from '../turn-phases/phase-fragment';
 import { Error } from '../Error';
-import { I18nTranslateContext } from '../I18nContext';
+import { I18nTranslateContext, I18nLanguageContext } from '../I18nContext';
 
 const Loading = () => (
   <Placeholder>
@@ -254,6 +254,7 @@ const playerNotInGame = (playerId, players) => !players.some(({ id }) => id === 
 
 export const Game = () => {
   const t = useContext(I18nTranslateContext);
+  const { language } = useContext(I18nLanguageContext);
   const history = useHistory();
   const { gameId } = useParams();
   const {
@@ -282,12 +283,16 @@ export const Game = () => {
     if (data) {
       const isNotInGame = data && playerNotInGame(currentUser.id, data.game.players);
       console.log('isNotInGame ?', isNotInGame, currentUser.id, data.game.players);
-      if (data.game.status === 'WAITING_FOR_PLAYERS' && isNotInGame) {
-        console.log('redirecting to join');
-        history.push(`/join/${data.game.id}`);
+      if (isNotInGame && data.game.status === 'WAITING_FOR_PLAYERS') {
+        refetchGame().then(({ data }) => {
+          if (data.game.status === 'WAITING_FOR_PLAYERS' && playerNotInGame(currentUser.id, data.game.players)) {
+            console.log('redirecting to join');
+            history.push(`/${language}/join/${data.game.id}`);
+          }
+        });
       }
     }
-  }, [data, currentUser, history]);
+  }, [refetchGame, language, data, currentUser, history]);
 
   if (error) {
     stopGamePolling();

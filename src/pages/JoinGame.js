@@ -35,6 +35,7 @@ export const JoinGame = () => {
   useEffect(() => {
     if (data?.gameJoinGame.__typename === 'GameJoinGameResultSuccess') {
       console.log('Join game success, redirecting to game');
+      debugger;
       history.push(`/${language}/game/${gameId}`);
     }
   }, [language, data, gameId, history]);
