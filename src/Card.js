@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex, Image } from '@chakra-ui/core';
 import { Avatar } from './Avatar';
 
-export const Card = ({ id, src, onClick, votes = [], bordered }) =>
+export const Card = ({ id, src, onClick = () => {}, votes = [], bordered }) =>
   votes.length === 0 ? (
     <Flex key={id} justifyContent="center" onClick={() => onClick({ id })}>
       <Image
