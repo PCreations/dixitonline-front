@@ -4,6 +4,7 @@ import { TitledBox } from './TitledBox';
 import { Input } from './Input';
 import { Button } from './Button';
 import { I18nTranslateContext } from './I18nContext';
+import { GameConfigurationForm } from './GameConfigurationForm';
 
 export const GameSelection = ({
   authenticatedUser,
@@ -39,9 +40,7 @@ export const GameSelection = ({
         </p>
       </Segment>
       <Segment basic textAlign="center">
-        <Button primary onClick={onCreateNewGameClicked} loading={createNewGameLoading}>
-          {t('game-choice.create-new-game')}
-        </Button>
+        <GameConfigurationForm onSubmitted={onCreateNewGameClicked} loading={createNewGameLoading} />
         <p style={{ marginTop: '10px' }}>{t('game-choice.or')}</p>
         <Form>
           <Form.Field inline>

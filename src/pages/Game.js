@@ -32,7 +32,15 @@ const GameFragment = gql`
   fragment Game on Game {
     id
     currentTurnId
-    remainingTurns
+    endCondition {
+      __typename
+      ... on GameRemainingTurnsEndCondition {
+        remainingTurns
+      }
+      ... on GameScoreLimitEndCondition {
+        scoreLimit
+      }
+    }
     status
     host {
       id
@@ -123,7 +131,7 @@ const GameEnded = ({ players }) => {
   );
 };
 
-const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTurns }) => {
+const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, endCondition }) => {
   console.log('current turn id', turnId);
   const t = useContext(I18nTranslateContext);
   const {
@@ -172,6 +180,10 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
   const storyteller = players.find((p) => p.isStoryteller);
   const isStoryteller = currentUser.id === data.getTurnPhase.storytellerId;
   const currentPlayer = players.find((p) => p.id === currentUser.id);
+  const isLastTurn =
+    (endCondition.__typename === 'GameRemainingTurnsEndCondition' && endCondition.remainingTurns === 0) ||
+    (endCondition.__typename === 'GameScoreLimitEndCondition' &&
+      players.some((score) => score >= endCondition.scoreLimit));
   return (
     <Flex direction="column">
       <PlayersPanel players={players} authenticatedPlayerId={currentUser.id} />
@@ -185,16 +197,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
           paddingBottom: 0,
         }}
       >
-        {remainingTurns === 0 ? (
-          <span>{t('game.last-turn')}</span>
-        ) : (
-          <span>
-            <strong>
-              {t('game.remaining-turns')}
-              {remainingTurns + 1}
-            </strong>
-          </span>
-        )}
+        <EndCondition endCondition={endCondition} />
       </Segment>
       {(() => {
         switch (data.getTurnPhase.name) {
@@ -238,7 +241,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
                 clue={data.getTurnPhase.clue}
                 storytellerUsername={storyteller.username}
                 isStoryteller={isStoryteller}
-                isLastTurn={remainingTurns === 0}
+                isLastTurn={isLastTurn}
                 onReadyForNextTurn={handleReadyForNextTurn}
               />
             );
@@ -247,6 +250,27 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, remainingTu
         }
       })()}
     </Flex>
+  );
+};
+
+const EndCondition = ({ endCondition }) => {
+  const t = useContext(I18nTranslateContext);
+  if (endCondition.__typename === 'GameRemainingTurnsEndCondition') {
+    return endCondition.remainingTurns === 0 ? (
+      <span>{t('game.last-turn')}</span>
+    ) : (
+      <span>
+        <strong>
+          {t('game.remaining-turns')}
+          {endCondition.remainingTurns + 1}
+        </strong>
+      </span>
+    );
+  }
+  return (
+    <span>
+      Premier joueur à arriver à <strong>{endCondition.scoreLimit} points</strong>
+    </span>
   );
 };
 
@@ -340,7 +364,7 @@ export const Game = () => {
           totalPlayerScoreById={totalPlayerScoreById}
           turnId={data.game.currentTurnId}
           refetchGame={refetchGame}
-          remainingTurns={data.game.remainingTurns}
+          endCondition={data.game.endCondition}
         />
       ) : (
         <Loading />
