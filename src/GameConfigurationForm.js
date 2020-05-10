@@ -1,7 +1,8 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useContext } from 'react';
 import { Form } from 'semantic-ui-react';
 import { Flex } from '@chakra-ui/core';
 import { Button } from './Button';
+import { I18nTranslateContext } from './I18nContext';
 
 export const EndingCondition = {
   DEFAULT: 'default',
@@ -10,6 +11,7 @@ export const EndingCondition = {
 };
 
 export const GameConfigurationForm = ({ onSubmitted, loading }) => {
+  const t = useContext(I18nTranslateContext);
   const [endingCondition, setEndingCondition] = useState(EndingCondition.DEFAULT);
   const [value, setValue] = useState(1);
   const [hasError, setHasError] = useState(false);
@@ -45,25 +47,25 @@ export const GameConfigurationForm = ({ onSubmitted, loading }) => {
       <Flex justifyContent="center" direction="column" alignItems="center">
         <Form.Select
           inline
-          label="Condition de fin de partie"
+          label={t('game-configuration.ending-condition')}
           value={endingCondition}
           onChange={handleEndingConditionChange}
           options={[
             {
               key: EndingCondition.DEFAULT,
-              text: 'Par défaut',
+              text: t('game-configuration.default'),
               value: EndingCondition.DEFAULT,
               active: endingCondition === EndingCondition.DEFAULT,
             },
             {
               key: EndingCondition.X_TIMES_STORYTELLER,
-              text: 'Nombre de fois conteur',
+              text: t('game-configuration.x-times-storyteller'),
               value: EndingCondition.X_TIMES_STORYTELLER,
               active: endingCondition === EndingCondition.X_TIMES_STORYTELLER,
             },
             {
               key: EndingCondition.SCORE_LIMIT,
-              text: 'Limite de points',
+              text: t('game-configuration.points-limit'),
               value: EndingCondition.SCORE_LIMIT,
               active: endingCondition === EndingCondition.SCORE_LIMIT,
             },
@@ -71,7 +73,7 @@ export const GameConfigurationForm = ({ onSubmitted, loading }) => {
         />
         {endingCondition !== EndingCondition.DEFAULT && (
           <Form.Input
-            label="Valeur"
+            label={t('game-configuration.value-label')}
             inline
             type="number"
             value={value}
@@ -79,7 +81,7 @@ export const GameConfigurationForm = ({ onSubmitted, loading }) => {
             error={
               hasError
                 ? {
-                    content: 'La valeur doit être supérieur à zéro',
+                    content: t('game-configuration.value-error'),
                     pointing: 'below',
                   }
                 : false
@@ -88,7 +90,7 @@ export const GameConfigurationForm = ({ onSubmitted, loading }) => {
           />
         )}
         <Button primary onClick={handleOnSubmit} loading={loading}>
-          Créer une nouvelle partie
+          {t('game-choice.create-new-game')}
         </Button>
       </Flex>
     </Form>

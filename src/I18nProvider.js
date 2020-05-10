@@ -10,6 +10,48 @@ const catalog = new Map([
     ]),
   ],
   [
+    'game-configuration.ending-condition',
+    new Map([
+      ['fr', 'Condition de fin de partie'],
+      ['en', 'End of game condition'],
+    ]),
+  ],
+  [
+    'game-configuration.value-label',
+    new Map([
+      ['fr', 'Valeur'],
+      ['en', 'Value'],
+    ]),
+  ],
+  [
+    'game-configuration.default',
+    new Map([
+      ['fr', 'Par défaut'],
+      ['en', 'Default'],
+    ]),
+  ],
+  [
+    'game-configuration.x-times-storyteller',
+    new Map([
+      ['fr', 'Nombre de fois conteur'],
+      ['en', 'Number of times being storyteller'],
+    ]),
+  ],
+  [
+    'game-configuration.points-limit',
+    new Map([
+      ['fr', 'Limite de points'],
+      ['en', 'Points limit'],
+    ]),
+  ],
+  [
+    'game-configuration.value-error',
+    new Map([
+      ['fr', 'La valeur doit être supérieure à zéro'],
+      ['en', 'The value must be superior to zero'],
+    ]),
+  ],
+  [
     'game-choice.title',
     new Map([
       ['fr', 'Choix de partie'],
