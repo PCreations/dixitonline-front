@@ -341,8 +341,8 @@ const catalog = new Map([
   [
     'game-waiting.waiting-for-players',
     new Map([
-      ['fr', 'En attente de joueurs... (4 joueurs minimum, 6 maximum)'],
-      ['en', 'Waiting for other players... (4 players min, 6 max)'],
+      ['fr', 'En attente de joueurs... (3 joueurs minimum, 6 maximum)'],
+      ['en', 'Waiting for other players... (3 players min, 6 max)'],
     ]),
   ],
   [
