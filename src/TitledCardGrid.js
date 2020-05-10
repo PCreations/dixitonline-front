@@ -71,7 +71,7 @@ export const StorytellerTitledCardGrid = ({ cards, onClueSubmitted }) => {
   );
 };
 
-export const PlayerChoseCardTitledCardGrid = ({ cards, onCardChosen }) => {
+export const PlayerChoseCardTitledCardGrid = ({ cards, onCardChosen, threePlayersMode }) => {
   const t = useContext(I18nTranslateContext);
   const handleCardChosen = useCallback(
     ({ closeModal, cardId }) => () => {
@@ -82,7 +82,10 @@ export const PlayerChoseCardTitledCardGrid = ({ cards, onCardChosen }) => {
   );
 
   return (
-    <TitledCardGrid title={t('titled-card-grid.chose-card')} cards={cards}>
+    <TitledCardGrid
+      title={threePlayersMode ? t('titled-card-grid.chose-two-cards') : t('titled-card-grid.chose-card')}
+      cards={cards}
+    >
       {({ closeModal, cardId }) => (
         <PlayerChoiceCardModalContent onCardChosen={handleCardChosen({ closeModal, cardId })} />
       )}

@@ -21,7 +21,15 @@ const TURN_CHOSE_CARD = gql`
   ${PhaseFragment}
 `;
 
-export const PlayersCardChoicePhase = ({ turnId, cards, clue, storytellerUsername, isStoryteller, hasPlayed }) => {
+export const PlayersCardChoicePhase = ({
+  turnId,
+  cards,
+  clue,
+  storytellerUsername,
+  isStoryteller,
+  hasPlayed,
+  threePlayersMode,
+}) => {
   const t = useContext(I18nTranslateContext);
   const [choseCard, { error, data }] = useMutation(TURN_CHOSE_CARD);
 
@@ -47,7 +55,11 @@ export const PlayersCardChoicePhase = ({ turnId, cards, clue, storytellerUsernam
       {isStoryteller || hasPlayed ? (
         <NoModalContentTitledCardGrid cards={cards} />
       ) : (
-        <PlayerChoseCardTitledCardGrid cards={cards} onCardChosen={handleChoseCard} />
+        <PlayerChoseCardTitledCardGrid
+          cards={cards}
+          onCardChosen={handleChoseCard}
+          threePlayersMode={threePlayersMode}
+        />
       )}
     </>
   );

@@ -6,7 +6,7 @@ import { Avatar } from './Avatar';
 import { Button } from './Button';
 import { I18nTranslateContext } from './I18nContext';
 
-const MIN_PLAYERS_TO_START_GAME = 4;
+const MIN_PLAYERS_TO_START_GAME = 3;
 
 const canStartGame = (players) => players.length >= MIN_PLAYERS_TO_START_GAME;
 

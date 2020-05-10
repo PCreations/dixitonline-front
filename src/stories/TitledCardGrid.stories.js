@@ -29,6 +29,10 @@ export const playerChoseCard = () => (
   <PlayerChoseCardTitledCardGrid cards={cards} onCardChosen={action('card-chosen')} />
 );
 
+export const playerChoseCardThreePlayersMode = () => (
+  <PlayerChoseCardTitledCardGrid cards={cards} onCardChosen={action('card-chosen')} threePlayersMode={true} />
+);
+
 export const playerVoteCard = () => (
   <PlayerVoteCardTitledCardGrid cards={cards} onCardVoted={action('card-voted')} storyteller="Anthow" />
 );

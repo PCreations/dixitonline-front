@@ -212,6 +212,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, endConditio
                 storytellerUsername={storyteller.username}
                 isStoryteller={isStoryteller}
                 hasPlayed={currentPlayer.isReady}
+                threePlayersMode={players.length === 3}
               />
             );
           case 'PLAYERS_VOTING':

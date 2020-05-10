@@ -353,6 +353,13 @@ const catalog = new Map([
     ]),
   ],
   [
+    'titled-card-grid.chose-two-cards',
+    new Map([
+      ['fr', 'Choisissez deux cartes'],
+      ['en', 'Chose two cards'],
+    ]),
+  ],
+  [
     'titled-card-grid.find-card',
     new Map([
       ['fr', 'Retrouvez la carte de {$}'],
