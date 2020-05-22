@@ -12,11 +12,16 @@ import { I18nLanguageContext } from './I18nContext';
 const PrivateRoute = ({ children, ...rest }) => {
   const { isAuthenticated } = useContext(AuthStateContext);
   const { language } = useContext(I18nLanguageContext);
+  const match = useRouteMatch('/:lan');
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        isAuthenticated ? children : <Redirect to={{ pathname: `/${language}/login`, state: { from: location } }} />
+        isAuthenticated ? (
+          children
+        ) : (
+          <Redirect to={{ pathname: `/${match?.params?.lan ?? language}/login`, state: { from: location } }} />
+        )
       }
     />
   );
@@ -27,6 +32,7 @@ const LocalizedSwitch = () => {
   const match = useRouteMatch('/:lan');
   useEffect(() => {
     if (match?.params?.lan && match.params.lan !== language) {
+      console.log('set language', match.params.lan);
       setLanguage(match.params.lan);
     }
   }, [match, language, setLanguage]);

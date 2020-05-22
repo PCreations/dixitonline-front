@@ -307,7 +307,7 @@ const catalog = new Map([
     'username.chose-username',
     new Map([
       ['fr', 'Choisissez un pseudo'],
-      ['en', 'Chose a username'],
+      ['en', 'Choose a username'],
     ]),
   ],
   [
