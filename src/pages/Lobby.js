@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useCallback, useState } from 'react';
-import { useHistory, Link } from 'react-router-dom';
-import { Segment, Flag } from 'semantic-ui-react';
+import { useHistory } from 'react-router-dom';
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/core';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
 import { firebaseApp } from '../firebase-app';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 import { AuthStateContext } from '../AuthContext';
 import { Logo } from '../Logo';
 import { Footer } from '../Footer';
@@ -190,17 +190,7 @@ export const Lobby = () => {
           <AlertDescription>{createdGameError}</AlertDescription>
         </Alert>
       )}
-      <Segment basic textAlign="center">
-        {language === 'fr' ? (
-          <Link to="/en/">
-            <Flag name="gb" />
-          </Link>
-        ) : (
-          <Link to="/fr/">
-            <Flag name="fr" />
-          </Link>
-        )}
-      </Segment>
+      <LanguageSwitcher />
       <GameSelection
         authenticatedUser={currentUser.username}
         onCreateNewGameClicked={handleCreateNewGame}

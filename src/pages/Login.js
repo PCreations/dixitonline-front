@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useCallback } from 'react';
 import { Flex } from '@chakra-ui/core';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 import { useHistory, useLocation } from 'react-router-dom';
 import { firebaseApp } from '../firebase-app';
 import { ChoseUsername } from '../ChoseUsername';
@@ -43,6 +44,7 @@ export const Login = () => {
   return (
     <Flex flexDirection="column" alignItems="center" justifyItems="center">
       <Logo />
+      <LanguageSwitcher />
       <ChoseUsername onUsernameSubmitted={signIn} />
       <Footer />
     </Flex>
