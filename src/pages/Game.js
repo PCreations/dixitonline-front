@@ -4,6 +4,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { Placeholder, Segment } from 'semantic-ui-react';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { Alert, AlertIcon, AlertTitle, AlertDescription, Flex } from '@chakra-ui/core';
+import { firebaseApp } from '../firebase-app';
 import { GameWaitingForPlayers } from '../GameWaitingForPlayers';
 import { GameEnded as BaseGameEnded } from '../GameEnded';
 import { PlayersPanel } from '../PlayersPanel';
@@ -90,7 +91,7 @@ const GET_TURN_PHASE = gql`
 `;
 
 const GameNotStarted = ({ game }) => {
-  const [startGame, { data: startGameData, error: startGameError, loading: startGameLoading }] = useMutation(
+  const [doStartGame, { data: startGameData, error: startGameError, loading: startGameLoading }] = useMutation(
     START_GAME,
     {
       variables: { startGameInput: { gameId: game.id } },
@@ -100,6 +101,14 @@ const GameNotStarted = ({ game }) => {
   const t = useContext(I18nTranslateContext);
 
   const startGameErrorMessage = startGameError || startGameData?.gameStartGame.type;
+
+  const startGame = useCallback(() => {
+    firebaseApp.analytics().logEvent('game_started', {
+      userId: currentUser.id,
+      gameId: game.id,
+    });
+    doStartGame();
+  }, [doStartGame, game, currentUser]);
 
   return (
     <Flex direction="column">
@@ -131,7 +140,7 @@ const GameEnded = ({ players }) => {
   );
 };
 
-const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, endCondition }) => {
+const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, refetchGame, endCondition }) => {
   console.log('current turn id', turnId);
   const t = useContext(I18nTranslateContext);
   const {
@@ -183,7 +192,7 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, endConditio
   const isLastTurn =
     (endCondition.__typename === 'GameRemainingTurnsEndCondition' && endCondition.remainingTurns === 0) ||
     (endCondition.__typename === 'GameScoreLimitEndCondition' &&
-      players.some((score) => score >= endCondition.scoreLimit));
+      players.some(({ score }) => score >= endCondition.scoreLimit));
   return (
     <Flex direction="column">
       <PlayersPanel players={players} authenticatedPlayerId={currentUser.id} />
@@ -231,6 +240,8 @@ const GameInProgress = ({ totalPlayerScoreById, turnId, refetchGame, endConditio
             console.log(data.getTurnPhase.players);
             return (
               <ScoringPhase
+                gameId={gameId}
+                hostId={hostId}
                 cards={data.getTurnPhase.board.map(({ card, playerId, votes }) => ({
                   id: card.id,
                   src: card.url,
@@ -362,6 +373,8 @@ export const Game = () => {
       }
       return data.game.currentTurnId ? (
         <GameInProgress
+          gameId={data.game.id}
+          hostId={data.game.host.id}
           totalPlayerScoreById={totalPlayerScoreById}
           turnId={data.game.currentTurnId}
           refetchGame={refetchGame}

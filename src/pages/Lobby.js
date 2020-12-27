@@ -101,7 +101,6 @@ export const Lobby = () => {
         userUsername: currentUser.username,
       });
       const route = `/${language}/join/${code}`;
-      debugger;
       history.push(route);
     },
     [language, currentUser, history]
