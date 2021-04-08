@@ -23,6 +23,17 @@ export const Footer = () => {
           </a>
         </p>
       </Segment>
+      <Segment textAlign="center" basic>
+        <a href="https://ko-fi.com/F1F047Y9M" target="_blank" rel="noopener noreferrer">
+          <img
+            height="36"
+            style={{ border: 0, height: 36 }}
+            src="https://cdn.ko-fi.com/cdn/kofi1.png?v=2"
+            border="0"
+            alt="Buy Me a Coffee at ko-fi.com"
+          />
+        </a>
+      </Segment>
     </>
   );
 };
