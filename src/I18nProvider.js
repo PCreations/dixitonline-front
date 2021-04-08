@@ -10,6 +10,62 @@ const catalog = new Map([
     ]),
   ],
   [
+    'lobby-infos.no-waiting-games',
+    new Map([
+      ['fr', 'Aucune partie en attente de joueurs'],
+      ['en', 'No games waiting for players'],
+    ]),
+  ],
+  [
+    'lobby-infos.no-connected-players',
+    new Map([
+      ['fr', 'Aucun joueur connecté'],
+      ['en', 'No connected players'],
+    ]),
+  ],
+  [
+    'lobby-infos.game',
+    new Map([
+      ['fr', 'partie'],
+      ['en', 'game'],
+    ]),
+  ],
+  [
+    'lobby-infos.waiting-players',
+    new Map([
+      ['fr', 'en attente de joueurs'],
+      ['en', 'waiting for players'],
+    ]),
+  ],
+  [
+    'lobby-infos.connected-player',
+    new Map([
+      ['fr', 'joueur connecté'],
+      ['en', 'connected player'],
+    ]),
+  ],
+  [
+    'lobby-infos.connected-players',
+    new Map([
+      ['fr', 'joueurs connectés'],
+      ['en', 'connected players'],
+    ]),
+  ],
+  [
+    'lobby-infos.games',
+    new Map([
+      ['fr', 'parties'],
+      ['en', 'games'],
+    ]),
+  ],
+  [
+    'lobby-infos.no-players-connected',
+    new Map([
+      ['fr', 'Aucun joueur connecté'],
+      ['en', 'No players connected'],
+    ]),
+  ],
+  [
     'game-configuration.ending-condition',
     new Map([
       ['fr', 'Condition de fin de partie'],
@@ -431,8 +487,8 @@ const catalog = new Map([
   ],
 ]);
 
-export const I18nProvider = ({ children }) => {
-  const [language, setLanguage] = useState('fr');
+export const I18nProvider = ({ defaultLanguage = 'fr', children }) => {
+  const [language, setLanguage] = useState(defaultLanguage);
   const t = useCallback(
     (name, param = '') => {
       if (!catalog.has(name)) {
