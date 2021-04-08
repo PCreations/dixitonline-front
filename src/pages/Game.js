@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useCallback } from 'react';
 import gql from 'graphql-tag';
 import { useParams, useHistory } from 'react-router-dom';
 import { Placeholder, Segment } from 'semantic-ui-react';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useQuery, useMutation } from '@apollo/client';
 import { Alert, AlertIcon, AlertTitle, AlertDescription, Flex } from '@chakra-ui/core';
 import { firebaseApp } from '../firebase-app';
 import { GameWaitingForPlayers } from '../GameWaitingForPlayers';

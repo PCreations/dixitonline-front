@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/core';
 import gql from 'graphql-tag';
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client';
 import { firebaseApp } from '../firebase-app';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { AuthStateContext } from '../AuthContext';
@@ -11,6 +11,7 @@ import { Footer } from '../Footer';
 import { GameSelection } from '../GameSelection';
 import { I18nLanguageContext } from '../I18nContext';
 import { EndingCondition } from '../GameConfigurationForm';
+import { LobbyInfos } from '../LobbyInfos';
 
 const GameFragment = gql`
   fragment Game on Game {
@@ -190,6 +191,7 @@ export const Lobby = () => {
         </Alert>
       )}
       <LanguageSwitcher />
+      <LobbyInfos />
       <GameSelection
         authenticatedUser={currentUser.username}
         onCreateNewGameClicked={handleCreateNewGame}

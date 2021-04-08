@@ -1,6 +1,6 @@
 import React, { useCallback, useContext } from 'react';
 import gql from 'graphql-tag';
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client';
 import { Segment } from 'semantic-ui-react';
 import { StorytellerTitledCardGrid, NoModalContentTitledCardGrid } from '../TitledCardGrid';
 import { PhaseFragment } from './phase-fragment';
