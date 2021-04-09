@@ -19,8 +19,8 @@ const catalog = new Map([
   [
     'lobby-infos.no-connected-players',
     new Map([
-      ['fr', 'Aucun joueur connecté'],
-      ['en', 'No connected players'],
+      ['fr', 'Aucun joueur prêt à jouer'],
+      ['en', 'No players ready to play'],
     ]),
   ],
   [
@@ -40,15 +40,15 @@ const catalog = new Map([
   [
     'lobby-infos.connected-player',
     new Map([
-      ['fr', 'joueur connecté'],
-      ['en', 'connected player'],
+      ['fr', 'joueur prêt à jouer'],
+      ['en', 'player ready to play'],
     ]),
   ],
   [
     'lobby-infos.connected-players',
     new Map([
-      ['fr', 'joueurs connectés'],
-      ['en', 'connected players'],
+      ['fr', 'joueurs prêts à jouer'],
+      ['en', 'players ready to play'],
     ]),
   ],
   [
@@ -61,8 +61,8 @@ const catalog = new Map([
   [
     'lobby-infos.no-players-connected',
     new Map([
-      ['fr', 'Aucun joueur connecté'],
-      ['en', 'No players connected'],
+      ['fr', 'Aucun joueur prêt à jouer'],
+      ['en', 'No players ready to play'],
     ]),
   ],
   [
@@ -108,17 +108,24 @@ const catalog = new Map([
     ]),
   ],
   [
+    'game-choice.play-now',
+    new Map([
+      ['fr', 'JOUER !'],
+      ['en', 'PLAY !'],
+    ]),
+  ],
+  [
     'game-choice.title',
     new Map([
-      ['fr', 'Choix de partie'],
-      ['en', 'Game choice'],
+      ['fr', 'Choix de partie privée'],
+      ['en', 'Prviate game choice'],
     ]),
   ],
   [
     'game-choice.create-new-game',
     new Map([
-      ['fr', 'Créer une nouvelle partie'],
-      ['en', 'Create new game'],
+      ['fr', 'Créer une nouvelle partie privée'],
+      ['en', 'Create a new private game'],
     ]),
   ],
   [

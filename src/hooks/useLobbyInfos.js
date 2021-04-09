@@ -28,14 +28,25 @@ export const useLobbyInfos = () => {
   } = data;
 
   const waitingGamesString = `${
-    data.lobbyInfos.waitingGames === 1 ? t('lobby-infos.game') : t('lobby-infos.games')
-  } ${t('lobby-infos.waiting-players')}`;
+    waitingGames === 1
+      ? t('lobby-infos.game')
+      : waitingGames === 0
+      ? t('lobby-infos.no-waiting-games')
+      : t('lobby-infos.games')
+  }`;
   const connectedPlayersString = `${
-    data.lobbyInfos.connectedPlayers === 1 ? t('lobby-infos.connected-player') : t('lobby-infos.connected-players')
+    connectedPlayers === 1
+      ? t('lobby-infos.connected-player')
+      : connectedPlayers === 0
+      ? t('lobby-infos.no-connected-players')
+      : t('lobby-infos.connected-players')
   }`;
 
   return {
-    waitingGames: `${waitingGames} ${waitingGamesString}`,
-    connectedPlayers: `${connectedPlayers} ${connectedPlayersString}`,
+    waitingGames:
+      waitingGames === 0
+        ? waitingGamesString
+        : `${waitingGames} ${waitingGamesString} ${t('lobby-infos.waiting-players')}`,
+    connectedPlayers: connectedPlayers === 0 ? connectedPlayersString : `${connectedPlayers} ${connectedPlayersString}`,
   };
 };

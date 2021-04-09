@@ -1,14 +1,20 @@
 import React from 'react';
-import { Segment } from 'semantic-ui-react';
+import { List } from 'semantic-ui-react';
 import { useLobbyInfos } from './hooks/useLobbyInfos';
 
 export const LobbyInfos = () => {
   const lobbyInfos = useLobbyInfos();
 
   return (
-    <Segment textAlign="center" basic>
-      <p>{lobbyInfos.waitingGames}</p>
-      <p>{lobbyInfos.connectedPlayers}</p>
-    </Segment>
+    <List
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <List.Item icon="game" content={lobbyInfos.waitingGames} />
+      <List.Item icon="users" content={lobbyInfos.connectedPlayers} />
+    </List>
   );
 };

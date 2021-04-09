@@ -6,13 +6,13 @@ export const Footer = () => {
   const t = useContext(I18nTranslateContext);
   return (
     <>
-      <Segment textAlign="center" basic>
+      <Segment textAlign="center" basic style={{ padding: 0 }}>
         <p>
           {t('footer.rights')}
           <a href="https://www.libellud.com/dixit-2/">Libellud</a>. {t('footer.game-created-by')}
         </p>
       </Segment>
-      <Segment textAlign="center" basic>
+      <Segment textAlign="center" basic style={{ padding: 0 }}>
         <p>
           Dixit Online - {t('footer.created-by')} Pierre Criulanscy
           <a href="https://github.com/PCreations/dixitonline" alt="github" target="_blank" rel="noopener noreferrer">
@@ -23,7 +23,7 @@ export const Footer = () => {
           </a>
         </p>
       </Segment>
-      <Segment textAlign="center" basic>
+      <Segment textAlign="center" basic style={{ padding: 0 }}>
         <a href="https://ko-fi.com/F1F047Y9M" target="_blank" rel="noopener noreferrer">
           <img
             height="36"

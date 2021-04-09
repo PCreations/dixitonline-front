@@ -13,9 +13,10 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(
     () =>
-      firebaseApp.auth().onAuthStateChanged((user) => {
+      firebaseApp.auth().onAuthStateChanged(async (user) => {
         if (user) {
           user.getIdToken().then((idToken) => localStorage.setItem('idToken', idToken));
+
           setAuthState((state) => ({
             isAuthenticated: true,
             currentUser: {
@@ -30,7 +31,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(
     () =>
-      firebaseApp.auth().onAuthStateChanged((user) => {
+      firebaseApp.auth().onAuthStateChanged(async (user) => {
         if (user) {
           const alreadyLoggedIn = localStorage.getItem('currentUser') !== null;
           const currentUser = {
@@ -40,10 +41,13 @@ export const AuthProvider = ({ children }) => {
           console.log('Already logged in ? ', alreadyLoggedIn);
           if (!alreadyLoggedIn) {
             console.log('sending login event');
+
             firebaseApp.analytics().logEvent('login', {
               userId: currentUser.id,
               userUsername: currentUser.username,
             });
+
+            await firebaseApp.firestore().collection('connected-players').doc(currentUser.id).set(currentUser);
           }
           localStorage.setItem('currentUser', JSON.stringify(currentUser));
         }

@@ -38,6 +38,17 @@ const CREATE_GAME = gql`
   ${GameFragment}
 `;
 
+const PLAY_NOW = gql`
+  mutation {
+    gamePlayNow {
+      game {
+        ...Game
+      }
+    }
+  }
+  ${GameFragment}
+`;
+
 const CREATE_GAME_WITH_X_TIMES_STORYTELLER_LIMIIT = gql`
   mutation GameCreateGame(
     $createGameWithXtimesStorytellerEndingConditionInput: GameCreateGameWithXtimesStorytellerEndingConditionInput!
@@ -83,6 +94,8 @@ const CREATE_GAME_WITH_SCORE_LIMIT = gql`
 export const Lobby = () => {
   const [createdGame, setCreatedGame] = useState();
   const [createdGameError, setCreatedGameError] = useState();
+  const [playNowError, setPlayNowError] = useState();
+
   const { currentUser } = useContext(AuthStateContext);
   const { language } = useContext(I18nLanguageContext);
   const [createGame, { loading }] = useMutation(CREATE_GAME);
@@ -90,6 +103,8 @@ export const Lobby = () => {
     CREATE_GAME_WITH_X_TIMES_STORYTELLER_LIMIIT
   );
   const [createGameWithScoreLimit, scoreLimitResult] = useMutation(CREATE_GAME_WITH_SCORE_LIMIT);
+  const [playNow, { loading: playNowLoading }] = useMutation(PLAY_NOW);
+
   const history = useHistory();
 
   const gameCreationLoading = loading || xTimesStorytellerResult.loading || scoreLimitResult.loading;
@@ -107,6 +122,32 @@ export const Lobby = () => {
     [language, currentUser, history]
   );
 
+  const handlePlayNow = useCallback(() => {
+    playNow().then(({ data, errors = [] }) => {
+      if (errors.length > 0) {
+        setPlayNowError(errors.map((e) => e.message).join('\n'));
+        return;
+      }
+      const { game } = data.gamePlayNow;
+      if (game.players.length === 0) {
+        firebaseApp.analytics().logEvent('game_created', {
+          userId: currentUser.id,
+          userUsername: currentUser.username,
+          endingCondition: EndingCondition.DEFAULT,
+          isPublic: true,
+        });
+      } else {
+        firebaseApp.analytics().logEvent('join_game', {
+          gameId: game.id,
+          userId: currentUser.id,
+          userUsername: currentUser.username,
+        });
+      }
+      const route = `/${language}/game/${game.id}`;
+      history.push(route);
+    });
+  }, [setPlayNowError, currentUser, history, language, playNow]);
+
   const handleCreateNewGame = useCallback(
     ({ endingCondition, value }) => {
       firebaseApp.analytics().logEvent('game_created', {
@@ -114,6 +155,7 @@ export const Lobby = () => {
         userUsername: currentUser.username,
         endingCondition,
         value,
+        isPublic: false,
       });
       switch (endingCondition) {
         case EndingCondition.X_TIMES_STORYTELLER:
@@ -190,10 +232,19 @@ export const Lobby = () => {
           <AlertDescription>{createdGameError}</AlertDescription>
         </Alert>
       )}
+      {playNowError && (
+        <Alert status="error">
+          <AlertIcon />
+          <AlertTitle mr={2}>Something went wrong :(</AlertTitle>
+          <AlertDescription>{playNowError}</AlertDescription>
+        </Alert>
+      )}
       <LanguageSwitcher />
       <LobbyInfos />
       <GameSelection
         authenticatedUser={currentUser.username}
+        onPlayNowClicked={handlePlayNow}
+        playNowLoading={playNowLoading}
         onCreateNewGameClicked={handleCreateNewGame}
         onJoinGameSubmitted={joinGame}
         createNewGameLoading={gameCreationLoading && !createdGameError}

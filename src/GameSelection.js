@@ -8,9 +8,11 @@ import { GameConfigurationForm } from './GameConfigurationForm';
 
 export const GameSelection = ({
   authenticatedUser,
+  onPlayNowClicked,
   onCreateNewGameClicked,
   onJoinGameSubmitted,
   createNewGameLoading,
+  playNowLoading,
 }) => {
   const t = useContext(I18nTranslateContext);
   const [code, setCode] = useState('');
@@ -38,6 +40,9 @@ export const GameSelection = ({
         <p>
           {t('welcome.home')} {authenticatedUser} !
         </p>
+        <Button primary style={{ marginTop: '10px' }} onClick={onPlayNowClicked} loading={playNowLoading}>
+          {t('game-choice.play-now')}
+        </Button>
       </Segment>
       <Segment basic textAlign="center">
         <GameConfigurationForm onSubmitted={onCreateNewGameClicked} loading={createNewGameLoading} />
@@ -56,12 +61,12 @@ export const GameSelection = ({
         <Button style={{ marginTop: '10px' }} onClick={handleJoinGameSubmitted}>
           {t('game-choice.join')}
         </Button>
-        <Segment basic textAlign="center">
+        {/* <Segment basic textAlign="center">
           <a href="https://discord.gg/WQRMufE" alt="dixit online discord server">
             <Icon name="discord" />
             {t('game-choice.discord')}
           </a>
-        </Segment>
+        </Segment> */}
       </Segment>
     </TitledBox>
   );

@@ -28,10 +28,10 @@ const createRenderLobbyInfoHook = ({ waitingGames, connectedPlayers, language })
 
   return {
     async render() {
-      const { result, waitForValueToChange } = renderHook(() => useLobbyInfos(), { wrapper });
+      const { result, waitForNextUpdate } = renderHook(() => useLobbyInfos(), { wrapper });
 
       const defaultValue = result.current;
-      await waitForValueToChange(() => result.current);
+      await waitForNextUpdate();
       const retrievedLobbyInfos = result.current;
 
       return { defaultValue, retrievedLobbyInfos };
@@ -53,11 +53,11 @@ describe.only('useLobbyInfos', () => {
     // assert
     expect(defaultValue).toEqual({
       waitingGames: 'Aucune partie en attente de joueurs',
-      connectedPlayers: 'Aucun joueur connecté',
+      connectedPlayers: 'Aucun joueur prêt à jouer',
     });
     expect(retrievedLobbyInfos).toEqual({
       waitingGames: '42 parties en attente de joueurs',
-      connectedPlayers: '117 joueurs connectés',
+      connectedPlayers: '117 joueurs prêts à jouer',
     });
   });
 
@@ -74,11 +74,32 @@ describe.only('useLobbyInfos', () => {
     // assert
     expect(defaultValue).toEqual({
       waitingGames: 'Aucune partie en attente de joueurs',
-      connectedPlayers: 'Aucun joueur connecté',
+      connectedPlayers: 'Aucun joueur prêt à jouer',
     });
     expect(retrievedLobbyInfos).toEqual({
       waitingGames: '1 partie en attente de joueurs',
-      connectedPlayers: '1 joueur connecté',
+      connectedPlayers: '1 joueur prêt à jouer',
+    });
+  });
+
+  it('retrieves informations about lobby infos when there is no games or no plauyers', async () => {
+    // arrange
+    const { render } = createRenderLobbyInfoHook({
+      waitingGames: 0,
+      connectedPlayers: 0,
+    });
+
+    // act
+    const { defaultValue, retrievedLobbyInfos } = await render();
+
+    // assert
+    expect(defaultValue).toEqual({
+      waitingGames: 'Aucune partie en attente de joueurs',
+      connectedPlayers: 'Aucun joueur prêt à jouer',
+    });
+    expect(retrievedLobbyInfos).toEqual({
+      waitingGames: 'Aucune partie en attente de joueurs',
+      connectedPlayers: 'Aucun joueur prêt à jouer',
     });
   });
 
@@ -96,11 +117,11 @@ describe.only('useLobbyInfos', () => {
     // assert
     expect(defaultValue).toEqual({
       waitingGames: 'No games waiting for players',
-      connectedPlayers: 'No connected players',
+      connectedPlayers: 'No players ready to play',
     });
     expect(retrievedLobbyInfos).toEqual({
       waitingGames: '42 games waiting for players',
-      connectedPlayers: '117 connected players',
+      connectedPlayers: '117 players ready to play',
     });
   });
 });
