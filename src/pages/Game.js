@@ -17,6 +17,7 @@ import { VotingPhase } from '../turn-phases/VotingPhase';
 import { PhaseFragment } from '../turn-phases/phase-fragment';
 import { Error } from '../Error';
 import { I18nTranslateContext, I18nLanguageContext } from '../I18nContext';
+import { ChatRoom } from '../ChatRoom';
 
 const Loading = () => (
   <Placeholder>
@@ -98,6 +99,7 @@ const GameNotStarted = ({ game }) => {
     }
   );
   const { currentUser } = useContext(AuthStateContext);
+  console.log({ currentUser });
   const t = useContext(I18nTranslateContext);
 
   const startGameErrorMessage = startGameError || startGameData?.gameStartGame.type;
@@ -357,43 +359,52 @@ export const Game = () => {
     );
   }
 
-  switch (data.game.status) {
-    case 'WAITING_FOR_PLAYERS':
-      return <GameNotStarted game={data.game} />;
-    case 'STARTED': {
-      const totalPlayerScoreById = data.game.players.reduce(
-        (scores, player) => ({
-          ...scores,
-          [player.id]: player.score,
-        }),
-        {}
-      );
-      if (data.game.currentTurnId) {
-        stopGamePolling();
+  const getGameComponent = () => {
+    switch (data.game.status) {
+      case 'WAITING_FOR_PLAYERS':
+        return <GameNotStarted game={data.game} />;
+      case 'STARTED': {
+        const totalPlayerScoreById = data.game.players.reduce(
+          (scores, player) => ({
+            ...scores,
+            [player.id]: player.score,
+          }),
+          {}
+        );
+        if (data.game.currentTurnId) {
+          stopGamePolling();
+        }
+        return data.game.currentTurnId ? (
+          <GameInProgress
+            gameId={data.game.id}
+            hostId={data.game.host.id}
+            totalPlayerScoreById={totalPlayerScoreById}
+            turnId={data.game.currentTurnId}
+            refetchGame={refetchGame}
+            endCondition={data.game.endCondition}
+          />
+        ) : (
+          <Loading />
+        );
       }
-      return data.game.currentTurnId ? (
-        <GameInProgress
-          gameId={data.game.id}
-          hostId={data.game.host.id}
-          totalPlayerScoreById={totalPlayerScoreById}
-          turnId={data.game.currentTurnId}
-          refetchGame={refetchGame}
-          endCondition={data.game.endCondition}
-        />
-      ) : (
-        <Loading />
-      );
+      case 'ENDED':
+        stopGamePolling();
+        return <GameEnded players={data.game.players} />;
+      default:
+        return (
+          <Alert status="error">
+            <AlertIcon />
+            <AlertTitle mr={2}>{t('an-error-has-occured')}</AlertTitle>
+            <AlertDescription>{t('refresh-page')}</AlertDescription>
+          </Alert>
+        );
     }
-    case 'ENDED':
-      stopGamePolling();
-      return <GameEnded players={data.game.players} />;
-    default:
-      return (
-        <Alert status="error">
-          <AlertIcon />
-          <AlertTitle mr={2}>{t('an-error-has-occured')}</AlertTitle>
-          <AlertDescription>{t('refresh-page')}</AlertDescription>
-        </Alert>
-      );
-  }
+  };
+
+  return (
+    <>
+      {data?.game && <ChatRoom gameId={data.game.id} username={currentUser.username} userId={currentUser.id} />}
+      {getGameComponent()}
+    </>
+  );
 };

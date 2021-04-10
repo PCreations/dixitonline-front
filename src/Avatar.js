@@ -9,7 +9,7 @@ const AvatarIcon = ({ ready }) => (
   />
 );
 
-export const Avatar = ({ username, grayBorder, ready, showUsername }) => {
+export const Avatar = ({ username, grayBorder, ready, showUsername, size = 'md' }) => {
   const borderProps = grayBorder
     ? {
         showBorder: true,
@@ -19,7 +19,7 @@ export const Avatar = ({ username, grayBorder, ready, showUsername }) => {
     : {};
   return (
     <Flex alignItems="center">
-      <BaseAvatar name={username} {...borderProps}>
+      <BaseAvatar name={username} {...borderProps} size={size}>
         {typeof ready !== 'undefined' && <AvatarIcon ready={ready} />}
       </BaseAvatar>
       {showUsername && <span style={{ paddingLeft: '10px' }}>{username}</span>}

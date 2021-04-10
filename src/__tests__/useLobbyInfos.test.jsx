@@ -39,7 +39,7 @@ const createRenderLobbyInfoHook = ({ waitingGames, connectedPlayers, language })
   };
 };
 
-describe.only('useLobbyInfos', () => {
+describe('useLobbyInfos', () => {
   it('retrieves informations about lobby infos', async () => {
     // arrange
     const { render } = createRenderLobbyInfoHook({
