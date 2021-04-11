@@ -16,12 +16,11 @@ export const AuthProvider = ({ children }) => {
       firebaseApp.auth().onAuthStateChanged(async (user) => {
         if (user) {
           user.getIdToken().then((idToken) => localStorage.setItem('idToken', idToken));
-
           setAuthState((state) => ({
             isAuthenticated: true,
             currentUser: {
               id: user.uid,
-              username: state.username || user.displayName,
+              username: state.currentUser.username || user.displayName,
             },
           }));
         }
