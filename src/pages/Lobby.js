@@ -97,6 +97,7 @@ export const Lobby = () => {
   const [playNowError, setPlayNowError] = useState();
 
   const { currentUser } = useContext(AuthStateContext);
+
   const { language } = useContext(I18nLanguageContext);
   const [createGame, { loading }] = useMutation(CREATE_GAME);
   const [createGameWithXtimesStorytellerLimit, xTimesStorytellerResult] = useMutation(
