@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { firebaseApp } from './firebase-app';
+import { firebaseApp, ServerValue } from './firebase-app';
 import { AuthStateContext, AuthSetStateContext } from './AuthContext';
 
 export const AuthProvider = ({ children }) => {
@@ -15,7 +15,33 @@ export const AuthProvider = ({ children }) => {
     () =>
       firebaseApp.auth().onAuthStateChanged(async (user) => {
         if (user) {
-          user.getIdToken().then((idToken) => localStorage.setItem('idToken', idToken));
+          user
+            .getIdToken()
+            .then((idToken) => {
+              localStorage.setItem('idToken', idToken);
+              return idToken;
+            })
+            .then(() => {
+              const metadataRef = firebaseApp.database().ref(`metadata`);
+              firebaseApp
+                .database()
+                .ref('.info/connected')
+                .on('value', (snp) => {
+                  if (snp.val() === false) {
+                    return false;
+                  }
+                  metadataRef
+                    .onDisconnect()
+                    .update({
+                      usersConnected: ServerValue.increment(-1),
+                    })
+                    .then(() => {
+                      metadataRef.update({
+                        usersConnected: ServerValue.increment(1),
+                      });
+                    });
+                });
+            });
           setAuthState((state) => ({
             isAuthenticated: true,
             currentUser: {
@@ -45,8 +71,6 @@ export const AuthProvider = ({ children }) => {
               userId: currentUser.id,
               userUsername: currentUser.username,
             });
-
-            await firebaseApp.firestore().collection('connected-players').doc(currentUser.id).set(currentUser);
           }
           localStorage.setItem('currentUser', JSON.stringify(currentUser));
         }

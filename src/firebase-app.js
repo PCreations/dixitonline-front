@@ -16,4 +16,5 @@ const config = {
 };
 const firebaseDefaultApp = firebase.initializeApp(config);
 
+export const ServerValue = firebase.database.ServerValue;
 export const firebaseApp = firebaseDefaultApp;

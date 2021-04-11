@@ -45,17 +45,17 @@ const catalog = new Map([
   [
     'lobby-infos.connected-player',
     new Map([
-      ['fr', 'joueur prêt à jouer'],
-      ['en', 'player ready to play'],
-      ['de', 'Spieler spielbereit'],
+      ['fr', 'joueur connecté'],
+      ['en', 'player connected'],
+      ['de', 'verbundener Spieler'],
     ]),
   ],
   [
     'lobby-infos.connected-players',
     new Map([
-      ['fr', 'joueurs prêts à jouer'],
-      ['en', 'players ready to play'],
-      ['de', 'spielbereite Spieler'],
+      ['fr', 'joueurs connectés'],
+      ['en', 'connected players'],
+      ['de', 'verbundene Spieler'],
     ]),
   ],
   [
