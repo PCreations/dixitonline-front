@@ -117,8 +117,8 @@ const catalog = new Map([
   [
     'game-choice.title',
     new Map([
-      ['fr', 'Choix de partie privée'],
-      ['en', 'Prviate game choice'],
+      ['fr', 'Choix de partie'],
+      ['en', 'Game choice'],
     ]),
   ],
   [

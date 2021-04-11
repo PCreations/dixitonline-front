@@ -61,12 +61,6 @@ export const GameSelection = ({
         <Button style={{ marginTop: '10px' }} onClick={handleJoinGameSubmitted}>
           {t('game-choice.join')}
         </Button>
-        {/* <Segment basic textAlign="center">
-          <a href="https://discord.gg/WQRMufE" alt="dixit online discord server">
-            <Icon name="discord" />
-            {t('game-choice.discord')}
-          </a>
-        </Segment> */}
       </Segment>
     </TitledBox>
   );
