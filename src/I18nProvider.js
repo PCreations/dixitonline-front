@@ -156,7 +156,7 @@ const catalog = new Map([
     'game-configuration.value-error',
     new Map([
       ['fr', 'La valeur doit être supérieure à zéro'],
-      ['en', 'The value must be superior to zero'],
+      ['en', 'The value must be greater than zero'],
       ['de', 'Der Wert muss größer als Null sein'],
       ['it', 'Il valore deve essere maggiore di zero'],
     ]),
@@ -390,7 +390,7 @@ const catalog = new Map([
     'turn.other-players-voting',
     new Map([
       ['fr', 'Les autres joueurs sont en train de voter...'],
-      ['en', 'Other players are voting...'],
+      ['en', 'The other players are voting...'],
       ['de', 'Andere Spieler stimmen ab...'],
       ['it', 'Gli altri giocatori stanno votando...'],
     ]),
@@ -408,7 +408,7 @@ const catalog = new Map([
     'turn.cards-exposed-to-vote',
     new Map([
       ['fr', 'Cartes soumises au vote'],
-      ['en', 'Exposed cards'],
+      ['en', 'The cards exposed for voting'],
       ['de', 'Karten zur Abstimmung gestellt'],
       ['it', 'Carte sottoposte al voto'],
     ]),
@@ -426,7 +426,7 @@ const catalog = new Map([
     'card-modal.clue',
     new Map([
       ['fr', "Définir l'indice pour cette carte"],
-      ['en', 'Define a clue for this card'],
+      ['en', 'Give a clue for this card'],
       ['de', 'Definieren Sie einen Hinweis für diese Karte'],
       ['it', 'Definire l’indizio'],
     ]),
@@ -444,7 +444,7 @@ const catalog = new Map([
     'card-modal.validate',
     new Map([
       ['fr', 'VALIDER'],
-      ['en', 'VALIDATE'],
+      ['en', 'SUBMIT'],
       ['de', 'BESTÄTIGEN'],
       ['it', 'CONVALIDARE'],
     ]),
@@ -453,7 +453,7 @@ const catalog = new Map([
     'card-modal.chose-card',
     new Map([
       ['fr', 'CHOISIR CETTE CARTE'],
-      ['en', 'CHOSE THIS CARD'],
+      ['en', 'CHOOSE THIS CARD'],
       ['de', 'WÄHLEN SIE DIESE KARTE'],
       ['it', 'SCEGLIERE QUESTA CARTA'],
     ]),
@@ -615,7 +615,7 @@ const catalog = new Map([
     'titled-card-grid.chose-card',
     new Map([
       ['fr', 'Choisissez une carte'],
-      ['en', 'Chose a card'],
+      ['en', 'Choose a card'],
       ['de', 'Wähle eine Karte'],
       ['it', 'Scegli una carta'],
     ]),
@@ -624,7 +624,7 @@ const catalog = new Map([
     'titled-card-grid.chose-two-cards',
     new Map([
       ['fr', 'Choisissez deux cartes'],
-      ['en', 'Chose two cards'],
+      ['en', 'Choose two cards'],
       ['de', 'Wähle zwei Karten'],
       ['it', 'Scegli due carte'],
     ]),
@@ -642,7 +642,7 @@ const catalog = new Map([
     'titled-card-grid.vote-results',
     new Map([
       ['fr', 'Résultat des votes'],
-      ['en', 'Vote results'],
+      ['en', 'Voting results'],
       ['de', 'Ergebnis der Stimmen'],
       ['it', 'Risultato dei votazioni'],
     ]),
