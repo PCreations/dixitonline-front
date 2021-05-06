@@ -21,34 +21,44 @@ export const GameEnded = ({ players }) => {
   const t = useContext(I18nTranslateContext);
   players.sort(({ score: scoreA }, { score: scoreB }) => scoreB - scoreA);
   return (
-    <TitledBox title={`Résultats de la partie`}>
-      <Segment textAlign="center" basic style={{ padding: '0' }}>
-        <p>And the winner is...</p>
-      </Segment>
-      {players.map(({ score, username }, index) => (
-        <Segment basic key={index} style={{ padding: '0' }}>
-          <Flex justifyContent={index === 0 ? 'center' : 'flex-start'} alignItems="center">
-            <Avatar username={username} showUsername={true} />
-            {index === 0 && (
-              <div style={{ marginBottom: '20px', marginTop: '20px' }}>
-                <Icon color="yellow" name="trophy" size="huge" />
-                <strong style={{ size: '2rem' }}>
-                  {t('game-ended.ranking.first')} - {score} points
-                </strong>
-              </div>
-            )}
-            {index !== 0 && (
-              <span>
-                <strong>
-                  {getIconForNonWinner(index)}
-                  {t('game-ended.ranking.other', index + 1)} - {score} points
-                </strong>
-              </span>
-            )}
-          </Flex>
+    <>
+      <TitledBox title={`Résultats de la partie`}>
+        <Segment textAlign="center" basic style={{ padding: '0' }}>
+          <p>And the winner is...</p>
         </Segment>
-      ))}
-    </TitledBox>
+        {players.map(({ score, username }, index) => (
+          <Segment basic key={index} style={{ padding: '0' }}>
+            <Flex justifyContent={index === 0 ? 'center' : 'flex-start'} alignItems="center">
+              <Avatar username={username} showUsername={true} />
+              {index === 0 && (
+                <div style={{ marginBottom: '20px', marginTop: '20px' }}>
+                  <Icon color="yellow" name="trophy" size="huge" />
+                  <strong style={{ size: '2rem' }}>
+                    {t('game-ended.ranking.first')} - {score} points
+                  </strong>
+                </div>
+              )}
+              {index !== 0 && (
+                <span>
+                  <strong>
+                    {getIconForNonWinner(index)}
+                    {t('game-ended.ranking.other', index + 1)} - {score} points
+                  </strong>
+                </span>
+              )}
+            </Flex>
+          </Segment>
+        ))}
+      </TitledBox>
+      <Flex justifyContent="center">
+        <Segment inverted color="blue" textAlign="center">
+          {t('game-ended.thanks')}{' '}
+          <a href="https://bit.ly/3b8m4nl" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+            {t('game-ended.survey')}
+          </a>
+        </Segment>
+      </Flex>
+    </>
   );
 };
 

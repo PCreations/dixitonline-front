@@ -155,7 +155,7 @@ const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, refetchG
 
   useEffect(() => {
     console.log('Start phase polling', turnId);
-    startPhasePolling(2000);
+    startPhasePolling(4000);
     return () => {
       console.log('Stop phase polling', turnId);
       stopPhasePolling();

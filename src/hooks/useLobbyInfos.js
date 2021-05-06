@@ -16,17 +16,6 @@ export const GET_LOBBY_INFOS = gql`
 export const useLobbyInfos = () => {
   const { data } = useQuery(GET_LOBBY_INFOS);
   const t = useContext(I18nTranslateContext);
-  const [connectedPlayers, setConnectedPlayers] = useState(0);
-
-  useEffect(() => {
-    const updateConnectedPlayers = (snp) => {
-      console.log('count', snp.val());
-      setConnectedPlayers(snp.val() > 0 ? snp.val() : 0);
-    };
-    firebaseApp.database().ref('metadata/usersConnected').on('value', updateConnectedPlayers);
-
-    return () => firebaseApp.database().ref('metadata/usersConnected').off('value', updateConnectedPlayers);
-  }, [setConnectedPlayers]);
 
   if (!data) {
     return {
@@ -36,7 +25,7 @@ export const useLobbyInfos = () => {
   }
 
   const {
-    lobbyInfos: { waitingGames },
+    lobbyInfos: { waitingGames, connectedPlayers },
   } = data;
 
   const waitingGamesString = `${

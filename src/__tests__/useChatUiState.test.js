@@ -38,7 +38,7 @@ const buildTestMessage = ({ id = `id-${Math.random()}`, text = 'Hello World', us
   };
 };
 
-describe.only('useChatUiState', () => {
+describe('useChatUiState', () => {
   describe('open/close toggle', () => {
     test('the chat should be closed by default', () => {
       // arrange
@@ -110,7 +110,7 @@ describe.only('useChatUiState', () => {
       expect(result.current.messages[0]).toEqual(message);
     });
 
-    test.only('append message at the bottom of the list', () => {
+    test('append message at the bottom of the list', () => {
       // arrange
       const messages = [buildTestMessage().build()];
       const newMessage = buildTestMessage().build();

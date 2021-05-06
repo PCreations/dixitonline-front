@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { BrowserRouter, Switch, Route, Redirect, useRouteMatch } from 'react-router-dom';
 import { ThemeProvider } from '@chakra-ui/core';
 import { AuthStateContext } from './AuthContext';
@@ -7,7 +8,7 @@ import { Lobby } from './pages/Lobby';
 import { JoinGame } from './pages/JoinGame';
 import { Login } from './pages/Login';
 import { Game } from './pages/Game';
-import { I18nLanguageContext } from './I18nContext';
+import { I18nLanguageContext, I18nTranslateContext } from './I18nContext';
 
 const PrivateRoute = ({ children, ...rest }) => {
   const { isAuthenticated } = useContext(AuthStateContext);
@@ -48,14 +49,20 @@ const LocalizedSwitch = () => {
 };
 
 function App() {
+  const t = useContext(I18nTranslateContext);
   return (
-    <ThemeProvider>
-      <AuthProvider>
-        <BrowserRouter>
-          <LocalizedSwitch />
-        </BrowserRouter>
-      </AuthProvider>
-    </ThemeProvider>
+    <>
+      <Helmet>
+        <meta property="og:description" content={t('meta.description')} />
+      </Helmet>
+      <ThemeProvider>
+        <AuthProvider>
+          <BrowserRouter>
+            <LocalizedSwitch />
+          </BrowserRouter>
+        </AuthProvider>
+      </ThemeProvider>
+    </>
   );
 }
 

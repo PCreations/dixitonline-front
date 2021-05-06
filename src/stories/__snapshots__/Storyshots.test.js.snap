@@ -562,6 +562,72 @@ exports[`Storyshots CardModal Vote Results Card Modal Content 1`] = `
 </div>
 `;
 
+exports[`Storyshots ChatRoom Chat 1`] = `
+<div
+  className="css-0"
+>
+  <div
+    className="css-b4m0rk"
+  >
+    <div
+      className="css-1g9d81u"
+    >
+      <div
+        className="css-1z04f82"
+      />
+    </div>
+    <div
+      className="css-jb501c"
+    >
+      <div
+        className="css-3lf2mu"
+      >
+        <input
+          className="css-1v0ulua"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Jot something down to other players"
+          type="text"
+          value=""
+        />
+        <div
+          className="css-mczi6p"
+        >
+          <button
+            aria-label="send message"
+            className="css-1umhd4g"
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="css-thzv76"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Chose a Username Empty State 1`] = `
 <div
   className="css-1l4w6pd"

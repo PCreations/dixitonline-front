@@ -22,7 +22,7 @@ export const useChatUiState = () => {
     },
     setText,
     appendMessage(message) {
-      setMessages((prevMessages) => [...prevMessages, message]);
+      setMessages((previousMessages) => [...previousMessages, message]);
       if (!isOpen) setUnreadMessages((prevUnreadMessages) => prevUnreadMessages + 1);
     },
   };

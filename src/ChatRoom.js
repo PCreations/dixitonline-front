@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useLayoutEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { MdSend } from 'react-icons/md';
 import { IoChatbubbles } from 'react-icons/io5';
 import {
