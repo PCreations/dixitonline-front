@@ -5,25 +5,19 @@ const catalog = new Map([
   [
     'info.update',
     new Map([
-      ['fr', 'Mise à jour !'],
-      ['en', 'New update !'],
-      ['de', 'Neues Update !'],
-      ['it', 'Nuovo aggiornamento !'],
+      ['fr', '🙌 Mise à jour ! 🙌'],
+      ['en', '🙌 New update ! 🙌'],
+      ['de', '🙌 Neues Update ! 🙌'],
+      ['it', '🙌 Nuovo aggiornamento ! 🙌'],
     ]),
   ],
   [
     'info.message',
     new Map([
-      ['fr', 'Le bug bloquant parfois les parties à 3 joueurs est maintenant résolu :) Bon jeu !'],
-      ['en', 'The bug leading to a blocked game when playing a 3-players game is now fixed :) Happy gaming !'],
-      [
-        'de',
-        'Der Fehler, der beim Spielen eines 3-Spieler-Spiels zu einem blockierten Spiel führt, ist jetzt behoben :) Viel Spaß beim Spielen !',
-      ],
-      [
-        'it',
-        'Il bug che causava il blocco del gioco quando si giocava a una partita a 3 giocatori è stato risolto :) Buon gioco !',
-      ],
+      ['fr', "Vous pouvez maintenant jouer jusqu'à 8 joueurs ! Et 75+ cartes ont été ajoutées 💪"],
+      ['en', 'You can now play up to 8 players ! And enjoy 75+ new cards 💪'],
+      ['de', 'Sie können jetzt bis zu 8 Spieler spielen ! Und genießen Sie mehr als 75+ neue Karten 💪'],
+      ['it', 'Ora puoi giocare fino a 8 giocatori ! E goditi più di 75+ nuove carte 💪'],
     ]),
   ],
   [
@@ -373,7 +367,7 @@ const catalog = new Map([
     new Map([
       ['fr', 'Vous êtes le conteur !'],
       ['en', 'You are the storyteller!'],
-      ['de', 'Du bist der Geschichtenerzähler!'],
+      ['de', 'Du bist die Geschichtenerzähler*in!'],
       ['it', 'Lei è il narratore'],
     ]),
   ],
@@ -382,7 +376,7 @@ const catalog = new Map([
     new Map([
       ['fr', 'En attente du conteur...'],
       ['en', 'Waiting for the storyteller...'],
-      ['de', 'Warten auf den Geschichtenerzähler...'],
+      ['de', 'Warten auf die Geschichtenerzähler*in...'],
       ['it', 'Aspettando il narratore'],
     ]),
   ],
@@ -533,10 +527,10 @@ const catalog = new Map([
   [
     'game-waiting.waiting-for-players',
     new Map([
-      ['fr', 'En attente de joueurs... (3 joueurs minimum, 6 maximum)'],
-      ['en', 'Waiting for other players... (3 players min, 6 max)'],
-      ['de', 'Warten auf andere Spieler... (3 Spieler min, 6 max)'],
-      ['it', 'Aspettando i giocari... (3 giocatori min, 6 max)'],
+      ['fr', 'En attente de joueurs... (3 joueurs minimum, 8 maximum)'],
+      ['en', 'Waiting for other players... (3 players min, 8 max)'],
+      ['de', 'Warten auf andere Spieler... (3 Spieler min, 8 max)'],
+      ['it', 'Aspettando i giocari... (3 giocatori min, 8 max)'],
     ]),
   ],
   [

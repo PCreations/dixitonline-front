@@ -43,6 +43,11 @@ export const Logo = () => {
           </a>
         </p>
       </Segment>
+      <Flex justifyContent="center" marginBottom={5}>
+        <Segment inverted color="green" textAlign="center">
+          {t('info.update')} {t('info.message')}
+        </Segment>
+      </Flex>
       <Flex justifyContent="center">
         <Segment inverted color="blue" textAlign="center">
           <a href="https://bit.ly/3b8m4nl" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
