@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { Segment, Icon } from 'semantic-ui-react';
 import { TitledBox } from './TitledBox';
 import { Avatar } from './Avatar';
-import { Flex } from '@chakra-ui/core';
+import { Flex, Box } from '@chakra-ui/core';
 import { I18nTranslateContext } from './I18nContext';
+import { useColors } from './hooks/useColors';
 
 const getIconForNonWinner = (rank) => {
   switch (rank) {
@@ -19,9 +20,10 @@ const getIconForNonWinner = (rank) => {
 
 export const GameEnded = ({ players }) => {
   const t = useContext(I18nTranslateContext);
+  const { color } = useColors();
   players.sort(({ score: scoreA }, { score: scoreB }) => scoreB - scoreA);
   return (
-    <>
+    <Box color={color}>
       <TitledBox title={`Résultats de la partie`}>
         <Segment textAlign="center" basic style={{ padding: '0' }}>
           <p>And the winner is...</p>
@@ -50,7 +52,7 @@ export const GameEnded = ({ players }) => {
           </Segment>
         ))}
       </TitledBox>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginTop={5}>
         <Segment inverted color="blue" textAlign="center">
           {t('game-ended.thanks')}{' '}
           <a href="https://bit.ly/3b8m4nl" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
@@ -58,7 +60,7 @@ export const GameEnded = ({ players }) => {
           </a>
         </Segment>
       </Flex>
-    </>
+    </Box>
   );
 };
 

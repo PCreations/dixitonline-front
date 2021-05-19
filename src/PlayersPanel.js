@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import { Segment, Icon, Responsive } from 'semantic-ui-react';
 import { Flex } from '@chakra-ui/core';
 import { Avatar } from './Avatar';
+import { useColors } from './hooks/useColors';
 
 export const PlayersPanel = ({ players, authenticatedPlayerId }) => {
+  const { color } = useColors();
   return (
     <Segment basic style={{ marginTop: '10px', borderBottom: '1px solid #718096' }}>
-      <Flex justifyContent="space-between">
+      <Flex justifyContent="space-between" wrap="wrap" color={color}>
         {players.map((p) => (
           <div key={p.id}>
             <Responsive as="div" minWidth={414} style={{ textAlign: 'center', paddingBottom: '3px' }}>

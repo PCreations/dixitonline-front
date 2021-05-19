@@ -4,6 +4,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/core';
 import { I18nTranslateContext, I18nLanguageContext } from '../I18nContext';
+import { Background } from './Background';
 
 const JOIN_GAME = gql`
   mutation JoinGame($joinGameInput: GameJoinGameInput!) {
@@ -69,9 +70,9 @@ export const JoinGame = () => {
     );
 
   return (
-    <div>
+    <Background>
       <p>{t('game.accessing-game')}</p>
       <a href={`/${language}/game/${gameId}`}>{t('game.click-if-not-redirected')}</a>
-    </div>
+    </Background>
   );
 };

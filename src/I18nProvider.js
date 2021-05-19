@@ -14,10 +14,10 @@ const catalog = new Map([
   [
     'info.message',
     new Map([
-      ['fr', "Vous pouvez maintenant jouer jusqu'à 8 joueurs ! Et 75+ cartes ont été ajoutées 💪"],
-      ['en', 'You can now play up to 8 players ! And enjoy 75+ new cards 💪'],
-      ['de', 'Sie können jetzt bis zu 8 Spieler spielen ! Und genießen Sie mehr als 75+ neue Karten 💪'],
-      ['it', 'Ora puoi giocare fino a 8 giocatori ! E goditi più di 75+ nuove carte 💪'],
+      ['fr', 'Dark mode !'],
+      ['en', 'Dark mode !'],
+      ['de', 'Dark mode !'],
+      ['it', 'Dark mode !'],
     ]),
   ],
   [
@@ -609,7 +609,7 @@ const catalog = new Map([
     'titled-card-grid.chose-card',
     new Map([
       ['fr', 'Choisissez une carte'],
-      ['en', 'Chose a card'],
+      ['en', 'Choose a card'],
       ['de', 'Wähle eine Karte'],
       ['it', 'Scegli una carta'],
     ]),
@@ -618,7 +618,7 @@ const catalog = new Map([
     'titled-card-grid.chose-two-cards',
     new Map([
       ['fr', 'Choisissez deux cartes'],
-      ['en', 'Chose two cards'],
+      ['en', 'Choose two cards'],
       ['de', 'Wähle zwei Karten'],
       ['it', 'Scegli due carte'],
     ]),

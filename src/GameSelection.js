@@ -5,6 +5,7 @@ import { Input } from './Input';
 import { Button } from './Button';
 import { I18nTranslateContext } from './I18nContext';
 import { GameConfigurationForm } from './GameConfigurationForm';
+import { useColors } from './hooks/useColors';
 
 export const GameSelection = ({
   authenticatedUser,
@@ -34,6 +35,8 @@ export const GameSelection = ({
     }
   }, [onJoinGameSubmitted, code]);
 
+  const { color } = useColors();
+
   return (
     <TitledBox title={t('game-choice.title')}>
       <Segment basic textAlign="center">
@@ -49,7 +52,7 @@ export const GameSelection = ({
         <p style={{ marginTop: '10px' }}>{t('game-choice.or')}</p>
         <Form>
           <Form.Field inline>
-            <label>{t('game-choice.join-game')}</label>
+            <label style={{ color }}>{t('game-choice.join-game')}</label>
             <Input placeholder="code" size="mini" error={hasError} onChange={handleCodeChange} />
           </Form.Field>
         </Form>

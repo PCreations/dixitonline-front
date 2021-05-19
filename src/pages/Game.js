@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import { useParams, useHistory } from 'react-router-dom';
 import { Placeholder, Segment } from 'semantic-ui-react';
 import { useQuery, useMutation } from '@apollo/client';
-import { Alert, AlertIcon, AlertTitle, AlertDescription, Flex } from '@chakra-ui/core';
+import { Alert, AlertIcon, AlertTitle, AlertDescription, Flex, useColorMode } from '@chakra-ui/core';
 import { firebaseApp } from '../firebase-app';
 import { GameWaitingForPlayers } from '../GameWaitingForPlayers';
 import { GameEnded as BaseGameEnded } from '../GameEnded';
@@ -18,17 +18,22 @@ import { PhaseFragment } from '../turn-phases/phase-fragment';
 import { Error } from '../Error';
 import { I18nTranslateContext, I18nLanguageContext } from '../I18nContext';
 import { ChatRoom } from '../ChatRoom';
+import { Background } from './Background';
+import { useColors } from '../hooks/useColors';
 
-const Loading = () => (
-  <Placeholder>
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-  </Placeholder>
-);
+const Loading = () => {
+  const { colorMode } = useColorMode();
+  return (
+    <Placeholder inverted={colorMode === 'dark'} fluid>
+      <Placeholder.Line />
+      <Placeholder.Line />
+      <Placeholder.Line />
+      <Placeholder.Line />
+      <Placeholder.Line />
+      <Placeholder.Line />
+    </Placeholder>
+  );
+};
 
 const GameFragment = gql`
   fragment Game on Game {
@@ -113,23 +118,25 @@ const GameNotStarted = ({ game }) => {
   }, [doStartGame, game, currentUser]);
 
   return (
-    <Flex direction="column">
-      <Logo />
-      {startGameErrorMessage && (
-        <Alert status="error">
-          <AlertIcon />
-          <AlertTitle mr={2}>{t('game.cant-start-game')}</AlertTitle>
-          <AlertDescription>{startGameErrorMessage}</AlertDescription>
-        </Alert>
-      )}
-      <GameWaitingForPlayers
-        gameId={game.id}
-        players={game.players}
-        isHost={game.host.id === currentUser.id}
-        onStartGameClicked={startGame}
-        startGameIsLoading={startGameLoading}
-      />
-    </Flex>
+    <Background>
+      <Flex direction="column">
+        <Logo />
+        {startGameErrorMessage && (
+          <Alert status="error">
+            <AlertIcon />
+            <AlertTitle mr={2}>{t('game.cant-start-game')}</AlertTitle>
+            <AlertDescription>{startGameErrorMessage}</AlertDescription>
+          </Alert>
+        )}
+        <GameWaitingForPlayers
+          gameId={game.id}
+          players={game.players}
+          isHost={game.host.id === currentUser.id}
+          onStartGameClicked={startGame}
+          startGameIsLoading={startGameLoading}
+        />
+      </Flex>
+    </Background>
   );
 };
 
@@ -145,6 +152,7 @@ const GameEnded = ({ players }) => {
 const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, refetchGame, endCondition }) => {
   console.log('current turn id', turnId);
   const t = useContext(I18nTranslateContext);
+  const { color } = useColors();
   const {
     loading,
     error,
@@ -195,8 +203,9 @@ const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, refetchG
     (endCondition.__typename === 'GameRemainingTurnsEndCondition' && endCondition.remainingTurns === 0) ||
     (endCondition.__typename === 'GameScoreLimitEndCondition' &&
       players.some(({ score }) => score >= endCondition.scoreLimit));
+
   return (
-    <Flex direction="column">
+    <Flex direction="column" color={color}>
       <PlayersPanel players={players} authenticatedPlayerId={currentUser.id} />
       <Segment
         basic

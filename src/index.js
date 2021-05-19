@@ -4,6 +4,7 @@ import * as Sentry from '@sentry/browser';
 import ApolloClient from 'apollo-boost';
 import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
 import { ApolloProvider } from '@apollo/client';
+import './body-style.css';
 import introspectionQueryResultData from './fragment-types.gen.json';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

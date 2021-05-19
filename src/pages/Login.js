@@ -7,6 +7,7 @@ import { ChoseUsername } from '../ChoseUsername';
 import { Logo } from '../Logo';
 import { Footer } from '../Footer';
 import { AuthSetStateContext } from '../AuthContext';
+import { Background } from './Background';
 
 export const Login = () => {
   const history = useHistory();
@@ -42,11 +43,13 @@ export const Login = () => {
   );
 
   return (
-    <Flex flexDirection="column" alignItems="center" justifyItems="center">
-      <Logo />
-      <LanguageSwitcher />
-      <ChoseUsername onUsernameSubmitted={signIn} />
-      <Footer />
-    </Flex>
+    <Background>
+      <Flex flexDirection="column" alignItems="center" justifyItems="center">
+        <Logo />
+        <LanguageSwitcher />
+        <ChoseUsername onUsernameSubmitted={signIn} />
+        <Footer />
+      </Flex>
+    </Background>
   );
 };

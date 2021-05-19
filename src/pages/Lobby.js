@@ -12,6 +12,8 @@ import { GameSelection } from '../GameSelection';
 import { I18nLanguageContext } from '../I18nContext';
 import { EndingCondition } from '../GameConfigurationForm';
 import { LobbyInfos } from '../LobbyInfos';
+import { Background } from './Background';
+import { ToggleColorMode } from '../ToggleColorMode';
 
 const GameFragment = gql`
   fragment Game on Game {
@@ -224,8 +226,9 @@ export const Lobby = () => {
   }, [language, createdGame, history]);
 
   return (
-    <>
+    <Background>
       <Logo />
+      <ToggleColorMode />
       {createdGameError && (
         <Alert status="error">
           <AlertIcon />
@@ -251,6 +254,6 @@ export const Lobby = () => {
         createNewGameLoading={gameCreationLoading && !createdGameError}
       />
       <Footer />
-    </>
+    </Background>
   );
 };

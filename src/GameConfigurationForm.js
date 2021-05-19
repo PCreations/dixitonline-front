@@ -3,6 +3,7 @@ import { Form } from 'semantic-ui-react';
 import { Flex } from '@chakra-ui/core';
 import { Button } from './Button';
 import { I18nTranslateContext } from './I18nContext';
+import { useColors } from './hooks/useColors';
 
 export const EndingCondition = {
   DEFAULT: 'default',
@@ -15,6 +16,7 @@ export const GameConfigurationForm = ({ onSubmitted, loading }) => {
   const [endingCondition, setEndingCondition] = useState(EndingCondition.DEFAULT);
   const [value, setValue] = useState(1);
   const [hasError, setHasError] = useState(false);
+  const { color } = useColors();
 
   const handleOnSubmit = useCallback(() => {
     if (value < 1) {
@@ -47,7 +49,7 @@ export const GameConfigurationForm = ({ onSubmitted, loading }) => {
       <Flex justifyContent="center" direction="column" alignItems="center">
         <Form.Select
           inline
-          label={t('game-configuration.ending-condition')}
+          label={<label style={{ color }}>{t('game-configuration.ending-condition')}</label>}
           value={endingCondition}
           onChange={handleEndingConditionChange}
           options={[
@@ -73,7 +75,7 @@ export const GameConfigurationForm = ({ onSubmitted, loading }) => {
         />
         {endingCondition !== EndingCondition.DEFAULT && (
           <Form.Input
-            label={t('game-configuration.value-label')}
+            label={<label style={{ color }}>{t('game-configuration.value-label')}</label>}
             inline
             type="number"
             value={value}
