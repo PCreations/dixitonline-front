@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Icon } from 'semantic-ui-react';
+import { Flex, Box } from '@chakra-ui/core';
+import { Button } from './Button';
 import { TitledBox } from './TitledBox';
 import { Avatar } from './Avatar';
-import { Flex, Box } from '@chakra-ui/core';
 import { I18nTranslateContext } from './I18nContext';
+import { AuthStateContext } from './AuthContext';
 import { useColors } from './hooks/useColors';
 
 const getIconForNonWinner = (rank) => {
@@ -18,10 +20,16 @@ const getIconForNonWinner = (rank) => {
   }
 };
 
-export const GameEnded = ({ players }) => {
+export const GameEnded = ({ players, restartGame, restartGameLoading, hostId }) => {
   const t = useContext(I18nTranslateContext);
+  const { currentUser } = useContext(AuthStateContext);
+
+  const isHost = hostId === currentUser.id;
+
   const { color } = useColors();
+
   players.sort(({ score: scoreA }, { score: scoreB }) => scoreB - scoreA);
+
   return (
     <Box color={color}>
       <TitledBox title={`Résultats de la partie`}>
@@ -51,6 +59,13 @@ export const GameEnded = ({ players }) => {
             </Flex>
           </Segment>
         ))}
+        {isHost && (
+          <Flex justifyContent="center">
+            <Button primary onClick={restartGame} loading={restartGameLoading}>
+              {t('game.restart-game')}
+            </Button>
+          </Flex>
+        )}
       </TitledBox>
       <Flex justifyContent="center" marginTop={5}>
         <Segment inverted color="blue" textAlign="center">
@@ -71,4 +86,6 @@ GameEnded.propTypes = {
       username: PropTypes.string.isRequired,
     })
   ),
+  gameId: PropTypes.string.isRequired,
+  hostId: PropTypes.string.isRequired,
 };

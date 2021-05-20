@@ -13,6 +13,26 @@ const JOIN_GAME = gql`
       ... on GameJoinGameResultSuccess {
         game {
           id
+          currentTurnId
+          endCondition {
+            __typename
+            ... on GameRemainingTurnsEndCondition {
+              remainingTurns
+            }
+            ... on GameScoreLimitEndCondition {
+              scoreLimit
+            }
+          }
+          status
+          host {
+            id
+            username: name
+          }
+          players {
+            id
+            username: name
+            score
+          }
         }
       }
       ... on GameJoinGameResultError {
@@ -27,27 +47,19 @@ export const JoinGame = () => {
   const { language } = useContext(I18nLanguageContext);
   const { gameId } = useParams();
   const history = useHistory();
-  const [joinGame, { error, data, loading }] = useMutation(JOIN_GAME, { variables: { joinGameInput: { gameId } } });
+  const [joinGame, { called, loading, error, data }] = useMutation(JOIN_GAME, {
+    variables: { joinGameInput: { gameId } },
+  });
 
   useEffect(() => {
-    joinGame();
-  }, [joinGame]);
-
-  useEffect(() => {
-    if (data?.gameJoinGame.__typename === 'GameJoinGameResultSuccess') {
-      console.log('Join game success, redirecting to game');
-      history.push(`/${language}/game/${gameId}`);
-    }
-  }, [language, data, gameId, history]);
-
-  useEffect(() => {
-    if (data?.gameJoinGame.__typename === 'GameJoinGameResultError') {
-      if (data.gameJoinGame.type === 'GAME_ALREADY_JOINED') {
-        console.log('Game already joined, redirecting to game');
+    if (!called) {
+      joinGame().then(({ data }) => {
+        console.log('redirecting to game', data);
+        debugger;
         history.push(`/${language}/game/${gameId}`);
-      }
+      });
     }
-  }, [language, data, history, gameId]);
+  }, [called, joinGame, history, language, gameId]);
 
   if (loading) return 'Loading...';
 

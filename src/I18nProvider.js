@@ -291,6 +291,15 @@ const catalog = new Map([
     ]),
   ],
   [
+    'game.restart-game',
+    new Map([
+      ['fr', 'Relancer la partie'],
+      ['en', 'Relaunch the game'],
+      ['de', 'Starten Sie das Spiel neu'],
+      ['it', 'Riavvia il gioco'],
+    ]),
+  ],
+  [
     'error.oops',
     new Map([
       ['fr', 'Oups...'],
@@ -447,7 +456,7 @@ const catalog = new Map([
     'card-modal.chose-card',
     new Map([
       ['fr', 'CHOISIR CETTE CARTE'],
-      ['en', 'CHOSE THIS CARD'],
+      ['en', 'CHOOSE THIS CARD'],
       ['de', 'WÄHLEN SIE DIESE KARTE'],
       ['it', 'SCEGLIERE QUESTA CARTA'],
     ]),

@@ -10,7 +10,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { I18nProvider } from './I18nProvider';
 
-Sentry.init({ dsn: 'https://8c8ffb1dd1a34b8d9bd30d1e9793e020@o377168.ingest.sentry.io/5198896' });
+// Sentry.init({ dsn: 'https://8c8ffb1dd1a34b8d9bd30d1e9793e020@o377168.ingest.sentry.io/5198896' });
 
 const fragmentMatcher = new IntrospectionFragmentMatcher({
   introspectionQueryResultData,
