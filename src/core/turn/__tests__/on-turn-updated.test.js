@@ -1,4 +1,4 @@
-import { createStore } from '../../store';
+import { createTestStore } from '../../test-store';
 import { turnUpdated } from '../use-cases';
 import { selectTurnById } from '..';
 
@@ -8,7 +8,7 @@ const expectedTurn = ({ id = '' } = {}) => ({
 
 describe('on turn updated', () => {
   it('updates the turn for the correct turn', async () => {
-    const store = createStore();
+    const store = createTestStore({ existingTurns: [{ id: 'turnId' }] });
     const turnId = 'turnId';
 
     await store.dispatch(turnUpdated({ id: turnId }));
@@ -16,18 +16,18 @@ describe('on turn updated', () => {
     expect(selectTurnById(store.getState(), turnId)).toEqual(expectedTurn({ id: 'turnId' }));
   });
 
-  xit('given other turns are in state, it updates the correct turn', async () => {
+  it('given other turns are in state, it updates the correct turn', async () => {
     const existingTurn = {
       id: 'existingTurnId',
     };
-    const store = createStore({ existingTurn });
-    const updatedTurn = {
+    const turn = {
       id: 'turnId',
     };
+    const store = createTestStore({ existingTurns: [existingTurn, turn] });
 
-    await store.dispatch(turnUpdated({ turn: updatedTurn }));
+    await store.dispatch(turnUpdated({ turn }));
 
-    expect(selectTurnById(store.getState(), existingTurn.id)).toEqual(expectedTurn({ id: 'exinstingTurnId' }));
-    expect(selectTurnById(store.getState(), updatedTurn.id)).toEqual(expectedTurn({ id: 'turnId' }));
+    expect(selectTurnById(store.getState(), existingTurn.id)).toEqual(expectedTurn({ id: 'existingTurnId' }));
+    expect(selectTurnById(store.getState(), turn.id)).toEqual(expectedTurn({ id: 'turnId' }));
   });
 });
