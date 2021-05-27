@@ -1,1 +1,3 @@
-export const createTurnPhaseSelector = () => () => ({});
+export const createTurnPhaseSelector = ({ gameId }) => () => ({
+  gameId,
+});
