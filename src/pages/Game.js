@@ -178,13 +178,13 @@ const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, phase, r
 const EndCondition = ({ endCondition }) => {
   const t = useContext(I18nTranslateContext);
   if (endCondition.__typename === 'GameRemainingTurnsEndCondition') {
-    return endCondition.remainingTurns === 0 ? (
+    return endCondition.remainingTurns === 1 ? (
       <span>{t('game.last-turn')}</span>
     ) : (
       <span>
         <strong>
           {t('game.remaining-turns')}
-          {endCondition.remainingTurns + 1}
+          {endCondition.remainingTurns}
         </strong>
       </span>
     );
