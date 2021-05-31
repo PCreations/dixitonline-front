@@ -1,10 +1,7 @@
 import { createTestStore } from '../../test-store';
+import { expectedTurn } from '../test-utils/expected-turn';
 import { turnUpdated } from '../use-cases';
 import { selectTurnById } from '..';
-
-const expectedTurn = ({ id = '' } = {}) => ({
-  id,
-});
 
 describe('on turn updated', () => {
   it('updates the turn for the correct turn', async () => {
