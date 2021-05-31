@@ -1,15 +1,14 @@
 import { createStore } from '../../store';
 import { expectedTurn } from '../test-utils/expected-turn';
-import { newTurnCreated } from '../use-cases';
-import { selectTurnById } from '..';
+import { useCases, selectors } from '..';
 
 describe('new turn created', () => {
   it('adds the new turn', async () => {
     const store = createStore();
 
-    await store.dispatch(newTurnCreated({ id: 'the-created-turn-id', gameId: 'game-id' }));
+    store.dispatch(useCases.newTurnCreated({ id: 'the-created-turn-id', gameId: 'game-id' }));
 
-    expect(selectTurnById(store.getState(), 'the-created-turn-id')).toEqual(
+    expect(selectors.selectById(store.getState(), 'the-created-turn-id')).toEqual(
       expectedTurn({
         id: 'the-created-turn-id',
         gameId: 'game-id',

@@ -1,14 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { turnsAdapter } from './entity-adapter';
-import { extraReducers } from './extra-reducers';
+import { createSlice, createEntityAdapter } from '@reduxjs/toolkit';
+
+export const turnsAdapter = createEntityAdapter();
 
 const turnsSlice = createSlice({
   name: 'turns',
   initialState: turnsAdapter.getInitialState(),
-  extraReducers,
+  reducers: {
+    newTurnCreated: turnsAdapter.addOne,
+    turnUpdated: turnsAdapter.updateOne,
+  },
 });
 
-const turnsSelectors = turnsAdapter.getSelectors((state) => state[turnsSlice.name]);
+export const selectors = turnsAdapter.getSelectors((state) => state[turnsSlice.name]);
 
-export const selectTurnById = turnsSelectors.selectById;
 export const reducerMap = { [turnsSlice.name]: turnsSlice.reducer };
+
+export const useCases = {
+  newTurnCreated: turnsSlice.actions.newTurnCreated,
+  turnUpdated: turnsSlice.actions.turnUpdated,
+};

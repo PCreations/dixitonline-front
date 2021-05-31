@@ -1,6 +1,6 @@
 export const createInMemoryGameGateway = ({ nextGameId, authenticatedPlayerId }) => {
   return {
-    async createNewGame() {
+    async createGame() {
       return {
         id: nextGameId,
         hostId: authenticatedPlayerId,

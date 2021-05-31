@@ -1,9 +1,8 @@
-import { selectGameById } from '..';
+import { useCases, selectors } from '..';
 import { createTestStore } from '../../test-store';
 import { createInMemoryGameGateway } from '../gateways';
-import { createGame } from '../use-cases';
 
-describe('create new game', () => {
+describe('create game', () => {
   it('creates a new game', async () => {
     const gameGateway = createInMemoryGameGateway({
       nextGameId: 'game-id',
@@ -11,9 +10,9 @@ describe('create new game', () => {
     });
     const store = createTestStore({ gameGateway });
 
-    await store.dispatch(createGame());
+    await store.dispatch(useCases.createGame());
 
-    const game = selectGameById(store.getState(), 'game-id');
+    const game = selectors.selectById(store.getState(), 'game-id');
 
     expect(game).toEqual({
       id: 'game-id',

@@ -1,14 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { gamesAdapter } from './entity-adapter';
-import { extraReducers } from './extra-reducers';
+import { createSlice, createEntityAdapter, createAsyncThunk } from '@reduxjs/toolkit';
+
+export const gamesAdapter = createEntityAdapter();
+
+const createGame = createAsyncThunk('games/createGame', (_, { extra: { gameGateway } }) => gameGateway.createGame());
 
 const gamesSlice = createSlice({
   name: 'games',
   initialState: gamesAdapter.getInitialState(),
-  extraReducers,
+  extraReducers: {
+    [createGame.fulfilled]: gamesAdapter.addOne,
+  },
 });
 
-const gamesSelectors = gamesAdapter.getSelectors((state) => state[gamesSlice.name]);
+export const selectors = gamesAdapter.getSelectors((state) => state[gamesSlice.name]);
 
-export const selectGameById = gamesSelectors.selectById;
 export const reducerMap = { [gamesSlice.name]: gamesSlice.reducer };
+
+export const useCases = {
+  createGame,
+};
