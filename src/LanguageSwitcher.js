@@ -15,6 +15,7 @@ const renderFlagsFromLanguage = (actualLanguage) => {
     en: 'gb',
     de: 'de',
     it: 'it',
+    es: 'es',
   };
   return (
     <Segment basic textAlign="center">

@@ -9,6 +9,7 @@ const catalog = new Map([
       ['en', '🙌 New update ! 🙌'],
       ['de', '🙌 Neues Update ! 🙌'],
       ['it', '🙌 Nuovo aggiornamento ! 🙌'],
+      ['es', '🙌 Nueva actualización ! 🙌'],
     ]),
   ],
   [
@@ -18,6 +19,7 @@ const catalog = new Map([
       ['en', 'Dark mode !'],
       ['de', 'Dark mode !'],
       ['it', 'Dark mode !'],
+      ['es', 'Dark mode !'],
     ]),
   ],
   [
@@ -27,6 +29,7 @@ const catalog = new Map([
       ['en', 'Welcome'],
       ['de', 'Herzlich Willkommen'],
       ['it', 'Benvenuto'],
+      ['es', 'Bienvenido'],
     ]),
   ],
   [
@@ -36,6 +39,7 @@ const catalog = new Map([
       ['en', 'No games waiting for players'],
       ['de', 'Keine Spiele warten auf Spieler'],
       ['it', 'No partita aspettando giocatori'],
+      ['es', 'No hay partidas esperando jugadores'],
     ]),
   ],
   [
@@ -45,6 +49,7 @@ const catalog = new Map([
       ['en', 'No players ready to play'],
       ['de', 'Kein Spieler bereit zu spielen'],
       ['it', 'No giocatore pronto a giocare'],
+      ['es', 'No hay jugadores esperando para jugar'],
     ]),
   ],
   [
@@ -54,6 +59,7 @@ const catalog = new Map([
       ['en', 'game'],
       ['de', 'Spiel'],
       ['it', 'Partita'],
+      ['es', 'Partida'],
     ]),
   ],
   [
@@ -63,6 +69,7 @@ const catalog = new Map([
       ['en', 'waiting for players'],
       ['de', 'Warten auf Spieler'],
       ['it', 'Aspettando giocatori'],
+      ['es', 'Esperando jugadores'],
     ]),
   ],
   [
@@ -72,6 +79,7 @@ const catalog = new Map([
       ['en', 'player ready to play'],
       ['de', 'Spieler spielbereit'],
       ['it', 'Giocatore pronto a giocare'],
+      ['es', 'Jugador listo para jugar'],
     ]),
   ],
   [
@@ -81,6 +89,7 @@ const catalog = new Map([
       ['en', 'players ready to play'],
       ['de', 'spielbereite Spieler'],
       ['it', 'Giocatori pronto a giocare'],
+      ['es', 'Jugadores listos para jugar'],
     ]),
   ],
   [
@@ -90,6 +99,7 @@ const catalog = new Map([
       ['en', 'games'],
       ['de', 'Spiele'],
       ['it', 'Partite'],
+      ['es', 'Partidas'],
     ]),
   ],
   [
@@ -99,6 +109,7 @@ const catalog = new Map([
       ['en', 'No players ready to play'],
       ['de', 'Kein Spieler bereit zu spielen'],
       ['it', 'No giocatore pronto a giocare'],
+      ['es', 'Sin jugadores para jugar'],
     ]),
   ],
   [
@@ -108,6 +119,7 @@ const catalog = new Map([
       ['en', 'End of game condition'],
       ['de', 'Spielende Bedingung'],
       ['it', 'Condizioni di fine della partita'],
+      ['es', 'Condiciones para el fin de la partida'],
     ]),
   ],
   [
@@ -117,6 +129,7 @@ const catalog = new Map([
       ['en', 'Value'],
       ['de', 'Wert'],
       ['it', 'Valore'],
+      ['es', 'Valor'],
     ]),
   ],
   [
@@ -126,6 +139,7 @@ const catalog = new Map([
       ['en', 'Default'],
       ['de', 'Standardmäßig'],
       ['it', 'Di default'],
+      ['es', 'Por defecto'],
     ]),
   ],
   [
@@ -135,6 +149,7 @@ const catalog = new Map([
       ['en', 'Number of times being storyteller'],
       ['de', 'Häufigkeit, Geschichtenerzähler zu sein'],
       ['it', 'Numero di volte Narratore'],
+      ['es', 'Número de veces siendo Narrador'],
     ]),
   ],
   [
@@ -144,6 +159,7 @@ const catalog = new Map([
       ['en', 'Points limit'],
       ['de', 'Punktbegrenzung'],
       ['it', 'Punteggio limite'],
+      ['es', 'Límite de puntos'],
     ]),
   ],
   [
@@ -153,6 +169,7 @@ const catalog = new Map([
       ['en', 'The value must be superior to zero'],
       ['de', 'Der Wert muss größer als Null sein'],
       ['it', 'Il valore deve essere maggiore di zero'],
+      ['es', 'El valor debe ser mayor de cero'],
     ]),
   ],
   [
@@ -162,6 +179,7 @@ const catalog = new Map([
       ['en', 'PLAY!'],
       ['de', 'SPIELEN!'],
       ['it', 'GIOCARE!'],
+      ['es', 'A JUGAR!'],
     ]),
   ],
   [
@@ -171,6 +189,7 @@ const catalog = new Map([
       ['en', 'Game choice'],
       ['de', 'Spielwahl'],
       ['it', 'Scelta di partita'],
+      ['es', 'Opciones de partida'],
     ]),
   ],
   [
@@ -180,6 +199,7 @@ const catalog = new Map([
       ['en', 'Create a new private game'],
       ['de', 'Erstelle ein neues privates Spiel'],
       ['it', 'Creare una nuova partita'],
+      ['es', 'Crear una nueva partida'],
     ]),
   ],
   [
@@ -189,6 +209,7 @@ const catalog = new Map([
       ['en', 'or'],
       ['de', 'oder'],
       ['it', 'o'],
+      ['es', 'o'],
     ]),
   ],
   [
@@ -198,6 +219,7 @@ const catalog = new Map([
       ['en', 'Join a game :'],
       ['de', 'Mach mit bei einem Spiel :'],
       ['it', 'Unirsi una partita'],
+      ['es', 'Unirse a una partida'],
     ]),
   ],
   [
@@ -207,6 +229,7 @@ const catalog = new Map([
       ['en', 'The code cannot be empty'],
       ['de', 'Der Code darf nicht leer sein'],
       ['it', 'Il codice non puo essere vuoto'],
+      ['es', 'El código no puede estar vacío'],
     ]),
   ],
   [
@@ -216,6 +239,7 @@ const catalog = new Map([
       ['en', 'join'],
       ['de', 'teilnehmen'],
       ['it', 'Unirsi'],
+      ['es', 'Unirse'],
     ]),
   ],
   [
@@ -225,6 +249,7 @@ const catalog = new Map([
       ['en', 'Created by'],
       ['de', 'Erstellt von'],
       ['it', 'Creato per'],
+      ['es', 'Creado por'],
     ]),
   ],
   [
@@ -234,6 +259,7 @@ const catalog = new Map([
       ['en', 'the official game, is coming soon !'],
       ['de', 'Das offizielle Spiel, kommt bald'],
       ['it', 'il gioco ufficiale, arriverà presto'],
+      ['es', 'El juego oficial llegará pronto'],
     ]),
   ],
   [
@@ -243,6 +269,7 @@ const catalog = new Map([
       ['en', 'Register for the beta'],
       ['de', 'Registrieren Sie sich für die Beta'],
       ['it', 'Registrati per la beta'],
+      ['es', 'Regístrate para la beta'],
     ]),
   ],
   [
@@ -252,6 +279,7 @@ const catalog = new Map([
       ['en', "Can't start the game :("],
       ['de', 'Es ist unmöglich, das Spiel zu starten :('],
       ['it', 'Impossibile avviare la partita'],
+      ['es', 'No se puede iniciar la partida'],
     ]),
   ],
   [
@@ -260,7 +288,8 @@ const catalog = new Map([
       ['fr', 'Une erreur est survenue :('],
       ['en', 'An error has occurred :('],
       ['de', 'Ein Fehler ist aufgetreten :('],
-      ['it', 'E verificato un errore'],
+      ['it', 'E verificato un errore :('],
+      ['es', 'Ha ocurrido un error :('],
     ]),
   ],
   [
@@ -270,6 +299,7 @@ const catalog = new Map([
       ['en', 'Try to refresh the page'],
       ['de', 'Versuchen Sie, die Seite zu aktualisieren'],
       ['it', 'Provate a aggiornare la pagina'],
+      ['es', 'Trata de recargar la página'],
     ]),
   ],
   [
@@ -279,6 +309,7 @@ const catalog = new Map([
       ['en', 'Last turn!'],
       ['de', 'Letzte Windung!'],
       ['it', 'Ultimo giro'],
+      ['es', 'Último turno!'],
     ]),
   ],
   [
@@ -287,7 +318,8 @@ const catalog = new Map([
       ['fr', 'Tours restants : '],
       ['en', 'Remaining turns: '],
       ['de', 'Verbleibende Spielrunden: '],
-      ['it', 'Round rimasti '],
+      ['it', 'Round rimasti: '],
+      ['es', 'Turnos restantes: '],
     ]),
   ],
   [
@@ -297,6 +329,7 @@ const catalog = new Map([
       ['en', 'Relaunch the game'],
       ['de', 'Starten Sie das Spiel neu'],
       ['it', 'Riavvia il gioco'],
+      ['es', 'Relanzar la partida'],
     ]),
   ],
   [
@@ -306,6 +339,7 @@ const catalog = new Map([
       ['en', 'Oops...'],
       ['de', 'Hoppla...'],
       ['it', 'Oups...'],
+      ['es', 'Ups...'],
     ]),
   ],
   [
@@ -315,6 +349,7 @@ const catalog = new Map([
       ['en', 'The developer has to be punished...'],
       ['de', 'Wir müssen den Entwickler bestrafen...'],
       ['it', 'Dovremo punire il deveolper...'],
+      ['es', 'Vamos a castigar al desarrollador...'],
     ]),
   ],
   [
@@ -324,6 +359,7 @@ const catalog = new Map([
       ['en', 'No game was found for this code'],
       ['de', 'Für diesen Code wurde kein Spiel gefunden'],
       ['it', 'No partita per questo codice'],
+      ['es', 'No se ha encontrado una partida con este código'],
     ]),
   ],
   [
@@ -333,6 +369,7 @@ const catalog = new Map([
       ['en', "You're not in that game"],
       ['de', 'Sie sind nicht in diesem Spiel'],
       ['it', 'Non è in questa partita'],
+      ['es', 'No estás en esa partida'],
     ]),
   ],
   [
@@ -342,6 +379,7 @@ const catalog = new Map([
       ['en', 'This game is full'],
       ['de', 'Dieses Spiel ist bereits voll'],
       ['it', 'Questo gioco è già pieno'],
+      ['es', 'Esta partida está completa'],
     ]),
   ],
   [
@@ -349,8 +387,9 @@ const catalog = new Map([
     new Map([
       ['fr', 'Accès au jeu...'],
       ['en', 'Accessing the game...'],
-      ['de', 'Zugang zum Spiel ...'],
-      ['it', 'Accesso al gioco'],
+      ['de', 'Zugang zum Spiel...'],
+      ['it', 'Accesso al gioco...'],
+      ['es', 'Acceso al juego...'],
     ]),
   ],
   [
@@ -360,6 +399,7 @@ const catalog = new Map([
       ['en', "Click here if you're not redirected"],
       ['de', 'Klicken Sie hier, wenn Sie nicht weitergeleitet werden'],
       ['it', 'Fare clic qui se non è rediretta'],
+      ['es', 'Haz clic aquí si no te redirige'],
     ]),
   ],
   [
@@ -368,7 +408,8 @@ const catalog = new Map([
       ['fr', 'En attente des autres joueurs...'],
       ['en', 'Waiting for the other players...'],
       ['de', 'Warten auf die anderen Spieler...'],
-      ['it', 'In attesa degli altri giocatori'],
+      ['it', 'In attesa degli altri giocatori...'],
+      ['es', 'Esperando a otros jugadores...'],
     ]),
   ],
   [
@@ -378,6 +419,7 @@ const catalog = new Map([
       ['en', 'You are the storyteller!'],
       ['de', 'Du bist die Geschichtenerzähler*in!'],
       ['it', 'Lei è il narratore'],
+      ['es', 'Eres el Narrador!'],
     ]),
   ],
   [
@@ -386,7 +428,8 @@ const catalog = new Map([
       ['fr', 'En attente du conteur...'],
       ['en', 'Waiting for the storyteller...'],
       ['de', 'Warten auf die Geschichtenerzähler*in...'],
-      ['it', 'Aspettando il narratore'],
+      ['it', 'Aspettando il narratore...'],
+      ['es', 'Esperando al Narrador...'],
     ]),
   ],
   [
@@ -396,6 +439,7 @@ const catalog = new Map([
       ['en', 'Other players are voting...'],
       ['de', 'Andere Spieler stimmen ab...'],
       ['it', 'Gli altri giocatori stanno votando...'],
+      ['es', 'Los otros jugadores están votando...'],
     ]),
   ],
   [
@@ -404,7 +448,8 @@ const catalog = new Map([
       ['fr', 'Vous ne pouvez pas voter pour votre propre carte !'],
       ['en', "You can't vote for your own card !"],
       ['de', 'Sie können nicht für Ihre eigene Karte stimmen !'],
-      ['it', 'Non può votare per la propria carta'],
+      ['it', 'Non può votare per la propria carta !'],
+      ['es', 'No puedes votar por tu propia carta !'],
     ]),
   ],
   [
@@ -414,6 +459,7 @@ const catalog = new Map([
       ['en', 'Exposed cards'],
       ['de', 'Karten zur Abstimmung gestellt'],
       ['it', 'Carte sottoposte al voto'],
+      ['es', 'Cartas mandadas a votación'],
     ]),
   ],
   [
@@ -423,6 +469,7 @@ const catalog = new Map([
       ['en', "{$}'s card"],
       ['de', '{$} Karte'],
       ['it', 'Carta di {$}'],
+      ['es', 'Carta de {$}'],
     ]),
   ],
   [
@@ -432,6 +479,7 @@ const catalog = new Map([
       ['en', 'Define a clue for this card'],
       ['de', 'Definieren Sie einen Hinweis für diese Karte'],
       ['it', 'Definire l’indizio'],
+      ['es', 'Definir una pista para esta carta'],
     ]),
   ],
   [
@@ -441,6 +489,7 @@ const catalog = new Map([
       ['en', 'clue'],
       ['de', 'Hinweis'],
       ['it', 'indizio'],
+      ['es', 'índice'],
     ]),
   ],
   [
@@ -450,6 +499,7 @@ const catalog = new Map([
       ['en', 'VALIDATE'],
       ['de', 'BESTÄTIGEN'],
       ['it', 'CONVALIDARE'],
+      ['es', 'VALIDAR'],
     ]),
   ],
   [
@@ -459,6 +509,7 @@ const catalog = new Map([
       ['en', 'CHOOSE THIS CARD'],
       ['de', 'WÄHLEN SIE DIESE KARTE'],
       ['it', 'SCEGLIERE QUESTA CARTA'],
+      ['es', 'ESCOGE ESTA CARTA'],
     ]),
   ],
   [
@@ -468,6 +519,7 @@ const catalog = new Map([
       ['en', 'VOTE FOR THIS CARD'],
       ['de', 'ABSTIMMUNG FÜR DIESE KARTE'],
       ['it', 'VOTARE PER QUESTA CARTA'],
+      ['es', 'VOTAR POR ESTA CARTA'],
     ]),
   ],
   [
@@ -477,6 +529,7 @@ const catalog = new Map([
       ['en', 'Players who voted for this card:'],
       ['de', 'Spieler, die für diese Karte gestimmt haben:'],
       ['it', 'Giocatore(i) avendo votato per questa carta:'],
+      ['es', 'Jugador(es) que ha(n) votado por esta carta:'],
     ]),
   ],
   [
@@ -486,6 +539,7 @@ const catalog = new Map([
       ['en', 'Nobody voted for this card.'],
       ['de', 'Niemand hat für diese Karte gestimmt.'],
       ['it', 'Nessuno ha votato per questa carta'],
+      ['es', 'Nadie ha votado por esta carta'],
     ]),
   ],
   [
@@ -495,6 +549,7 @@ const catalog = new Map([
       ['en', 'Choose a username'],
       ['de', 'Wähle ein Pseudo'],
       ['it', 'Scegliete un pseudonimo'],
+      ['es', 'Escoge un nombre de usuario'],
     ]),
   ],
   [
@@ -504,6 +559,7 @@ const catalog = new Map([
       ['en', 'username'],
       ['de', 'pseudo'],
       ['it', 'pseudonimo'],
+      ['es', 'nombre de usuario'],
     ]),
   ],
   [
@@ -513,6 +569,7 @@ const catalog = new Map([
       ['en', "The username can't be empty"],
       ['de', 'Das Pseudo kann nicht leer sein'],
       ['it', 'Il pseudonimo non può essere vuoto'],
+      ['es', 'El nombre de usuario no puede estar en blanco'],
     ]),
   ],
   [
@@ -522,6 +579,7 @@ const catalog = new Map([
       ['en', 'You can now start the game'],
       ['de', 'Sie können jetzt das Spiel starten'],
       ['it', 'Adesso puo avviare la partita'],
+      ['es', 'Ya puedes comenzar la partida'],
     ]),
   ],
   [
@@ -531,6 +589,7 @@ const catalog = new Map([
       ['en', 'Waiting for the game to start'],
       ['de', 'Warten auf den Start des Spiels'],
       ['it', 'Aspettando di avviare la partita'],
+      ['es', 'Esperando que comience la partida'],
     ]),
   ],
   [
@@ -540,6 +599,7 @@ const catalog = new Map([
       ['en', 'Waiting for other players... (3 players min, 8 max)'],
       ['de', 'Warten auf andere Spieler... (3 Spieler min, 8 max)'],
       ['it', 'Aspettando i giocari... (3 giocatori min, 8 max)'],
+      ['es', 'Esperando que se unan más jugadores... (3 jugadores min, 8 max)'],
     ]),
   ],
   [
@@ -549,6 +609,7 @@ const catalog = new Map([
       ['en', 'Start the game!'],
       ['de', 'Starte das Spiel!'],
       ['it', 'Avviare la partita!'],
+      ['es', 'Empezar la partida!'],
     ]),
   ],
   [
@@ -558,6 +619,7 @@ const catalog = new Map([
       ['en', '1st'],
       ['de', '1'],
       ['it', '1°'],
+      ['es', '1º'],
     ]),
   ],
   [
@@ -567,6 +629,7 @@ const catalog = new Map([
       ['en', '{$}'],
       ['de', '{$}'],
       ['it', '{$}°'],
+      ['es', '{$}º'],
     ]),
   ],
   [
@@ -576,6 +639,7 @@ const catalog = new Map([
       ['en', '🎉 Thanks for playing 🙌 !'],
       ['de', '🎉 Danke fürs Spielen 🙌 !'],
       ['it', '🎉 Grazie per aver giocato 🙌 !'],
+      ['es', '🎉 Gracias por jugar 🙌 !'],
     ]),
   ],
   [
@@ -585,6 +649,7 @@ const catalog = new Map([
       ['en', 'Any ideas to improve Dixit online ? Tell me here :)'],
       ['de', 'Irgendwelche Ideen, um Dixit Online zu verbessern? Sag es mir hier :)'],
       ['it', 'Qualche idea per migliorare Dixit Online? Dimmi qui :)'],
+      ['es', 'Tienes alguna idea para mejorar Dixit online? Dímela aquí :)'],
     ]),
   ],
   [
@@ -593,7 +658,8 @@ const catalog = new Map([
       ['fr', "Vous avez donné l'indice : "],
       ['en', 'You gave the following clue: '],
       ['de', 'Sie gaben den folgenden Hinweis: '],
-      ['it', 'Ha dato lindizio : '],
+      ['it', 'Hai dato il seguente indizio: '],
+      ['es', 'Has dado la siguiente pista: '],
     ]),
   ],
   [
@@ -602,7 +668,8 @@ const catalog = new Map([
       ['fr', "{$} a donné l'indice : "],
       ['en', '{$} gave the following clue : '],
       ['de', '{$} gab den folgenden Hinweis : '],
-      ['it', '{$} ha dato l’indizio : '],
+      ['it', '{$} ha dato il seguente indizio: '],
+      ['es', '{$} ha dado la siguiente pista: '],
     ]),
   ],
   [
@@ -612,6 +679,7 @@ const catalog = new Map([
       ['en', 'Your hand'],
       ['de', 'Deine Hand'],
       ['it', 'Sua mano'],
+      ['es', 'Tu mano'],
     ]),
   ],
   [
@@ -621,6 +689,7 @@ const catalog = new Map([
       ['en', 'Choose a card'],
       ['de', 'Wähle eine Karte'],
       ['it', 'Scegli una carta'],
+      ['es', 'Escoge una carta'],
     ]),
   ],
   [
@@ -630,6 +699,7 @@ const catalog = new Map([
       ['en', 'Choose two cards'],
       ['de', 'Wähle zwei Karten'],
       ['it', 'Scegli due carte'],
+      ['es', 'Escoge dos cartas'],
     ]),
   ],
   [
@@ -639,6 +709,7 @@ const catalog = new Map([
       ['en', "Find {$}'s card"],
       ['de', 'Finde {$}s Karte'],
       ['it', 'Ritrova la carta di {$}'],
+      ['es', 'Encuentra la carta de {$}'],
     ]),
   ],
   [
@@ -648,6 +719,7 @@ const catalog = new Map([
       ['en', 'Vote results'],
       ['de', 'Ergebnis der Stimmen'],
       ['it', 'Risultato dei votazioni'],
+      ['es', 'Resultado de las votaciones'],
     ]),
   ],
   [
@@ -657,6 +729,7 @@ const catalog = new Map([
       ['en', 'See the leaderboard !'],
       ['de', 'Siehe die endgültige Rangliste !'],
       ['it', 'Vedere il risultato finale'],
+      ['es', 'Ver la tabla de clasificación'],
     ]),
   ],
   [
@@ -666,6 +739,7 @@ const catalog = new Map([
       ['en', 'Go to next turn'],
       ['de', 'Siehe die endgültige Rangliste'],
       ['it', 'Passare al prossimo giro'],
+      ['es', 'Pasar al siguiente turno'],
     ]),
   ],
 ]);

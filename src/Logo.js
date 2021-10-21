@@ -48,7 +48,7 @@ export const Logo = () => {
       </Segment>
       <Flex justifyContent="center" marginBottom={5}>
         <Segment inverted color="green" textAlign="center">
-          {t('info.update')} {t('info.message')}
+          {t('info.update')} Spanish translation 🇪🇸 ! Thanks a lot Javier !
         </Segment>
       </Flex>
       <Flex justifyContent="center" marginBottom={5}>
