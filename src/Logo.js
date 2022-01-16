@@ -1,6 +1,6 @@
 import React, { useContext, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Image, Segment } from 'semantic-ui-react';
+import { Image, Segment, Icon } from 'semantic-ui-react';
 import { Flex, Box } from '@chakra-ui/core';
 import { I18nTranslateContext, I18nLanguageContext } from './I18nContext';
 import { firebaseApp } from './firebase-app';
@@ -48,7 +48,15 @@ export const Logo = () => {
       </Segment>
       <Flex justifyContent="center" marginBottom={5}>
         <Segment inverted color="green" textAlign="center">
-          {t('info.update')} Spanish translation 🇪🇸 ! Thanks a lot Javier !
+          {t('info.update')}{' '}
+          <a
+            href="https://discord.gg/nn7gTh4vfb"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'white', textTransform: 'uppercase' }}
+          >
+            <Icon name="discord" /> Join us on Discord !{' '}
+          </a>
         </Segment>
       </Flex>
       <Flex justifyContent="center" marginBottom={5}>
