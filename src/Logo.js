@@ -37,7 +37,7 @@ export const Logo = () => {
           </a>{' '}
           {t('footer.dixit-world-coming')}{' '}
           <a
-            href="https://bit.ly/3dVVvDV"
+            href="https://www.tempete.studio/dixitworld.html"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleDixitWorldRegisterForBetaClick}
