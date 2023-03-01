@@ -14,7 +14,7 @@ import {
 import { I18nTranslateContext } from './I18nContext';
 
 const TitledCardGrid = ({ cards, title, children, renderBeforeCards }) => {
-  const [modalState, setModalState] = useState({ card: { id: '', src: '' }, open: false });
+  const [modalState, setModalState] = useState({ card: { id: '', url: '' }, open: false });
 
   const handleCardClick = useCallback(
     ({ id }) => {
@@ -40,7 +40,7 @@ const TitledCardGrid = ({ cards, title, children, renderBeforeCards }) => {
     <TitledBox title={title} noSidePadding fullWidth>
       {renderBeforeCards && renderBeforeCards()}
       <CardGrid cards={cards} onCardClicked={handleCardClick} />
-      <CardModal open={modalState.open} src={modalState.card.src} onClose={closeModal}>
+      <CardModal open={modalState.open} src={modalState.card.url} onClose={closeModal}>
         {children && children({ closeModal, cardId: modalState.card.id })}
       </CardModal>
     </TitledBox>

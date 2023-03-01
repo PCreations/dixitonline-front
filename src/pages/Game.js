@@ -72,8 +72,8 @@ const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, phase, r
   const { color } = useColors();
 
   const handleReadyForNextTurn = useCallback(() => {
-    refetchGame();
-  }, [refetchGame]);
+    window.location.reload(false);
+  }, []);
 
   const { currentUser } = useContext(AuthStateContext);
   if (phase.loading || !phase.data) {
@@ -139,7 +139,7 @@ const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, phase, r
             return (
               <VotingPhase
                 turnId={turnId}
-                board={phase.data.board.map(({ card }) => ({ id: card.id, src: card.url }))}
+                board={phase.data.board.map(({ card }) => ({ id: card.id, url: card.url }))}
                 cards={phase.data.hand}
                 clue={phase.data.clue}
                 storytellerUsername={storyteller.username}
@@ -154,7 +154,7 @@ const GameInProgress = ({ gameId, hostId, totalPlayerScoreById, turnId, phase, r
                 hostId={hostId}
                 cards={phase.data.board.map(({ card, playerId, votes }) => ({
                   id: card.id,
-                  src: card.url,
+                  url: card.url,
                   ownedByStoryteller: playerId === storyteller.id,
                   votes: votes.map((p) => p.name),
                   username: players.find((p) => p.id === playerId).username,
@@ -262,7 +262,6 @@ export const Game = () => {
     if (game.data) {
       const isNotInGame = playerNotInGame(currentUser.id, game.data.players);
       console.log(game);
-      debugger;
       if (isNotInGame && game.data.status === 'WAITING_FOR_PLAYERS') {
         console.log('redirecting to join');
         history.push(`/${language}/join/${game.data.id}`);

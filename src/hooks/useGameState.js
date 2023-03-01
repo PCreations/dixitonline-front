@@ -1,4 +1,4 @@
-import { useContext, useEffect, useCallback, useReducer, useState } from 'react';
+import { useContext, useEffect, useCallback, useReducer, useState, useRef } from 'react';
 import gql from 'graphql-tag';
 import { firebaseApp } from '../firebase-app';
 import { useLazyQuery, useMutation } from '@apollo/client';
@@ -55,15 +55,6 @@ const START_GAME = gql`
     }
   }
   ${GameFragment}
-`;
-
-const GET_TURN_PHASE = gql`
-  query GetTurnPhase($turnId: ID!) {
-    getTurnPhase(turnId: $turnId) {
-      ...Phase
-    }
-  }
-  ${PhaseFragment}
 `;
 
 const defaultState = {
@@ -192,43 +183,80 @@ const useGamePolling = ({ gameId, setGame }) => {
 };
 
 const usePhasePolling = ({ turnId, setPhase }) => {
-  const [fetchPhase, { called, loading, startPolling, stopPolling, error, data }] = useLazyQuery(GET_TURN_PHASE, {
-    variables: { turnId },
-    fetchPolicy: 'network-only',
-    pollInterval: 2000,
-  });
-  const [shouldPoll, setShouldPoll] = useState(false);
+  const { currentUser } = useContext(AuthStateContext);
+  const [stopObservingPhase = () => {}, setStopObervingPhase] = useState();
+  const startObservingPhase = useCallback(() => {
+    const playerId = currentUser.id;
+    const phaseViewDoc = firebaseApp.firestore().collection('turn-phase-views').doc(`${turnId}-${playerId}`);
 
-  useEffect(() => {
-    let didCancel = false;
-    if (shouldPoll) {
-      if (!called && turnId) fetchPhase();
-      if (startPolling && turnId) startPolling(2000);
-    }
-
-    if (!didCancel) {
+    const unsub = phaseViewDoc.onSnapshot((docSnapshot) => {
+      const phase = docSnapshot.data();
+      const phaseState = {
+        id: phase.id,
+        name: phase.type,
+        storytellerId: phase.storytellerId,
+        board: (phase.board || []).map(({ playerId, votes, ...card }) => ({
+          card,
+          playerId: playerId ?? null,
+          votes: votes ?? [],
+        })),
+        clue: phase.clue || '',
+        hand: phase.hand,
+        players: phase.players.map((player) => ({
+          ...player,
+          score: player.score || 0,
+        })),
+      };
+      console.log(phase);
+      console.log(phaseState);
       setPhase({
-        loading,
-        error,
-        data: data?.getTurnPhase,
+        loading: false,
+        error: undefined,
+        data: phaseState,
       });
-    }
+    }, console.error);
 
-    return () => {
-      didCancel = true;
-      if (stopPolling) stopPolling();
-    };
-  }, [called, turnId, data, error, loading, fetchPhase, setPhase, shouldPoll, startPolling, stopPolling]);
+    setStopObervingPhase(() => {
+      // unsub();
+    });
+  }, [currentUser.id, setPhase, turnId]);
+  // const [fetchPhase, { called, loading, startPolling, stopPolling, error, data }] = useLazyQuery(GET_TURN_PHASE, {
+  //   variables: { turnId },
+  //   fetchPolicy: 'network-only',
+  //   pollInterval: 2000,
+  // });
+  // const [shouldPoll, setShouldPoll] = useState(false);
 
-  const startPhasePolling = useCallback(() => {
-    setShouldPoll(true);
-  }, [setShouldPoll]);
+  // useEffect(() => {
+  //   let didCancel = false;
+  //   if (shouldPoll) {
+  //     if (!called && turnId) fetchPhase();
+  //     if (startPolling && turnId) startPolling(2000);
+  //   }
 
-  const stopPhasePolling = useCallback(() => {
-    setShouldPoll(false);
-  }, [setShouldPoll]);
+  //   if (!didCancel) {
+  //     setPhase({
+  //       loading,
+  //       error,
+  //       data: data?.getTurnPhase,
+  //     });
+  //   }
 
-  return { startPhasePolling, stopPhasePolling };
+  //   return () => {
+  //     didCancel = true;
+  //     if (stopPolling) stopPolling();
+  //   };
+  // }, [called, turnId, data, error, loading, fetchPhase, setPhase, shouldPoll, startPolling, stopPolling]);
+
+  // const startPhasePolling = useCallback(() => {
+  //   setShouldPoll(true);
+  // }, [setShouldPoll]);
+
+  // const stopPhasePolling = useCallback(() => {
+  //   setShouldPoll(false);
+  // }, [setShouldPoll]);
+
+  return { startPhasePolling: startObservingPhase, stopPhasePolling: stopObservingPhase };
 };
 
 const useStartGame = ({ gameId, setGame, resetPhase }) => {
@@ -261,6 +289,7 @@ const useStartGame = ({ gameId, setGame, resetPhase }) => {
 };
 
 export const useGameState = ({ gameId }) => {
+  const subscribed = useRef(false);
   const [state, dispatch] = useReducer(reducer, defaultState);
   const setGame = useCallback(
     (payload) =>
@@ -295,8 +324,6 @@ export const useGameState = ({ gameId }) => {
   const phasePolling = usePhasePolling({ turnId, setPhase });
   const { startGame, startGameLoading } = useStartGame({ gameId, setGame, resetPhase });
 
-  console.log({ state });
-
   useEffect(() => {
     if (state.shouldPollGame) {
       if (!state.game.loading) {
@@ -309,13 +336,15 @@ export const useGameState = ({ gameId }) => {
   }, [state.shouldPollGame, state.game.loading, state.game.data, gamePolling]);
 
   useEffect(() => {
-    if (state.shouldPollPhase) {
+    if (state.shouldPollPhase && !subscribed.current) {
       if (!state.phase.loading) {
         phasePolling.startPhasePolling();
+        subscribed.current = true;
       }
-      return phasePolling.stopPhasePolling;
+      // return phasePolling.stopPhasePolling;
+    } else {
+      phasePolling.stopPhasePolling();
     }
-    phasePolling.stopPhasePolling();
   }, [state, phasePolling]);
 
   return {

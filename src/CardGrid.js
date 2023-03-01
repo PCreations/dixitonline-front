@@ -8,7 +8,7 @@ export const CardGrid = ({ cards, onCardClicked }) => {
   const t = useContext(I18nTranslateContext);
   return (
     <SimpleGrid columns={[2, 2, 3, 6]} spacing={2}>
-      {cards.map(({ id, src, votes, username, score, ownedByStoryteller }) => (
+      {cards.map(({ id, url, votes, username, score, ownedByStoryteller }) => (
         <Flex key={id} direction="column" alignItems="center">
           {username && (
             <span>
@@ -16,7 +16,7 @@ export const CardGrid = ({ cards, onCardClicked }) => {
               {score !== undefined && score !== 0 ? ` (+ ${score} points !)` : ''}
             </span>
           )}
-          <Card id={id} src={src} votes={votes || []} onClick={onCardClicked} bordered={ownedByStoryteller || false} />
+          <Card id={id} src={url} votes={votes || []} onClick={onCardClicked} bordered={ownedByStoryteller || false} />
         </Flex>
       ))}
     </SimpleGrid>
