@@ -20,8 +20,8 @@ export const Footer = () => {
       </Segment>
       <Segment textAlign="center" basic style={{ padding: 0 }}>
         <p>
-          Dixit Online - {t('footer.created-by')} Pierre Criulanscy
-           <a href="https://discord.gg/nn7gTh4vfb" alt="dixit online discord server">
+          Tixid Online - {t('footer.created-by')} Pierre Criulanscy
+          <a href="https://discord.gg/nn7gTh4vfb" alt="dixit online discord server">
             <Icon name="discord" size="large" />
           </a>
           <a href="https://github.com/PCreations/dixitonline" alt="github" target="_blank" rel="noopener noreferrer">

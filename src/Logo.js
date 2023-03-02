@@ -28,7 +28,7 @@ export const Logo = () => {
   return (
     <Box color={color}>
       <Link to="/">
-        <Image src="/dixit.png" centered style={{ padding: '20px' }} alt="Dixit Online" />
+        <Image src="/tixid.png" centered style={{ padding: '20px' }} alt="Tixid Online" />
       </Link>
       <Segment textAlign="center" basic style={{ padding: 0 }}>
         <p>
@@ -48,15 +48,9 @@ export const Logo = () => {
       </Segment>
       <Flex justifyContent="center" marginBottom={5}>
         <Segment inverted color="green" textAlign="center">
-          {t('info.update')}{' '}
-          <a
-            href="https://discord.gg/nn7gTh4vfb"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'white', textTransform: 'uppercase' }}
-          >
-            <Icon name="discord" /> Join us on Discord !{' '}
-          </a>
+          {
+            "🚨 IMPORTANT information 🚨 ! I do not own the legal rights to use the Dixit trademark, that's why I rebranded the site into Tixid (yeah...I know) and generated hundreds of original cards with OpenAI. This projects cost me thousands of dollars per year, you are on average 15k users per month, from all around the world 🙌 So I'm thinking of a way to monetize it. But don't worry, it will remain FREE !"
+          }
         </Segment>
       </Flex>
       <Flex justifyContent="center" marginBottom={5}>

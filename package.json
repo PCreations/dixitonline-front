@@ -27,6 +27,9 @@
     "react-toggle": "^4.1.2",
     "semantic-ui-react": "^0.88.2"
   },
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "start": "REACT_APP_GRAPHQL_API=http://localhost:5001/dixit-af060/us-central1/api/graphql react-scripts start",
     "build": "react-scripts build",

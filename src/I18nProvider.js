@@ -645,11 +645,11 @@ const catalog = new Map([
   [
     'game-ended.survey',
     new Map([
-      ['fr', 'Des idées pour améliorer Dixit Online ? Dites-le moi ici :)'],
-      ['en', 'Any ideas to improve Dixit online ? Tell me here :)'],
-      ['de', 'Irgendwelche Ideen, um Dixit Online zu verbessern? Sag es mir hier :)'],
-      ['it', 'Qualche idea per migliorare Dixit Online? Dimmi qui :)'],
-      ['es', 'Tienes alguna idea para mejorar Dixit online? Dímela aquí :)'],
+      ['fr', 'Des idées pour améliorer Tixid Online ? Dites-le moi ici :)'],
+      ['en', 'Any ideas to improve Tixid online ? Tell me here :)'],
+      ['de', 'Irgendwelche Ideen, um Tixid Online zu verbessern? Sag es mir hier :)'],
+      ['it', 'Qualche idea per migliorare Tixid Online? Dimmi qui :)'],
+      ['es', 'Tienes alguna idea para mejorar Tixid online? Dímela aquí :)'],
     ]),
   ],
   [
