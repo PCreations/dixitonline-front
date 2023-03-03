@@ -60,6 +60,19 @@ export const Logo = () => {
           </a>
         </Segment>
       </Flex>
+      <Flex justifyContent="center" marginBottom={5}>
+        <Segment inverted color="orange" textAlign="center">
+          <a
+            href="mailto:pcriulan@gmail.com?subject=Tixid%20Illustrations"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'white' }}
+          >
+            Are you a professionnal illustrator ? Would you like to create original cards for the game (paid of course)
+            ? Contact me here : pcriulan@gmail.com
+          </a>
+        </Segment>
+      </Flex>
     </Box>
   );
 };

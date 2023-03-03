@@ -33,6 +33,16 @@ const catalog = new Map([
     ]),
   ],
   [
+    'welcome.change-username',
+    new Map([
+      ['fr', 'Changer mon pseudo'],
+      ['en', 'Change my username'],
+      ['de', 'Pseudo ändern'],
+      ['it', 'Cambia pseudo'],
+      ['es', 'Cambiar pseudo'],
+    ]),
+  ],
+  [
     'lobby-infos.no-waiting-games',
     new Map([
       ['fr', 'Aucune partie en attente de joueurs'],

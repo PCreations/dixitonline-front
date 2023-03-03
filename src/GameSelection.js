@@ -6,6 +6,7 @@ import { Button } from './Button';
 import { I18nTranslateContext } from './I18nContext';
 import { GameConfigurationForm } from './GameConfigurationForm';
 import { useColors } from './hooks/useColors';
+import { firebaseApp } from './firebase-app';
 
 export const GameSelection = ({
   authenticatedUser,
@@ -35,13 +36,24 @@ export const GameSelection = ({
     }
   }, [onJoinGameSubmitted, code]);
 
+  const handleChangeUsername = () => {
+    localStorage.removeItem('currentUser');
+    firebaseApp
+      .auth()
+      .signOut()
+      .then(() => {
+        window.location.reload(false);
+      });
+  };
+
   const { color } = useColors();
 
   return (
     <TitledBox title={t('game-choice.title')}>
       <Segment basic textAlign="center">
         <p>
-          {t('welcome.home')} {authenticatedUser} !
+          {t('welcome.home')} {authenticatedUser} !{' '}
+          <button onClick={handleChangeUsername}>{t('welcome.change-username')}</button>
         </p>
         <Button primary style={{ marginTop: '10px' }} onClick={onPlayNowClicked} loading={playNowLoading}>
           {t('game-choice.play-now')}
