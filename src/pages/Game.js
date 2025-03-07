@@ -32,7 +32,7 @@ const Loading = () => {
   );
 };
 
-const GameNotStarted = ({ game, startGame }) => {
+const GameNotStarted = React.memo(({ game, startGame }) => {
   const t = useContext(I18nTranslateContext);
   const { currentUser } = useContext(AuthStateContext);
   return (
@@ -56,7 +56,7 @@ const GameNotStarted = ({ game, startGame }) => {
       </Flex>
     </Background>
   );
-};
+});
 
 const GameEnded = (gameEndedProps) => {
   return (
@@ -204,6 +204,12 @@ export const Game = () => {
   const { gameId } = useParams();
   const { language } = useContext(I18nLanguageContext);
   const { game, phase, refetchGame, startGame, startGameLoading } = useGameState({ gameId });
+
+  console.log({
+    game,
+    phase,
+    gameId,
+  });
 
   const getGameComponent = () => {
     if (game.loading || !game.data) {

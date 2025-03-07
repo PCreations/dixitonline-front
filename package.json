@@ -14,7 +14,7 @@
     "apollo-boost": "^0.4.7",
     "apollo-cache-inmemory": "^1.6.5",
     "emotion-theming": "^10.0.27",
-    "firebase": "^8.3.3",
+    "firebase": "^9.23.0",
     "graphql": "^15.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -25,16 +25,16 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-toggle": "^4.1.2",
-    "semantic-ui-react": "^0.88.2"
+    "semantic-ui-react": "^1.0.0"
   },
   "engines": {
-    "node": "14"
+    "node": "18"
   },
   "scripts": {
-    "start": "REACT_APP_GRAPHQL_API=http://localhost:5001/dixit-af060/us-central1/api/graphql react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "REACT_APP_GRAPHQL_API=https://us-central1-dixit-af060.cloudfunctions.net/api/graphql react-scripts  --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts  --openssl-legacy-provider test",
+    "eject": "react-scripts  --openssl-legacy-provider eject",
     "deploy": "REACT_APP_GRAPHQL_API=https://us-central1-dixit-af060.cloudfunctions.net/api/graphql yarn build && firebase deploy",
     "serve": "yarn build && firebase serve --only hosting",
     "storybook": "start-storybook -p 9009 -s public",
