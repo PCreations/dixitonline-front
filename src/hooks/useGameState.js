@@ -217,7 +217,7 @@ const usePhasePolling = ({ turnId, setPhase }) => {
     }, console.error);
 
     setStopObervingPhase(() => {
-      // unsub();
+      return unsub
     });
   }, [currentUser.id, setPhase, turnId]);
   // const [fetchPhase, { called, loading, startPolling, stopPolling, error, data }] = useLazyQuery(GET_TURN_PHASE, {
@@ -341,7 +341,7 @@ export const useGameState = ({ gameId }) => {
         phasePolling.startPhasePolling();
         subscribed.current = true;
       }
-      // return phasePolling.stopPhasePolling;
+      return phasePolling.stopPhasePolling;
     } else {
       phasePolling.stopPhasePolling();
     }

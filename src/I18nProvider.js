@@ -263,7 +263,7 @@ const catalog = new Map([
       ['de', 'Der Code darf nicht leer sein'],
       ['it', 'Il codice non puo essere vuoto'],
       ['es', 'El código no puede estar vacío'],
-      ['ca', 'S’ha d’introduir un codi.],
+      ['ca', 'S\'ha d\'introduir un codi.'],
     ]),
   ],
   [
@@ -274,7 +274,7 @@ const catalog = new Map([
       ['de', 'teilnehmen'],
       ['it', 'Unirsi'],
       ['es', 'Unirse'],
-      ['ca', 'Uneix-m'hi'],
+      ['ca', 'Uneix-m\'hi'],
     ]),
   ],
   [
