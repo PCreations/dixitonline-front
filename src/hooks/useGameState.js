@@ -187,10 +187,13 @@ const usePhasePolling = ({ turnId, setPhase }) => {
   const [stopObservingPhase = () => {}, setStopObervingPhase] = useState();
   const startObservingPhase = useCallback(() => {
     const playerId = currentUser.id;
+    console.log("PHASE TURN VIEW ID", `${turnId}-${playerId}`)
     const phaseViewDoc = firebaseApp.firestore().collection('turn-phase-views').doc(`${turnId}-${playerId}`);
-
-    const unsub = phaseViewDoc.onSnapshot((docSnapshot) => {
+    console.log("GET PHASE VIEW DOC")
+    const unsub = phaseViewDoc.onSnapshot({ includeMetadataChanges: true }, (docSnapshot) => {
+      console.log('phase snapshot ', docSnapshot);
       const phase = docSnapshot.data();
+      console.log('phase data ', { turnId, playerId, phase });
       const phaseState = {
         id: phase.id,
         name: phase.type,
@@ -217,44 +220,9 @@ const usePhasePolling = ({ turnId, setPhase }) => {
     }, console.error);
 
     setStopObervingPhase(() => {
-      // unsub();
+      return unsub
     });
   }, [currentUser.id, setPhase, turnId]);
-  // const [fetchPhase, { called, loading, startPolling, stopPolling, error, data }] = useLazyQuery(GET_TURN_PHASE, {
-  //   variables: { turnId },
-  //   fetchPolicy: 'network-only',
-  //   pollInterval: 2000,
-  // });
-  // const [shouldPoll, setShouldPoll] = useState(false);
-
-  // useEffect(() => {
-  //   let didCancel = false;
-  //   if (shouldPoll) {
-  //     if (!called && turnId) fetchPhase();
-  //     if (startPolling && turnId) startPolling(2000);
-  //   }
-
-  //   if (!didCancel) {
-  //     setPhase({
-  //       loading,
-  //       error,
-  //       data: data?.getTurnPhase,
-  //     });
-  //   }
-
-  //   return () => {
-  //     didCancel = true;
-  //     if (stopPolling) stopPolling();
-  //   };
-  // }, [called, turnId, data, error, loading, fetchPhase, setPhase, shouldPoll, startPolling, stopPolling]);
-
-  // const startPhasePolling = useCallback(() => {
-  //   setShouldPoll(true);
-  // }, [setShouldPoll]);
-
-  // const stopPhasePolling = useCallback(() => {
-  //   setShouldPoll(false);
-  // }, [setShouldPoll]);
 
   return { startPhasePolling: startObservingPhase, stopPhasePolling: stopObservingPhase };
 };
@@ -341,10 +309,15 @@ export const useGameState = ({ gameId }) => {
         phasePolling.startPhasePolling();
         subscribed.current = true;
       }
-      // return phasePolling.stopPhasePolling;
-    } else {
-      phasePolling.stopPhasePolling();
+      return phasePolling.stopPhasePolling;
     }
+    
+    if (!state.shouldPollPhase) {
+      phasePolling.stopPhasePolling();
+      subscribed.current = false;
+    }
+
+    return phasePolling.stopPhasePolling;
   }, [state, phasePolling]);
 
   return {
