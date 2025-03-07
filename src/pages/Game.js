@@ -205,6 +205,12 @@ export const Game = () => {
   const { language } = useContext(I18nLanguageContext);
   const { game, phase, refetchGame, startGame, startGameLoading } = useGameState({ gameId });
 
+  console.log({
+    game,
+    phase,
+    gameId,
+  })
+
   const getGameComponent = () => {
     if (game.loading || !game.data) {
       return <Loading />;

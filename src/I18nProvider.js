@@ -3,6 +3,17 @@ import { I18nTranslateContext, I18nLanguageContext } from './I18nContext';
 
 const catalog = new Map([
   [
+    'meta.description',
+    new Map([
+      ['fr', 'Jouez à Dixit en ligne avec vos amis !'],
+      ['en', 'Play Dixit online with your friends !'],
+      ['de', 'Spielen Sie Dixit online mit Ihren Freunden !'],
+      ['it', 'Gioca a Dixit online con i tuoi amici !'],
+      ['es', '¡Juega a Dixit en línea con tus amigos!'],
+      ['ca', 'Juga a Dixit en línia amb els teus amics!'],
+    ]),
+  ],
+  [
     'info.update',
     new Map([
       ['fr', '🙌 Mise à jour ! 🙌'],
@@ -263,7 +274,7 @@ const catalog = new Map([
       ['de', 'Der Code darf nicht leer sein'],
       ['it', 'Il codice non puo essere vuoto'],
       ['es', 'El código no puede estar vacío'],
-      ['ca', 'S’ha d’introduir un codi.],
+      ['ca', 'S\'ha d\'introduir un codi.'],
     ]),
   ],
   [
@@ -274,7 +285,7 @@ const catalog = new Map([
       ['de', 'teilnehmen'],
       ['it', 'Unirsi'],
       ['es', 'Unirse'],
-      ['ca', 'Uneix-m'hi'],
+      ['ca', 'Uneix-m\'hi'],
     ]),
   ],
   [

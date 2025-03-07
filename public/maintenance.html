@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dixit Online - Under Maintenance</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card-decoration {
+            position: absolute;
+            width: 150px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+
+        .card-1 {
+            top: -30px;
+            left: -30px;
+            transform: rotate(-15deg);
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+        }
+
+        .card-2 {
+            bottom: -30px;
+            right: -30px;
+            transform: rotate(15deg);
+            background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #6a11cb;
+            font-weight: 700;
+        }
+
+        .divider {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            margin: 30px auto;
+            border-radius: 3px;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .return-time {
+            background-color: rgba(106, 17, 203, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #6a11cb;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #2575fc;
+            transform: translateY(-3px);
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .card-decoration {
+                width: 100px;
+                height: 140px;
+            }
+            
+            .logo img {
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-1 {
+                display: none;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo img {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-decoration card-1"></div>
+        <div class="card-decoration card-2"></div>
+
+        <div class="logo">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tixid-cyKbk1JMrOs3AMJr0lOxkYCYgrGynV.png" alt="Dixit Logo">
+        </div>
+
+        <h1>Under Maintenance</h1>
+
+        <div class="divider"></div>
+
+        <p class="message">
+            We're currently adding new cards and fixing bugs.
+            Thank you for your patience.
+        </p>
+
+        <div class="return-time">
+            Expected return: March 10, 2025
+        </div>
+
+        <div class="social-links">
+            <a href="https://discord.gg/nn7gTh4vfb">Discord</a>
+        </div>
+    </div>
+</body>
+</html>
