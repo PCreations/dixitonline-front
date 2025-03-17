@@ -274,7 +274,7 @@ const catalog = new Map([
       ['de', 'Der Code darf nicht leer sein'],
       ['it', 'Il codice non puo essere vuoto'],
       ['es', 'El código no puede estar vacío'],
-      ['ca', 'S\'ha d\'introduir un codi.'],
+      ['ca', "S'ha d'introduir un codi."],
     ]),
   ],
   [
@@ -285,7 +285,7 @@ const catalog = new Map([
       ['de', 'teilnehmen'],
       ['it', 'Unirsi'],
       ['es', 'Unirse'],
-      ['ca', 'Uneix-m\'hi'],
+      ['ca', "Uneix-m'hi"],
     ]),
   ],
   [
@@ -731,12 +731,12 @@ const catalog = new Map([
   [
     'game-ended.survey',
     new Map([
-      ['fr', 'Des idées pour améliorer Tixid Online ? Dites-le moi ici :)'],
-      ['en', 'Any ideas to improve Tixid online ? Tell me here :)'],
-      ['de', 'Irgendwelche Ideen, um Tixid Online zu verbessern? Sag es mir hier :)'],
-      ['it', 'Qualche idea per migliorare Tixid Online? Dimmi qui :)'],
-      ['es', 'Tienes alguna idea para mejorar Tixid online? Dímela aquí :)'],
-      ['ca', 'Teniu alguna idea per a millorar Tixid online? Digueu-la aquí.'],
+      ['fr', '🙏 Petit sondage rapide ici :) Aidez moi à améliorer Tixid Online 🙏'],
+      ['en', '🙏 Quick survey here :) Help me improve Tixid Online 🙏'],
+      ['de', '🙏 Schnell Umfrage hier :) Hilf mir, Tixid Online zu verbessern 🙏'],
+      ['it', '🙏 Quick survey here :) Help me improve Tixid Online 🙏'],
+      ['es', '🙏 Encuesta rápida aquí :) Ayúdame a mejorar Tixid Online 🙏'],
+      ['ca', "🙏 Enquesta ràpida aquí :) Ajuda'm a millorar Tixid Online 🙏"],
     ]),
   ],
   [

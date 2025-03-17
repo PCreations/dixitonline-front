@@ -30,6 +30,45 @@ export const Logo = () => {
       <Link to="/">
         <Image src="/tixid.png" centered style={{ padding: '20px' }} alt="Tixid Online" />
       </Link>
+      <Flex justifyContent="center" marginBottom={5}>
+        <Segment
+          inverted
+          color="teal"
+          textAlign="center"
+          style={{ padding: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)', borderRadius: '8px' }}
+        >
+          <a href="https://forms.gle/APXubfGbghK7YbdD8" target="_blank" rel="noopener noreferrer">
+            <button
+              style={{
+                backgroundColor: '#FFD700',
+                color: '#333',
+                padding: '12px 20px',
+                borderRadius: '6px',
+                border: 'none',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                fontSize: '1.2rem',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)';
+                e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.3)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.2)';
+              }}
+            >
+              <span>✨ {t('game-ended.survey')} ✨</span> <Icon name="star" /> <Icon name="arrow right" />
+            </button>
+          </a>
+        </Segment>
+      </Flex>
       <Segment textAlign="center" basic style={{ padding: 0 }}>
         <p>
           <a href="https://bit.ly/3sX3Awb" target="_blank" rel="noopener noreferrer" onClick={handleDixitWorldClick}>
@@ -46,33 +85,6 @@ export const Logo = () => {
           </a>
         </p>
       </Segment>
-      <Flex justifyContent="center" marginBottom={5}>
-        <Segment inverted color="green" textAlign="center">
-          {
-            "🚨 IMPORTANT information 🚨 ! I do not own the legal rights to use the Dixit trademark, that's why I rebranded the site into Tixid (yeah...I know) and generated hundreds of original cards with OpenAI. This projects cost me thousands of dollars per year, you are on average 15k users per month, from all around the world 🙌 So I'm thinking of a way to monetize it. But don't worry, it will remain FREE !"
-          }
-        </Segment>
-      </Flex>
-      <Flex justifyContent="center" marginBottom={5}>
-        <Segment inverted color="blue" textAlign="center">
-          <a href="https://bit.ly/3b8m4nl" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
-            {t('game-ended.survey')}
-          </a>
-        </Segment>
-      </Flex>
-      <Flex justifyContent="center" marginBottom={5}>
-        <Segment inverted color="orange" textAlign="center">
-          <a
-            href="mailto:pcriulan@gmail.com?subject=Tixid%20Illustrations"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'white' }}
-          >
-            Are you a professionnal illustrator ? Would you like to create original cards for the game (paid of course)
-            ? Contact me here : pcriulan@gmail.com
-          </a>
-        </Segment>
-      </Flex>
     </Box>
   );
 };
