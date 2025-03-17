@@ -274,7 +274,7 @@ const catalog = new Map([
       ['de', 'Der Code darf nicht leer sein'],
       ['it', 'Il codice non puo essere vuoto'],
       ['es', 'El código no puede estar vacío'],
-      ['ca', 'S\'ha d\'introduir un codi.'],
+      ['ca', "S'ha d'introduir un codi."],
     ]),
   ],
   [
@@ -285,7 +285,7 @@ const catalog = new Map([
       ['de', 'teilnehmen'],
       ['it', 'Unirsi'],
       ['es', 'Unirse'],
-      ['ca', 'Uneix-m\'hi'],
+      ['ca', "Uneix-m'hi"],
     ]),
   ],
   [
@@ -731,12 +731,15 @@ const catalog = new Map([
   [
     'game-ended.survey',
     new Map([
-      ['fr', 'Des idées pour améliorer Tixid Online ? Dites-le moi ici :)'],
-      ['en', 'Any ideas to improve Tixid online ? Tell me here :)'],
-      ['de', 'Irgendwelche Ideen, um Tixid Online zu verbessern? Sag es mir hier :)'],
-      ['it', 'Qualche idea per migliorare Tixid Online? Dimmi qui :)'],
-      ['es', 'Tienes alguna idea para mejorar Tixid online? Dímela aquí :)'],
-      ['ca', 'Teniu alguna idea per a millorar Tixid online? Digueu-la aquí.'],
+      ['fr', ''],
+      ['en', '🙌 Help me shape the Future of Tixid Online ! Quick 2 min survey to improve the game 🤩'],
+      [
+        'de',
+        '🙌 Hilf mir, die Zukunft von Tixid Online zu gestalten! Schnell 2-min-Umfrage, um das Spiel zu verbessern 🤩',
+      ],
+      ['it', '🙌 Aiutaci a creare il futuro di Tixid Online! Breve sondaggio di 2 minuti per migliorare il gioco 🤩'],
+      ['es', '🙌 Ayúdame a crear el futuro de Tixid Online! Encuesta rápida de 2 minutos para mejorar el juego 🤩'],
+      ['ca', '🙌 Ajuda’m a crear el futur de Tixid Online! Encuesta ràpida de 2 minuts per millorar el joc 🤩'],
     ]),
   ],
   [

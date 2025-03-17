@@ -30,6 +30,18 @@ export const Logo = () => {
       <Link to="/">
         <Image src="/tixid.png" centered style={{ padding: '20px' }} alt="Tixid Online" />
       </Link>
+      <Flex justifyContent="center" marginBottom={5}>
+        <Segment inverted color="blue" textAlign="center">
+          <a
+            href="https://forms.gle/APXubfGbghK7YbdD8"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'white' }}
+          >
+            {t('game-ended.survey')}
+          </a>
+        </Segment>
+      </Flex>
       <Segment textAlign="center" basic style={{ padding: 0 }}>
         <p>
           <a href="https://bit.ly/3sX3Awb" target="_blank" rel="noopener noreferrer" onClick={handleDixitWorldClick}>
@@ -46,33 +58,6 @@ export const Logo = () => {
           </a>
         </p>
       </Segment>
-      <Flex justifyContent="center" marginBottom={5}>
-        <Segment inverted color="green" textAlign="center">
-          {
-            "🚨 IMPORTANT information 🚨 ! I do not own the legal rights to use the Dixit trademark, that's why I rebranded the site into Tixid (yeah...I know) and generated hundreds of original cards with OpenAI. This projects cost me thousands of dollars per year, you are on average 15k users per month, from all around the world 🙌 So I'm thinking of a way to monetize it. But don't worry, it will remain FREE !"
-          }
-        </Segment>
-      </Flex>
-      <Flex justifyContent="center" marginBottom={5}>
-        <Segment inverted color="blue" textAlign="center">
-          <a href="https://bit.ly/3b8m4nl" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
-            {t('game-ended.survey')}
-          </a>
-        </Segment>
-      </Flex>
-      <Flex justifyContent="center" marginBottom={5}>
-        <Segment inverted color="orange" textAlign="center">
-          <a
-            href="mailto:pcriulan@gmail.com?subject=Tixid%20Illustrations"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'white' }}
-          >
-            Are you a professionnal illustrator ? Would you like to create original cards for the game (paid of course)
-            ? Contact me here : pcriulan@gmail.com
-          </a>
-        </Segment>
-      </Flex>
     </Box>
   );
 };
